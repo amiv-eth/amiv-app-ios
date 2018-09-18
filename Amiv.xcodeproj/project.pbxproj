@@ -8,11 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B050E120215169230090CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E11F215169230090CB79 /* AppDelegate.swift */; };
-		B050E122215169230090CB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E121215169230090CB79 /* ViewController.swift */; };
-		B050E125215169230090CB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B050E123215169230090CB79 /* Main.storyboard */; };
 		B050E127215169250090CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B050E126215169250090CB79 /* Assets.xcassets */; };
 		B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B050E128215169250090CB79 /* LaunchScreen.storyboard */; };
 		B050E135215169250090CB79 /* AmivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E134215169250090CB79 /* AmivTests.swift */; };
+		B050E144215169950090CB79 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E143215169950090CB79 /* Navigator.swift */; };
+		B050E146215169D00090CB79 /* RootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E145215169D00090CB79 /* RootNavigator.swift */; };
+		B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E14B21516A590090CB79 /* AmivRootNavigator.swift */; };
+		B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E14D21516AFE0090CB79 /* AppNavigator.swift */; };
+		B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E14F21516BA60090CB79 /* OnboardingNavigator.swift */; };
+		B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15521516D4D0090CB79 /* HomeViewController.swift */; };
+		B050E15921516E230090CB79 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15821516E230090CB79 /* EventModel.swift */; };
+		B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15B215171F70090CB79 /* HomeNavigator.swift */; };
+		B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15E2151735A0090CB79 /* UIColor+Extension.swift */; };
+		B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E167215176D50090CB79 /* AmivApplicationActionDelegate.swift */; };
+		B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E16A215177820090CB79 /* JobsNavigator.swift */; };
+		B050E16E215178BA0090CB79 /* AmivApplictionsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E16D215178BA0090CB79 /* AmivApplictionsNavigator.swift */; };
+		B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E170215179A30090CB79 /* AmivApplicationViewController.swift */; };
+		B050E17321517A050090CB79 /* AmivApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17221517A050090CB79 /* AmivApplication.swift */; };
+		B050E17521517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17421517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift */; };
+		B050E17821517EF50090CB79 /* AmivApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17721517EF50090CB79 /* AmivApplicationModel.swift */; };
+		B050E17A215180D20090CB79 /* AmivApplicationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E179215180D20090CB79 /* AmivApplicationCell.swift */; };
+		B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17C2151910F0090CB79 /* LoginViewController.swift */; };
+		B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17E215195B50090CB79 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +45,32 @@
 /* Begin PBXFileReference section */
 		B050E11C215169230090CB79 /* Amiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B050E11F215169230090CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B050E121215169230090CB79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B050E124215169230090CB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B050E126215169250090CB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B050E129215169250090CB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B050E12B215169250090CB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B050E130215169250090CB79 /* AmivTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmivTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B050E134215169250090CB79 /* AmivTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivTests.swift; sourceTree = "<group>"; };
 		B050E136215169250090CB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B050E143215169950090CB79 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		B050E145215169D00090CB79 /* RootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigator.swift; sourceTree = "<group>"; };
+		B050E14B21516A590090CB79 /* AmivRootNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivRootNavigator.swift; sourceTree = "<group>"; };
+		B050E14D21516AFE0090CB79 /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		B050E14F21516BA60090CB79 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
+		B050E15121516C520090CB79 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B050E15521516D4D0090CB79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B050E15821516E230090CB79 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		B050E15B215171F70090CB79 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
+		B050E15E2151735A0090CB79 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B050E167215176D50090CB79 /* AmivApplicationActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationActionDelegate.swift; sourceTree = "<group>"; };
+		B050E16A215177820090CB79 /* JobsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsNavigator.swift; sourceTree = "<group>"; };
+		B050E16D215178BA0090CB79 /* AmivApplictionsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplictionsNavigator.swift; sourceTree = "<group>"; };
+		B050E170215179A30090CB79 /* AmivApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationViewController.swift; sourceTree = "<group>"; };
+		B050E17221517A050090CB79 /* AmivApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplication.swift; sourceTree = "<group>"; };
+		B050E17421517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B050E17721517EF50090CB79 /* AmivApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationModel.swift; sourceTree = "<group>"; };
+		B050E179215180D20090CB79 /* AmivApplicationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationCell.swift; sourceTree = "<group>"; };
+		B050E17C2151910F0090CB79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B050E17E215195B50090CB79 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +94,7 @@
 		B050E113215169230090CB79 = {
 			isa = PBXGroup;
 			children = (
+				B050E15121516C520090CB79 /* README.md */,
 				B050E11E215169230090CB79 /* Amiv */,
 				B050E133215169250090CB79 /* AmivTests */,
 				B050E11D215169230090CB79 /* Products */,
@@ -77,11 +113,12 @@
 		B050E11E215169230090CB79 /* Amiv */ = {
 			isa = PBXGroup;
 			children = (
-				B050E11F215169230090CB79 /* AppDelegate.swift */,
-				B050E121215169230090CB79 /* ViewController.swift */,
-				B050E123215169230090CB79 /* Main.storyboard */,
-				B050E126215169250090CB79 /* Assets.xcassets */,
-				B050E128215169250090CB79 /* LaunchScreen.storyboard */,
+				B050E15D215173470090CB79 /* Extension */,
+				B050E15721516E160090CB79 /* Model */,
+				B050E141215169740090CB79 /* View Controller */,
+				B050E140215169690090CB79 /* Navigation */,
+				B050E13F2151695A0090CB79 /* Base */,
+				B050E1632151762C0090CB79 /* Amiv Apps */,
 				B050E12B215169250090CB79 /* Info.plist */,
 			);
 			path = Amiv;
@@ -94,6 +131,198 @@
 				B050E136215169250090CB79 /* Info.plist */,
 			);
 			path = AmivTests;
+			sourceTree = "<group>";
+		};
+		B050E13F2151695A0090CB79 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B050E11F215169230090CB79 /* AppDelegate.swift */,
+				B050E126215169250090CB79 /* Assets.xcassets */,
+				B050E128215169250090CB79 /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B050E140215169690090CB79 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B050E14821516A0A0090CB79 /* Navigator Protocols */,
+				B050E14A21516A3A0090CB79 /* Root */,
+				B050E14921516A2E0090CB79 /* App */,
+				B050E14721516A030090CB79 /* Onboarding */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		B050E141215169740090CB79 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B050E17B215190FE0090CB79 /* Login */,
+				B050E15321516C8B0090CB79 /* Onboarding */,
+				B050E15221516C860090CB79 /* App */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		B050E14721516A030090CB79 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B050E14F21516BA60090CB79 /* OnboardingNavigator.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B050E14821516A0A0090CB79 /* Navigator Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B050E143215169950090CB79 /* Navigator.swift */,
+				B050E145215169D00090CB79 /* RootNavigator.swift */,
+			);
+			path = "Navigator Protocols";
+			sourceTree = "<group>";
+		};
+		B050E14921516A2E0090CB79 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B050E16C215177E30090CB79 /* Amiv Applications */,
+				B050E1692151776A0090CB79 /* Jobs */,
+				B050E15A215171E40090CB79 /* Home */,
+				B050E14D21516AFE0090CB79 /* AppNavigator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B050E14A21516A3A0090CB79 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B050E14B21516A590090CB79 /* AmivRootNavigator.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B050E15221516C860090CB79 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B050E16F2151798B0090CB79 /* Amiv Application */,
+				B050E15421516D3D0090CB79 /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B050E15321516C8B0090CB79 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B050E15421516D3D0090CB79 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B050E15521516D4D0090CB79 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B050E15721516E160090CB79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B050E15821516E230090CB79 /* EventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B050E15A215171E40090CB79 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B050E15B215171F70090CB79 /* HomeNavigator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B050E15D215173470090CB79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B050E15E2151735A0090CB79 /* UIColor+Extension.swift */,
+				B050E17E215195B50090CB79 /* UIFont+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B050E1632151762C0090CB79 /* Amiv Apps */ = {
+			isa = PBXGroup;
+			children = (
+				B050E17621517EE50090CB79 /* Model */,
+				B050E1662151766E0090CB79 /* App Protocols */,
+				B050E165215176420090CB79 /* Barcode */,
+				B050E1642151763C0090CB79 /* Checkin */,
+				B050E17221517A050090CB79 /* AmivApplication.swift */,
+			);
+			path = "Amiv Apps";
+			sourceTree = "<group>";
+		};
+		B050E1642151763C0090CB79 /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkin;
+			sourceTree = "<group>";
+		};
+		B050E165215176420090CB79 /* Barcode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Barcode;
+			sourceTree = "<group>";
+		};
+		B050E1662151766E0090CB79 /* App Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B050E167215176D50090CB79 /* AmivApplicationActionDelegate.swift */,
+			);
+			path = "App Protocols";
+			sourceTree = "<group>";
+		};
+		B050E1692151776A0090CB79 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				B050E16A215177820090CB79 /* JobsNavigator.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		B050E16C215177E30090CB79 /* Amiv Applications */ = {
+			isa = PBXGroup;
+			children = (
+				B050E16D215178BA0090CB79 /* AmivApplictionsNavigator.swift */,
+			);
+			path = "Amiv Applications";
+			sourceTree = "<group>";
+		};
+		B050E16F2151798B0090CB79 /* Amiv Application */ = {
+			isa = PBXGroup;
+			children = (
+				B050E170215179A30090CB79 /* AmivApplicationViewController.swift */,
+				B050E17421517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift */,
+				B050E179215180D20090CB79 /* AmivApplicationCell.swift */,
+			);
+			path = "Amiv Application";
+			sourceTree = "<group>";
+		};
+		B050E17621517EE50090CB79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B050E17721517EF50090CB79 /* AmivApplicationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B050E17B215190FE0090CB79 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B050E17C2151910F0090CB79 /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +408,6 @@
 			files = (
 				B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */,
 				B050E127215169250090CB79 /* Assets.xcassets in Resources */,
-				B050E125215169230090CB79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +425,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B050E122215169230090CB79 /* ViewController.swift in Sources */,
+				B050E17821517EF50090CB79 /* AmivApplicationModel.swift in Sources */,
+				B050E16E215178BA0090CB79 /* AmivApplictionsNavigator.swift in Sources */,
+				B050E17521517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift in Sources */,
 				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
+				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
+				B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */,
+				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
+				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
+				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
+				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
+				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
+				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
+				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
+				B050E15921516E230090CB79 /* EventModel.swift in Sources */,
+				B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */,
+				B050E144215169950090CB79 /* Navigator.swift in Sources */,
+				B050E17A215180D20090CB79 /* AmivApplicationCell.swift in Sources */,
+				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
+				B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */,
+				B050E17321517A050090CB79 /* AmivApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +467,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B050E123215169230090CB79 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B050E124215169230090CB79 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B050E128215169250090CB79 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,6 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28J3L9UEGT;
 				INFOPLIST_FILE = Amiv/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28J3L9UEGT;
 				INFOPLIST_FILE = Amiv/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
