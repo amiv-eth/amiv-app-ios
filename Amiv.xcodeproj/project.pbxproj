@@ -30,6 +30,16 @@
 		B050E17A215180D20090CB79 /* AmivApplicationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E179215180D20090CB79 /* AmivApplicationCell.swift */; };
 		B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17C2151910F0090CB79 /* LoginViewController.swift */; };
 		B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E17E215195B50090CB79 /* UIFont+Extension.swift */; };
+		B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E18021519B390090CB79 /* LoginViewControllerDelegate.swift */; };
+		B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1842151A3700090CB79 /* SettingsViewController.swift */; };
+		B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1862151A3C40090CB79 /* SettingsViewControllerDelegate.swift */; };
+		B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1892151A4A80090CB79 /* SettingsAction.swift */; };
+		B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E18B2151A54D0090CB79 /* SettingsCellModel.swift */; };
+		B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E18D2151A5660090CB79 /* SettingsCellType.swift */; };
+		B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E18F2151A6000090CB79 /* SettingsModel.swift */; };
+		B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */; };
+		B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1932151A9750090CB79 /* Bundle+Extension.swift */; };
+		B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1962151AAC40090CB79 /* SettingsNavigator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +81,16 @@
 		B050E179215180D20090CB79 /* AmivApplicationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationCell.swift; sourceTree = "<group>"; };
 		B050E17C2151910F0090CB79 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B050E17E215195B50090CB79 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B050E18021519B390090CB79 /* LoginViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B050E1842151A3700090CB79 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B050E1862151A3C40090CB79 /* SettingsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B050E1892151A4A80090CB79 /* SettingsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAction.swift; sourceTree = "<group>"; };
+		B050E18B2151A54D0090CB79 /* SettingsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellModel.swift; sourceTree = "<group>"; };
+		B050E18D2151A5660090CB79 /* SettingsCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellType.swift; sourceTree = "<group>"; };
+		B050E18F2151A6000090CB79 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
+		B050E1932151A9750090CB79 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		B050E1962151AAC40090CB79 /* SettingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +137,8 @@
 				B050E15721516E160090CB79 /* Model */,
 				B050E141215169740090CB79 /* View Controller */,
 				B050E140215169690090CB79 /* Navigation */,
-				B050E13F2151695A0090CB79 /* Base */,
 				B050E1632151762C0090CB79 /* Amiv Apps */,
+				B050E13F2151695A0090CB79 /* Base */,
 				B050E12B215169250090CB79 /* Info.plist */,
 			);
 			path = Amiv;
@@ -184,6 +204,7 @@
 		B050E14921516A2E0090CB79 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B050E1952151AAB70090CB79 /* Settings */,
 				B050E16C215177E30090CB79 /* Amiv Applications */,
 				B050E1692151776A0090CB79 /* Jobs */,
 				B050E15A215171E40090CB79 /* Home */,
@@ -203,6 +224,8 @@
 		B050E15221516C860090CB79 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B050E1832151A3600090CB79 /* Jobs */,
+				B050E1822151A3590090CB79 /* Settings */,
 				B050E16F2151798B0090CB79 /* Amiv Application */,
 				B050E15421516D3D0090CB79 /* Home */,
 			);
@@ -227,6 +250,7 @@
 		B050E15721516E160090CB79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B050E1882151A4850090CB79 /* Settings Model */,
 				B050E15821516E230090CB79 /* EventModel.swift */,
 			);
 			path = Model;
@@ -245,6 +269,7 @@
 			children = (
 				B050E15E2151735A0090CB79 /* UIColor+Extension.swift */,
 				B050E17E215195B50090CB79 /* UIFont+Extension.swift */,
+				B050E1932151A9750090CB79 /* Bundle+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -321,8 +346,45 @@
 			isa = PBXGroup;
 			children = (
 				B050E17C2151910F0090CB79 /* LoginViewController.swift */,
+				B050E18021519B390090CB79 /* LoginViewControllerDelegate.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B050E1822151A3590090CB79 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B050E1842151A3700090CB79 /* SettingsViewController.swift */,
+				B050E1862151A3C40090CB79 /* SettingsViewControllerDelegate.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B050E1832151A3600090CB79 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		B050E1882151A4850090CB79 /* Settings Model */ = {
+			isa = PBXGroup;
+			children = (
+				B050E18F2151A6000090CB79 /* SettingsModel.swift */,
+				B050E1892151A4A80090CB79 /* SettingsAction.swift */,
+				B050E18B2151A54D0090CB79 /* SettingsCellModel.swift */,
+				B050E18D2151A5660090CB79 /* SettingsCellType.swift */,
+				B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */,
+			);
+			path = "Settings Model";
+			sourceTree = "<group>";
+		};
+		B050E1952151AAB70090CB79 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B050E1962151AAC40090CB79 /* SettingsNavigator.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,17 +489,27 @@
 			files = (
 				B050E17821517EF50090CB79 /* AmivApplicationModel.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivApplictionsNavigator.swift in Sources */,
+				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
 				B050E17521517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift in Sources */,
 				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */,
+				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
+				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
 				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
 				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
+				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
+				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
+				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
+				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
+				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
+				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
+				B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */,
 				B050E15921516E230090CB79 /* EventModel.swift in Sources */,
 				B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */,
 				B050E144215169950090CB79 /* Navigator.swift in Sources */,

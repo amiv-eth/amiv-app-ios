@@ -42,6 +42,7 @@ public class AppNavigator: Navigator {
         // Create all tabs
         self.createHomeTab()
         self.createAmivApplicationTab()
+        self.createSettingsTab()
         
         // Make tabBarController ready
         self.tabBarController.viewControllers = self.childNavigators.map({ $0.rootViewController })
@@ -57,6 +58,11 @@ public class AppNavigator: Navigator {
     private func createAmivApplicationTab() {
         let app = AmivApplicationsNavigator()
         self.childNavigators.append(app)
+    }
+    
+    private func createSettingsTab() {
+        let settings = SettingsNavigator()
+        self.childNavigators.append(settings)
     }
     
 }
