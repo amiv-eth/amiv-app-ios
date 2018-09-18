@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B050E120215169230090CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E11F215169230090CB79 /* AppDelegate.swift */; };
+		B050E122215169230090CB79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E121215169230090CB79 /* ViewController.swift */; };
+		B050E125215169230090CB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B050E123215169230090CB79 /* Main.storyboard */; };
+		B050E127215169250090CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B050E126215169250090CB79 /* Assets.xcassets */; };
+		B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B050E128215169250090CB79 /* LaunchScreen.storyboard */; };
+		B050E135215169250090CB79 /* AmivTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E134215169250090CB79 /* AmivTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B050E131215169250090CB79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B050E114215169230090CB79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B050E11B215169230090CB79;
+			remoteInfo = Amiv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B050E11C215169230090CB79 /* Amiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B050E11F215169230090CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B050E121215169230090CB79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B050E124215169230090CB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B050E126215169250090CB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B050E129215169250090CB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B050E12B215169250090CB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B050E130215169250090CB79 /* AmivTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmivTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B050E134215169250090CB79 /* AmivTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivTests.swift; sourceTree = "<group>"; };
+		B050E136215169250090CB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B050E119215169230090CB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B050E12D215169250090CB79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B050E113215169230090CB79 = {
+			isa = PBXGroup;
+			children = (
+				B050E11E215169230090CB79 /* Amiv */,
+				B050E133215169250090CB79 /* AmivTests */,
+				B050E11D215169230090CB79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B050E11D215169230090CB79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B050E11C215169230090CB79 /* Amiv.app */,
+				B050E130215169250090CB79 /* AmivTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B050E11E215169230090CB79 /* Amiv */ = {
+			isa = PBXGroup;
+			children = (
+				B050E11F215169230090CB79 /* AppDelegate.swift */,
+				B050E121215169230090CB79 /* ViewController.swift */,
+				B050E123215169230090CB79 /* Main.storyboard */,
+				B050E126215169250090CB79 /* Assets.xcassets */,
+				B050E128215169250090CB79 /* LaunchScreen.storyboard */,
+				B050E12B215169250090CB79 /* Info.plist */,
+			);
+			path = Amiv;
+			sourceTree = "<group>";
+		};
+		B050E133215169250090CB79 /* AmivTests */ = {
+			isa = PBXGroup;
+			children = (
+				B050E134215169250090CB79 /* AmivTests.swift */,
+				B050E136215169250090CB79 /* Info.plist */,
+			);
+			path = AmivTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B050E11B215169230090CB79 /* Amiv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B050E139215169250090CB79 /* Build configuration list for PBXNativeTarget "Amiv" */;
+			buildPhases = (
+				B050E118215169230090CB79 /* Sources */,
+				B050E119215169230090CB79 /* Frameworks */,
+				B050E11A215169230090CB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Amiv;
+			productName = Amiv;
+			productReference = B050E11C215169230090CB79 /* Amiv.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B050E12F215169250090CB79 /* AmivTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B050E13C215169250090CB79 /* Build configuration list for PBXNativeTarget "AmivTests" */;
+			buildPhases = (
+				B050E12C215169250090CB79 /* Sources */,
+				B050E12D215169250090CB79 /* Frameworks */,
+				B050E12E215169250090CB79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B050E132215169250090CB79 /* PBXTargetDependency */,
+			);
+			name = AmivTests;
+			productName = AmivTests;
+			productReference = B050E130215169250090CB79 /* AmivTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B050E114215169230090CB79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Amiv an der ETH";
+				TargetAttributes = {
+					B050E11B215169230090CB79 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					B050E12F215169250090CB79 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = B050E11B215169230090CB79;
+					};
+				};
+			};
+			buildConfigurationList = B050E117215169230090CB79 /* Build configuration list for PBXProject "Amiv" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B050E113215169230090CB79;
+			productRefGroup = B050E11D215169230090CB79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B050E11B215169230090CB79 /* Amiv */,
+				B050E12F215169250090CB79 /* AmivTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B050E11A215169230090CB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */,
+				B050E127215169250090CB79 /* Assets.xcassets in Resources */,
+				B050E125215169230090CB79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B050E12E215169250090CB79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B050E118215169230090CB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B050E122215169230090CB79 /* ViewController.swift in Sources */,
+				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B050E12C215169250090CB79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B050E135215169250090CB79 /* AmivTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B050E132215169250090CB79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B050E11B215169230090CB79 /* Amiv */;
+			targetProxy = B050E131215169250090CB79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B050E123215169230090CB79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B050E124215169230090CB79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B050E128215169250090CB79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B050E129215169250090CB79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B050E137215169250090CB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B050E138215169250090CB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B050E13A215169250090CB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28J3L9UEGT;
+				INFOPLIST_FILE = Amiv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ethz.amiv.Amiv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B050E13B215169250090CB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28J3L9UEGT;
+				INFOPLIST_FILE = Amiv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ethz.amiv.Amiv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B050E13D215169250090CB79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28J3L9UEGT;
+				INFOPLIST_FILE = AmivTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ethz.amiv.AmivTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amiv.app/Amiv";
+			};
+			name = Debug;
+		};
+		B050E13E215169250090CB79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 28J3L9UEGT;
+				INFOPLIST_FILE = AmivTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.ethz.amiv.AmivTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amiv.app/Amiv";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B050E117215169230090CB79 /* Build configuration list for PBXProject "Amiv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B050E137215169250090CB79 /* Debug */,
+				B050E138215169250090CB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B050E139215169250090CB79 /* Build configuration list for PBXNativeTarget "Amiv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B050E13A215169250090CB79 /* Debug */,
+				B050E13B215169250090CB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B050E13C215169250090CB79 /* Build configuration list for PBXNativeTarget "AmivTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B050E13D215169250090CB79 /* Debug */,
+				B050E13E215169250090CB79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B050E114215169230090CB79 /* Project object */;
+}
