@@ -26,6 +26,7 @@ public class AppNavigator: Navigator {
     private enum Tab: Int {
         case home
         case apps
+        case settings
     }
     
     // MARK: - Initializers
@@ -62,6 +63,7 @@ public class AppNavigator: Navigator {
     
     private func createSettingsTab() {
         let settings = SettingsNavigator()
+        settings.rootViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings"), tag: Tab.settings.rawValue)
         self.childNavigators.append(settings)
     }
     
