@@ -12,6 +12,6 @@ public protocol LoginViewControllerDelegate {
     
     func login(username: String, password: String)
     
-    func cancelLogin()
+    func smallButtonTapped()
     
 }

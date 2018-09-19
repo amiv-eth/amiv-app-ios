@@ -22,7 +22,7 @@ public class AmivRootNavigator: RootNavigator {
     public init(window: UIWindow) {
         self.window = window
         
-        self.goToApp()
+        self.goToOnboarding()
     }
     
     // MARK: - Navigation
@@ -34,7 +34,18 @@ public class AmivRootNavigator: RootNavigator {
     }
     
     private func goToOnboarding() {
-        
+        let onboarding = OnboardingNavigator()
+        onboarding.delegate = self
+        self.window.rootViewController = onboarding.rootViewController
+        self.currentNavigator = onboarding
+    }
+    
+}
+
+extension AmivRootNavigator: OnboardingNavigatorDelegate {
+    
+    public func onboardingFinished() {
+        self.goToApp()
     }
     
 }

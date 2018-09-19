@@ -15,7 +15,7 @@ public class LoginViewController: UIViewController {
     
     public var delegate: LoginViewControllerDelegate?
     
-    private let infoLabelText: String = "Login in using your ETHZ username (email address) and your ETHZ password."
+    private let infoLabelText: String
     
     // MARK: - View variables
     
@@ -23,9 +23,9 @@ public class LoginViewController: UIViewController {
     
     public private(set) var infoLabel: UILabel!
     
-    public private(set) var submitButton: UIButton!
+    public private(set) var button: UIButton!
     
-    public private(set) var cancelButton: UIButton!
+    public private(set) var smallButton: UIButton!
     
     public private(set) var usernameTextField: UITextField!
     
@@ -33,21 +33,22 @@ public class LoginViewController: UIViewController {
     
     // MARK: - Initializers
     
-    public init() {
+    public init(model: LoginModel) {
+        self.infoLabelText = model.infoText
         super.init(nibName: nil, bundle: nil)
         
         // View Creation
-        self.titleLabel = self.createTitleLabel()
+        self.titleLabel = self.createTitleLabel(model.title)
         self.view.addSubview(self.titleLabel)
         
         self.infoLabel = self.createInfoTextLabel()
         self.view.addSubview(self.infoLabel)
         
-        self.submitButton = self.createSubmitButton()
-        self.view.addSubview(self.submitButton)
+        self.button = self.createButton(model.buttonTitle)
+        self.view.addSubview(self.button)
         
-        self.cancelButton = self.createCancelButton()
-        self.view.addSubview(self.cancelButton)
+        self.smallButton = self.createSmallButton(model.smallButtonTitle)
+        self.view.addSubview(self.smallButton)
         
         self.usernameTextField = self.createUsernameTextField()
         self.view.addSubview(self.usernameTextField)
@@ -60,8 +61,8 @@ public class LoginViewController: UIViewController {
         self.applyInfoLabelConstraints()
         self.applyUsernameTextFieldConstraints()
         self.applyPasswordTextFieldConstraints()
-        self.applySubmitButtonConstraints()
-        self.applyCancelButtonConstraints()
+        self.applyButtonConstraints()
+        self.applySmallButtonConstraints()
         
         // Tap view to hide keyboard
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.hideKeyboard))
@@ -74,9 +75,9 @@ public class LoginViewController: UIViewController {
     
     // MARK: - View Creation
     
-    private func createTitleLabel() -> UILabel {
+    private func createTitleLabel(_ title: String) -> UILabel {
         let label = UILabel()
-        label.text = "Login"
+        label.text = title
         label.textColor = .amivRed
         label.numberOfLines = 2
         label.textAlignment = .center
@@ -109,9 +110,9 @@ public class LoginViewController: UIViewController {
         NSLayoutConstraint(item: self.infoLabel, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
     }
     
-    private func createSubmitButton() -> UIButton {
+    private func createButton(_ title: String) -> UIButton {
         let button = UIButton()
-        button.setTitle("Login", for: .normal)
+        button.setTitle(title, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.lightGray, for: .highlighted)
         button.backgroundColor = .amivRed
@@ -122,35 +123,36 @@ public class LoginViewController: UIViewController {
         return button
     }
     
-    private func applySubmitButtonConstraints() {
-        NSLayoutConstraint(item: self.submitButton, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
-        NSLayoutConstraint(item: self.submitButton, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.submitButton, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.submitButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50).isActive = true
+    private func applyButtonConstraints() {
+        NSLayoutConstraint(item: self.button, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
+        NSLayoutConstraint(item: self.button, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.button, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50).isActive = true
     }
     
-    private func createCancelButton() -> UIButton {
+    private func createSmallButton(_ title: String) -> UIButton {
         let button = UIButton()
-        button.setTitle("Cancel", for: .normal)
+        button.setTitle(title, for: .normal)
         button.setTitleColor(.amivRed, for: .normal)
         button.setTitleColor(.lightGray, for: .highlighted)
-        button.addTarget(self, action: #selector(self.cancel), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.smallButtonAction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
     }
     
-    private func applyCancelButtonConstraints() {
-        NSLayoutConstraint(item: self.cancelButton, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: self.passwordTextField, attribute: .bottom, multiplier: 1, constant: 30).isActive = true
-        NSLayoutConstraint(item: self.cancelButton, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
-        NSLayoutConstraint(item: self.cancelButton, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.cancelButton, attribute: .bottom, relatedBy: .equal, toItem: self.submitButton, attribute: .top, multiplier: 1, constant: -15).isActive = true
+    private func applySmallButtonConstraints() {
+        NSLayoutConstraint(item: self.smallButton, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: self.passwordTextField, attribute: .bottom, multiplier: 1, constant: 30).isActive = true
+        NSLayoutConstraint(item: self.smallButton, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
+        NSLayoutConstraint(item: self.smallButton, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.smallButton, attribute: .bottom, relatedBy: .equal, toItem: self.button, attribute: .top, multiplier: 1, constant: -15).isActive = true
     }
     
     private func createUsernameTextField() -> UITextField {
         let field = UITextField()
         field.tintColor = .amivRed
         field.placeholder = "Username"
+        field.autocapitalizationType = .none
         field.returnKeyType = .continue
         field.borderStyle = .roundedRect
         field.addTarget(self, action: #selector(self.fillPassword), for: .primaryActionTriggered)
@@ -170,6 +172,7 @@ public class LoginViewController: UIViewController {
         field.tintColor = .amivRed
         field.placeholder = "Password"
         field.returnKeyType = .go
+        field.autocapitalizationType = .none
         field.isSecureTextEntry = true
         field.borderStyle = .roundedRect
         field.addTarget(self, action: #selector(self.login), for: .primaryActionTriggered)
@@ -192,6 +195,12 @@ public class LoginViewController: UIViewController {
         self.view.backgroundColor = .white
     }
     
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     // MARK: - View Interaction
     
     @objc private func login() {
@@ -205,8 +214,8 @@ public class LoginViewController: UIViewController {
         }
     }
     
-    @objc private func cancel() {
-        self.delegate?.cancelLogin()
+    @objc private func smallButtonAction() {
+        self.delegate?.smallButtonTapped()
     }
     
     @objc private func fillPassword() {

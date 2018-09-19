@@ -13,6 +13,8 @@ public class OnboardingNavigator: Navigator {
     
     // MARK: - Variables
     
+    public var delegate: OnboardingNavigatorDelegate?
+    
     public var rootViewController: UIViewController {
         return self.navigationController
     }
@@ -22,7 +24,42 @@ public class OnboardingNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        self.navigationController = UINavigationController()
+        let info = InfoViewController(model: .create())
+        self.navigationController = UINavigationController(rootViewController: info)
+        info.delegate = self
+    }
+    
+    // MARK: - Navigation
+    
+    private func presentLogin() {
+        let login = LoginViewController(model: .createOnboarding())
+        login.delegate = self
+        self.navigationController.present(login, animated: true, completion: nil)
+    }
+    
+}
+
+extension OnboardingNavigator: InfoViewControllerDelegate {
+    
+    public func buttonPressed() {
+        self.presentLogin()
+    }
+    
+    public func smallButtonPressed() {
+        self.delegate?.onboardingFinished()
+    }
+    
+}
+
+extension OnboardingNavigator: LoginViewControllerDelegate {
+    
+    public func login(username: String, password: String) {
+        debugPrint("Logging in with username: \(username) and password: \(password)")
+        self.delegate?.onboardingFinished()
+    }
+    
+    public func smallButtonTapped() {
+        self.delegate?.onboardingFinished()
     }
     
 }

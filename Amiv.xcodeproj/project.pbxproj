@@ -40,6 +40,13 @@
 		B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */; };
 		B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1932151A9750090CB79 /* Bundle+Extension.swift */; };
 		B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1962151AAC40090CB79 /* SettingsNavigator.swift */; };
+		B07A89FE2152316C003CC2D8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A89FD2152316C003CC2D8 /* InfoViewController.swift */; };
+		B07A8A00215233B5003CC2D8 /* InfoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A89FF215233B5003CC2D8 /* InfoItemView.swift */; };
+		B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A012152384F003CC2D8 /* InfoItemModel.swift */; };
+		B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0321523AB8003CC2D8 /* InfoViewControllerModel.swift */; };
+		B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */; };
+		B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */; };
+		B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0A21524474003CC2D8 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +98,13 @@
 		B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
 		B050E1932151A9750090CB79 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B050E1962151AAC40090CB79 /* SettingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigator.swift; sourceTree = "<group>"; };
+		B07A89FD2152316C003CC2D8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B07A89FF215233B5003CC2D8 /* InfoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemView.swift; sourceTree = "<group>"; };
+		B07A8A012152384F003CC2D8 /* InfoItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemModel.swift; sourceTree = "<group>"; };
+		B07A8A0321523AB8003CC2D8 /* InfoViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerModel.swift; sourceTree = "<group>"; };
+		B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigatorDelegate.swift; sourceTree = "<group>"; };
+		B07A8A0A21524474003CC2D8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				B050E14F21516BA60090CB79 /* OnboardingNavigator.swift */,
+				B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -235,6 +250,7 @@
 		B050E15321516C8B0090CB79 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				B07A8A0721524023003CC2D8 /* Info */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -347,6 +363,7 @@
 			children = (
 				B050E17C2151910F0090CB79 /* LoginViewController.swift */,
 				B050E18021519B390090CB79 /* LoginViewControllerDelegate.swift */,
+				B07A8A0A21524474003CC2D8 /* LoginModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -385,6 +402,18 @@
 				B050E1962151AAC40090CB79 /* SettingsNavigator.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B07A8A0721524023003CC2D8 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				B07A89FD2152316C003CC2D8 /* InfoViewController.swift */,
+				B07A89FF215233B5003CC2D8 /* InfoItemView.swift */,
+				B07A8A012152384F003CC2D8 /* InfoItemModel.swift */,
+				B07A8A0321523AB8003CC2D8 /* InfoViewControllerModel.swift */,
+				B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,12 +519,17 @@
 				B050E17821517EF50090CB79 /* AmivApplicationModel.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivApplictionsNavigator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
+				B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */,
+				B07A8A00215233B5003CC2D8 /* InfoItemView.swift in Sources */,
 				B050E17521517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift in Sources */,
 				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
+				B07A89FE2152316C003CC2D8 /* InfoViewController.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
+				B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
+				B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */,
 				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
 				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
@@ -514,8 +548,10 @@
 				B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */,
 				B050E144215169950090CB79 /* Navigator.swift in Sources */,
 				B050E17A215180D20090CB79 /* AmivApplicationCell.swift in Sources */,
+				B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */,
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
 				B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */,
+				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
