@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         let generic = GenericInfoViewController(model: .createTestModel())
-        window.rootViewController = generic
+        let nav = UINavigationController(rootViewController: generic)
+        window.rootViewController = nav
         
         //let rootNavigator = AmivRootNavigator(window: window)
         //self.rootNavigator = rootNavigator

@@ -19,6 +19,8 @@ public class GenericInfoViewController: UIViewController {
     
     public private(set) var scrollView: UIScrollView!
     
+    private var imageContainerView: UIView?
+    
     public private(set) var imageView: UIImageView?
     
     public private(set) var textView: UITextView!
@@ -36,6 +38,10 @@ public class GenericInfoViewController: UIViewController {
         self.view.addSubview(self.scrollView)
         
         if let image = model.image {
+            let container = self.createImageContainerView()
+            self.imageContainerView = container
+            self.scrollView.addSubview(container)
+            
             let view = self.createImageView(image)
             self.imageView = view
             self.scrollView.addSubview(view)
@@ -52,6 +58,7 @@ public class GenericInfoViewController: UIViewController {
         
         // View Constraints
         self.applyScrollViewConstraints()
+        self.applyImageContainerViewConstraints()
         self.applyImageViewConstraints()
         self.applyTextViewConstraints()
         self.applyButtonConstraints()
@@ -81,26 +88,49 @@ public class GenericInfoViewController: UIViewController {
     private func createImageView(_ image: UIImage?) -> UIImageView {
         let view = UIImageView()
         view.image = image
+        view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }
     
     private func applyImageViewConstraints() {
-        guard let imageView = self.imageView else {
+        guard let imageView = self.imageView, let container = self.imageContainerView else {
             return
         }
         
-        NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .topMargin, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: imageView, attribute: .width, multiplier: 0.7, constant: 0).isActive = true
+        let top = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 0)
+        top.priority = UILayoutPriority(rawValue: 900)
+        top.isActive = true
+        NSLayoutConstraint(item: imageView, attribute: .leading, relatedBy: .equal, toItem: container, attribute: .leadingMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: imageView, attribute: .trailing, relatedBy: .equal, toItem: container, attribute: .trailingMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: container, attribute: .bottomMargin, multiplier: 1, constant: 0).isActive = true
+    }
+    
+    private func createImageContainerView() -> UIView {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }
+    
+    private func applyImageContainerViewConstraints() {
+        guard let containerView = self.imageContainerView else {
+            return
+        }
+        
+        NSLayoutConstraint(item: containerView, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .topMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item:  containerView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: containerView, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: containerView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.7, constant: 0).isActive = true
     }
     
     private func createTextView(_ text: String) -> UITextView {
         let textView = UITextView()
         textView.text = text
         textView.isScrollEnabled = false
+        textView.isEditable = false
         textView.font = UIFont.preferredFont(forTextStyle: .body)
         textView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -109,9 +139,9 @@ public class GenericInfoViewController: UIViewController {
     
     private func applyTextViewConstraints() {
         if let imageView = self.imageView {
-            NSLayoutConstraint(item: self.textView, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .bottom, multiplier: 1, constant: 20).isActive = true
+            NSLayoutConstraint(item: self.textView, attribute: .top, relatedBy: .equal, toItem: imageView, attribute: .bottom, multiplier: 1, constant: 10).isActive = true
         } else {
-            NSLayoutConstraint(item: self.textView, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .topMargin, multiplier: 1, constant: 0).isActive = true
+            NSLayoutConstraint(item: self.textView, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .top, multiplier: 1, constant: 0).isActive = true
         }
         
         NSLayoutConstraint(item: self.textView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0).isActive = true
