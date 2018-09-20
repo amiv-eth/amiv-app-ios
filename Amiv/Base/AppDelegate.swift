@@ -21,12 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
-        let generic = GenericInfoViewController(model: .createTestModel())
-        let nav = UINavigationController(rootViewController: generic)
-        window.rootViewController = nav
-        
-        //let rootNavigator = AmivRootNavigator(window: window)
-        //self.rootNavigator = rootNavigator
+        let rootNavigator = AmivRootNavigator(window: window)
+        self.rootNavigator = rootNavigator
         
         self.window?.makeKeyAndVisible()
         

@@ -89,7 +89,12 @@ public class GenericInfoViewController: UIViewController {
         let view = UIImageView()
         view.image = image
         view.contentMode = .scaleAspectFill
+        view.isUserInteractionEnabled = true
         view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.expandImage))
+        recognizer.numberOfTapsRequired = 1
+        view.addGestureRecognizer(recognizer)
         
         return view
     }
@@ -190,6 +195,16 @@ public class GenericInfoViewController: UIViewController {
     @objc private func buttonTapped() {
         debugPrint("button tapped")
         self.delegate?.buttonTapped()
+    }
+    
+    @objc private func expandImage() {
+        debugPrint("expanding image")
+        guard let image = self.imageView?.image else {
+            return
+        }
+        
+        let imageViewer = ImageViewerViewController(image: image)
+        self.present(imageViewer, animated: false, completion: nil)
     }
     
 }

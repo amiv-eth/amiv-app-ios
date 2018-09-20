@@ -53,6 +53,8 @@
 		B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0521541C5C00F3D073 /* GenericInfoViewController.swift */; };
 		B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F072154230500F3D073 /* GenericInfoViewControllerDelegate.swift */; };
 		B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */; };
+		B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0C21543E6600F3D073 /* ImageViewerViewController.swift */; };
+		B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0F2154495100F3D073 /* BlurButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		B0FE2F0521541C5C00F3D073 /* GenericInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewController.swift; sourceTree = "<group>"; };
 		B0FE2F072154230500F3D073 /* GenericInfoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerModel.swift; sourceTree = "<group>"; };
+		B0FE2F0C21543E6600F3D073 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		B0FE2F0F2154495100F3D073 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 		B050E11E215169230090CB79 /* Amiv */ = {
 			isa = PBXGroup;
 			children = (
+				B0FE2F0E2154494100F3D073 /* View */,
 				B050E15D215173470090CB79 /* Extension */,
 				B050E15721516E160090CB79 /* Model */,
 				B050E141215169740090CB79 /* View Controller */,
@@ -451,6 +456,7 @@
 		B0FE2F0321541C3700F3D073 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
+				B0FE2F0B21543E4B00F3D073 /* Image Viewer */,
 				B0FE2F0421541C4000F3D073 /* Info */,
 			);
 			path = Generic;
@@ -464,6 +470,22 @@
 				B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */,
 			);
 			path = Info;
+			sourceTree = "<group>";
+		};
+		B0FE2F0B21543E4B00F3D073 /* Image Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2F0C21543E6600F3D073 /* ImageViewerViewController.swift */,
+			);
+			path = "Image Viewer";
+			sourceTree = "<group>";
+		};
+		B0FE2F0E2154494100F3D073 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2F0F2154495100F3D073 /* BlurButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,10 +614,12 @@
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
 				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
+				B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */,
 				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
 				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
 				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
+				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
 				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
 				B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */,
