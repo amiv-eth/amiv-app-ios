@@ -1,32 +1,23 @@
 //
-//  HomeViewController.swift
+//  JobsViewController.swift
 //  Amiv
 //
-//  Created by Domenic Wüthrich on 18.09.18.
+//  Created by Domenic Wüthrich on 20.09.18.
 //  Copyright © 2018 Amiv an der ETH. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public class HomeViewController: UITableViewController {
+public class JobsViewController: UITableViewController {
     
     // MARK: - Variables
     
-    public var model: EventModel {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
-    
     // MARK: - Initializers
     
-    public init(model: EventModel) {
-        self.model = model
-        
+    public init() {
         super.init(style: .plain)
-        
-        self.title = "Home"
+        self.title = "Jobs"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,10 +26,8 @@ public class HomeViewController: UITableViewController {
     
     // MARK: - View Setup
     
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.backgroundColor = .white
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .automatic
@@ -48,7 +37,9 @@ public class HomeViewController: UITableViewController {
     
 }
 
-extension HomeViewController {
+// MARK: - Table View Data Source
+
+extension JobsViewController {
     
     public override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

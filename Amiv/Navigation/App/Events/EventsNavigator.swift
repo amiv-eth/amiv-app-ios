@@ -1,15 +1,15 @@
 //
-//  JobsNavigator.swift
+//  EventsNavigator.swift
 //  Amiv
 //
-//  Created by Domenic Wüthrich on 18.09.18.
+//  Created by Domenic Wüthrich on 20.09.18.
 //  Copyright © 2018 Amiv an der ETH. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public class JobsNavigator: Navigator {
+public class EventsNavigator: Navigator {
     
     // MARK: - Variables
     
@@ -22,8 +22,8 @@ public class JobsNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        let jobs = JobsViewController()
-        self.navigationController = UINavigationController(rootViewController: jobs)
+        let home = EventsViewController()
+        self.navigationController = UINavigationController(rootViewController: home)
     }
     
 }

@@ -47,6 +47,12 @@
 		B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */; };
 		B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */; };
 		B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0A21524474003CC2D8 /* LoginModel.swift */; };
+		B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFB2154179600F3D073 /* JobsViewController.swift */; };
+		B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */; };
+		B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0121541A6300F3D073 /* EventsViewController.swift */; };
+		B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0521541C5C00F3D073 /* GenericInfoViewController.swift */; };
+		B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F072154230500F3D073 /* GenericInfoViewControllerDelegate.swift */; };
+		B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +111,12 @@
 		B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigatorDelegate.swift; sourceTree = "<group>"; };
 		B07A8A0A21524474003CC2D8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B0FE2EFB2154179600F3D073 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNavigator.swift; sourceTree = "<group>"; };
+		B0FE2F0121541A6300F3D073 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		B0FE2F0521541C5C00F3D073 /* GenericInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewController.swift; sourceTree = "<group>"; };
+		B0FE2F072154230500F3D073 /* GenericInfoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +234,7 @@
 				B050E1952151AAB70090CB79 /* Settings */,
 				B050E16C215177E30090CB79 /* Amiv Applications */,
 				B050E1692151776A0090CB79 /* Jobs */,
+				B0FE2EFD21541A1000F3D073 /* Events */,
 				B050E15A215171E40090CB79 /* Home */,
 				B050E14D21516AFE0090CB79 /* AppNavigator.swift */,
 			);
@@ -239,6 +252,8 @@
 		B050E15221516C860090CB79 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B0FE2F0321541C3700F3D073 /* Generic */,
+				B0FE2F0021541A5200F3D073 /* Events */,
 				B050E1832151A3600090CB79 /* Jobs */,
 				B050E1822151A3590090CB79 /* Settings */,
 				B050E16F2151798B0090CB79 /* Amiv Application */,
@@ -380,6 +395,7 @@
 		B050E1832151A3600090CB79 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
+				B0FE2EFB2154179600F3D073 /* JobsViewController.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -412,6 +428,40 @@
 				B07A8A012152384F003CC2D8 /* InfoItemModel.swift */,
 				B07A8A0321523AB8003CC2D8 /* InfoViewControllerModel.swift */,
 				B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		B0FE2EFD21541A1000F3D073 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B0FE2F0021541A5200F3D073 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2F0121541A6300F3D073 /* EventsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B0FE2F0321541C3700F3D073 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2F0421541C4000F3D073 /* Info */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		B0FE2F0421541C4000F3D073 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2F0521541C5C00F3D073 /* GenericInfoViewController.swift */,
+				B0FE2F072154230500F3D073 /* GenericInfoViewControllerDelegate.swift */,
+				B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -524,6 +574,8 @@
 				B050E17521517E1B0090CB79 /* AmivApplicationViewControllerDelegate.swift in Sources */,
 				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
 				B07A89FE2152316C003CC2D8 /* InfoViewController.swift in Sources */,
+				B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */,
+				B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
@@ -538,8 +590,11 @@
 				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
+				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
 				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
+				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
+				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
@@ -552,6 +607,7 @@
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
 				B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
+				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivApplication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

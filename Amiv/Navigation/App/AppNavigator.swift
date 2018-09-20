@@ -25,6 +25,8 @@ public class AppNavigator: Navigator {
     
     private enum Tab: Int {
         case home
+        case events
+        case jobs
         case apps
         case settings
     }
@@ -42,6 +44,8 @@ public class AppNavigator: Navigator {
     private func createTabs() {
         // Create all tabs
         self.createHomeTab()
+        self.createEventsTab()
+        self.createJobsTab()
         self.createAmivApplicationTab()
         self.createSettingsTab()
         
@@ -54,6 +58,16 @@ public class AppNavigator: Navigator {
     private func createHomeTab() {
         let home = HomeNavigator()
         self.childNavigators.append(home)
+    }
+    
+    private func createEventsTab() {
+        let events = EventsNavigator()
+        self.childNavigators.append(events)
+    }
+    
+    private func createJobsTab() {
+        let jobs = JobsNavigator()
+        self.childNavigators.append(jobs)
     }
     
     private func createAmivApplicationTab() {
