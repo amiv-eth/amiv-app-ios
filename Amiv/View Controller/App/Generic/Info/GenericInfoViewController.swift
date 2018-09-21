@@ -32,6 +32,7 @@ public class GenericInfoViewController: UIViewController {
     public init(model: GenericInfoViewControllerModel) {
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
+        self.title = model.title
         
         // View Creation
         self.scrollView = self.createScrollView()
@@ -125,7 +126,9 @@ public class GenericInfoViewController: UIViewController {
             return
         }
         
-        NSLayoutConstraint(item: containerView, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .topMargin, multiplier: 1, constant: 0).isActive = true
+        let top = NSLayoutConstraint(item: containerView, attribute: .top, relatedBy: .equal, toItem: self.scrollView, attribute: .top, multiplier: 1, constant: 0)
+        top.priority = UILayoutPriority(1000)
+        top.isActive = true
         NSLayoutConstraint(item:  containerView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: containerView, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: containerView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.7, constant: 0).isActive = true
@@ -187,7 +190,8 @@ public class GenericInfoViewController: UIViewController {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationItem.largeTitleDisplayMode = .never
+        self.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     // MARK: - View Interaction

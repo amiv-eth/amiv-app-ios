@@ -25,6 +25,7 @@ public class ImageViewerViewController: UIViewController {
     
     public init(image: UIImage) {
         super.init(nibName: nil, bundle: nil)
+        self.view.backgroundColor = .black
         
         // View Creation
         self.scrollView = self.createScrollView()
