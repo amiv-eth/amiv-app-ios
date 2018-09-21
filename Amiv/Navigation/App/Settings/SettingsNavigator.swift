@@ -25,6 +25,7 @@ public class SettingsNavigator: Navigator {
         let model = SettingsModel.create()
         let settings = SettingsViewController(model: model)
         self.navigationController = UINavigationController(rootViewController: settings)
+        self.navigationController.navigationBar.tintColor = .amivRed
         settings.delegate = self
     }
     

@@ -25,6 +25,7 @@ public class HomeNavigator: Navigator {
         let model = EventModel()
         let home = HomeViewController(model: model)
         self.navigationController = UINavigationController(rootViewController: home)
+        self.navigationController.navigationBar.tintColor = .amivRed
     }
     
 }

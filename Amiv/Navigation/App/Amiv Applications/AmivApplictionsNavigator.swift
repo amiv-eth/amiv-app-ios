@@ -24,6 +24,7 @@ public class AmivApplicationsNavigator: Navigator {
     public init() {
         let root = AmivApplicationViewcontroller(model: AmivApplicationModel.createModels())
         self.navigationController = UINavigationController(rootViewController: root)
+        self.navigationController.navigationBar.tintColor = .amivRed
         
         root.delegate = self
     }

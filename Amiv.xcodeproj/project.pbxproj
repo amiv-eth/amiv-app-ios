@@ -55,6 +55,10 @@
 		B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */; };
 		B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0C21543E6600F3D073 /* ImageViewerViewController.swift */; };
 		B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0F2154495100F3D073 /* BlurButton.swift */; };
+		B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1121550C0100F3D073 /* JobsViewControllerDelegate.swift */; };
+		B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */; };
+		B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */; };
+		B0FE2F182155167F00F3D073 /* Dienstverschiebungsgesuch.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +125,10 @@
 		B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerModel.swift; sourceTree = "<group>"; };
 		B0FE2F0C21543E6600F3D073 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		B0FE2F0F2154495100F3D073 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
+		B0FE2F1121550C0100F3D073 /* JobsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewControllerDelegate.swift; sourceTree = "<group>"; };
+		B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookDataSource.swift; sourceTree = "<group>"; };
+		B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Dienstverschiebungsgesuch.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +195,7 @@
 		B050E13F2151695A0090CB79 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */,
 				B050E11F215169230090CB79 /* AppDelegate.swift */,
 				B050E126215169250090CB79 /* Assets.xcassets */,
 				B050E128215169250090CB79 /* LaunchScreen.storyboard */,
@@ -348,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				B050E16A215177820090CB79 /* JobsNavigator.swift */,
+				B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -401,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				B0FE2EFB2154179600F3D073 /* JobsViewController.swift */,
+				B0FE2F1121550C0100F3D073 /* JobsViewControllerDelegate.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -449,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				B0FE2F0121541A6300F3D073 /* EventsViewController.swift */,
+				B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -571,6 +583,7 @@
 			files = (
 				B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */,
 				B050E127215169250090CB79 /* Assets.xcassets in Resources */,
+				B0FE2F182155167F00F3D073 /* Dienstverschiebungsgesuch.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +601,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */,
+				B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */,
 				B050E17821517EF50090CB79 /* AmivApplicationModel.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivApplictionsNavigator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
@@ -617,6 +632,7 @@
 				B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */,
 				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
 				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
+				B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */,
 				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
