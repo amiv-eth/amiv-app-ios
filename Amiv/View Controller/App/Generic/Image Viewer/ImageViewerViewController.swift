@@ -17,6 +17,8 @@ public class ImageViewerViewController: UIViewController {
     
     public private(set) var dismissButton: UIButton!
     
+    public private(set) var shareButton: UIButton!
+    
     public private(set) var imageView: UIImageView!
     
     public private(set) var scrollView: UIScrollView!
@@ -37,10 +39,14 @@ public class ImageViewerViewController: UIViewController {
         self.dismissButton = self.createDismissButton()
         self.view.addSubview(self.dismissButton)
         
+        self.shareButton = self.createShareButton()
+        self.view.addSubview(self.shareButton)
+        
         // View Constraints
         self.applyImageViewConstraints()
         self.applyScrollViewConstraints()
         self.applyDismissButtonConstraints()
+        self.applyShareButtonConstraints()
         
         // Swipe down to dismiss viewer gesture
         let gesture = UISwipeGestureRecognizer(target: self, action: #selector(self.dismissView))
@@ -60,7 +66,6 @@ public class ImageViewerViewController: UIViewController {
         button.setTitle("Close", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.setTitleColor(.darkGray, for: .highlighted)
-        //button.backgroundColor = .white
         button.addTarget(self, action: #selector(self.dismissView), for: .touchUpInside)
         button.layer.cornerRadius = 17
         button.layer.masksToBounds = true
@@ -72,9 +77,29 @@ public class ImageViewerViewController: UIViewController {
     
     private func applyDismissButtonConstraints() {
         NSLayoutConstraint(item: self.dismissButton, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 10).isActive = true
-        NSLayoutConstraint(item:  self.dismissButton, attribute: .leading, relatedBy: .greaterThanOrEqual, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
-        NSLayoutConstraint(item: self.dismissButton, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.dismissButton, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: 0).isActive = true
         NSLayoutConstraint(item: self.dismissButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 34).isActive = true
+    }
+    
+    private func createShareButton() -> UIButton {
+        let button = BlurButton(style: .prominent)
+        button.setTitle("Share", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.darkGray, for: .highlighted)
+        button.addTarget(self, action: #selector(self.shareImage), for: .touchUpInside)
+        button.layer.cornerRadius = 17
+        button.layer.masksToBounds = true
+        button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 10, bottom: 8, right: 10)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        return button
+    }
+    
+    private func applyShareButtonConstraints() {
+        NSLayoutConstraint(item: self.shareButton, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 10).isActive = true
+        NSLayoutConstraint(item:  self.shareButton, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 0).isActive = true
+        NSLayoutConstraint(item: self.shareButton, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: self.dismissButton, attribute: .leading, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.shareButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 34).isActive = true
     }
     
     private func createImageView(_ image: UIImage) -> UIImageView {
@@ -120,6 +145,17 @@ public class ImageViewerViewController: UIViewController {
     @objc private func dismissView() {
         debugPrint("dismissing ImageViewer")
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    @objc private func shareImage() {
+        debugPrint("sharing image")
+        
+        guard let image = self.imageView.image else {
+            return
+        }
+        
+        let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.present(activity, animated: true, completion: nil)
     }
     
 }
