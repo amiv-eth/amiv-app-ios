@@ -164,9 +164,9 @@ public class GenericInfoViewController: UIViewController {
         let button = UIButton()
         button.setTitle(title, for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.setTitleColor(.lightGray, for: .highlighted)
-        button.backgroundColor = .amivRed
+        button.setBackgroundColor(.amivRed, for: .normal)
         button.layer.cornerRadius = 12
+        button.layer.masksToBounds = true
         button.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         
