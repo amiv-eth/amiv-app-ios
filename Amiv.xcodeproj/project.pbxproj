@@ -59,6 +59,9 @@
 		B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */; };
 		B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */; };
 		B0FE2F182155167F00F3D073 /* Dienstverschiebungsgesuch.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */; };
+		B0FE2F1B21552A9D00F3D073 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1A21552A9D00F3D073 /* KeychainSwift.swift */; };
+		B0FE2F1D21552AC800F3D073 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */; };
+		B0FE2F1F21552AF700F3D073 /* KeychainSwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +132,9 @@
 		B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookDataSource.swift; sourceTree = "<group>"; };
 		B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Dienstverschiebungsgesuch.pdf; sourceTree = "<group>"; };
+		B0FE2F1A21552A9D00F3D073 /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
+		B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
+		B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 		B050E11E215169230090CB79 /* Amiv */ = {
 			isa = PBXGroup;
 			children = (
+				B0FE2F1921552A8800F3D073 /* Keychain */,
 				B0FE2F0E2154494100F3D073 /* View */,
 				B050E15D215173470090CB79 /* Extension */,
 				B050E15721516E160090CB79 /* Model */,
@@ -500,6 +507,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B0FE2F1921552A8800F3D073 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B0FE2F1A21552A9D00F3D073 /* KeychainSwift.swift */,
+				B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */,
+				B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -612,6 +629,7 @@
 				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
 				B07A89FE2152316C003CC2D8 /* InfoViewController.swift in Sources */,
 				B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */,
+				B0FE2F1B21552A9D00F3D073 /* KeychainSwift.swift in Sources */,
 				B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */,
@@ -636,6 +654,7 @@
 				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
+				B0FE2F1D21552AC800F3D073 /* KeychainSwiftAccessOptions.swift in Sources */,
 				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
 				B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */,
@@ -644,6 +663,7 @@
 				B050E144215169950090CB79 /* Navigator.swift in Sources */,
 				B050E17A215180D20090CB79 /* AmivApplicationCell.swift in Sources */,
 				B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */,
+				B0FE2F1F21552AF700F3D073 /* KeychainSwiftConstants.swift in Sources */,
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
 				B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
