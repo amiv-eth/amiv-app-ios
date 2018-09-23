@@ -13,6 +13,8 @@ public class EventsNavigator: Navigator {
     
     // MARK: - Variables
     
+    public let networkManager = NetworkManager()
+    
     public var rootViewController: UIViewController {
         return self.navigationController
     }
@@ -22,10 +24,20 @@ public class EventsNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        let home = EventsViewController()
+        let home = EventsViewController(model: nil)
         self.navigationController = UINavigationController(rootViewController: home)
         self.navigationController.navigationBar.tintColor = .amivRed
         home.delegate = self
+        
+        self.networkManager.getEvents { (response, error) in
+            if let response = response {
+                DispatchQueue.main.async {
+                    if let top = self.navigationController.topViewController as? EventsViewController {
+                        top.model = response
+                    }
+                }
+            }
+        }
     }
     
     // MARK: - Navigation
@@ -50,6 +62,17 @@ extension EventsNavigator: EventsViewControllerDelegate {
     
     public func refreshData() {
         debugPrint("Refreshing Events Data")
+        
+        self.networkManager.getEvents { (response, error) in
+            if let response = response {
+                DispatchQueue.main.async {
+                    if let top = self.navigationController.topViewController as? EventsViewController {
+                        top.model = response
+                        top.tableView.refreshControl?.endRefreshing()
+                    }
+                }
+            }
+        }
     }
     
 }

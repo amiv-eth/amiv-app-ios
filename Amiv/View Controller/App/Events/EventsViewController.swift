@@ -15,9 +15,16 @@ public class EventsViewController: UITableViewController {
     
     public var delegate: EventsViewControllerDelegate?
     
+    public var model: EventsResponse? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
     // MARK: - Initializers
     
-    public init() {
+    public init(model: EventsResponse?) {
+        self.model = model
         super.init(style: .plain)
         self.title = "Events"
     }
@@ -66,15 +73,32 @@ extension EventsViewController {
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if let model = self.model {
+            return model.events.count
+        }
+        return 0
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell: UITableViewCell = {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+                return UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+            }
+            return cell
+        }()
+        
+        guard let model = self.model else {
+            return cell
+        }
+        
+        cell.textLabel?.text = model.events[indexPath.row].title
+        cell.detailTextLabel?.text = model.events[indexPath.row].catchPhrase
+        
+        return cell
     }
     
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ""
+        return "Events"
     }
     
 }

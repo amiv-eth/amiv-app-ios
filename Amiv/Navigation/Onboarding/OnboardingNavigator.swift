@@ -54,7 +54,12 @@ extension OnboardingNavigator: InfoViewControllerDelegate {
 extension OnboardingNavigator: LoginViewControllerDelegate {
     
     public func login(username: String, password: String) {
+        // TODO: - Check for valid credentials
         debugPrint("Logging in with username: \(username) and password: \(password)")
+        let keychain = KeychainSwift()
+        keychain.set(password, forKey: KeychainKey.password.rawValue)
+        keychain.set(username, forKey: KeychainKey.username.rawValue)
+        keychain.synchronizable = true
         self.delegate?.onboardingFinished()
     }
     

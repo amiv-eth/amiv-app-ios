@@ -47,6 +47,21 @@
 		B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */; };
 		B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */; };
 		B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A0A21524474003CC2D8 /* LoginModel.swift */; };
+		B0AF91292157B0A3008F3B80 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91282157B0A3008F3B80 /* EndPointType.swift */; };
+		B0AF912E2157B19A008F3B80 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF912D2157B19A008F3B80 /* HTTPMethod.swift */; };
+		B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF912F2157B26C008F3B80 /* HTTPTask.swift */; };
+		B0AF91322157B38F008F3B80 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91312157B38F008F3B80 /* ParameterEncoding.swift */; };
+		B0AF91342157B430008F3B80 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91332157B430008F3B80 /* NetworkError.swift */; };
+		B0AF91362157B4C7008F3B80 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91352157B4C7008F3B80 /* URLParameterEncoder.swift */; };
+		B0AF91382157B632008F3B80 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91372157B632008F3B80 /* JSONParameterEncoder.swift */; };
+		B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91392157BF11008F3B80 /* NetworkRouter.swift */; };
+		B0AF913C2157C025008F3B80 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913B2157C025008F3B80 /* Router.swift */; };
+		B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */; };
+		B0AF91402157CF50008F3B80 /* AMIVApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913F2157CF50008F3B80 /* AMIVApi.swift */; };
+		B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91412157D192008F3B80 /* KeychainKey.swift */; };
+		B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91442157D34E008F3B80 /* JobsResponse.swift */; };
+		B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91462157D36E008F3B80 /* EventsResponse.swift */; };
+		B0AF914B2157DE2A008F3B80 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF914A2157DE2A008F3B80 /* EventItem.swift */; };
 		B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */; };
 		B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFB2154179600F3D073 /* JobsViewController.swift */; };
 		B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */; };
@@ -122,6 +137,21 @@
 		B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigatorDelegate.swift; sourceTree = "<group>"; };
 		B07A8A0A21524474003CC2D8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		B0A2F35921579FD0002C340F /* Amiv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amiv.entitlements; sourceTree = "<group>"; };
+		B0AF91282157B0A3008F3B80 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		B0AF912D2157B19A008F3B80 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		B0AF912F2157B26C008F3B80 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		B0AF91312157B38F008F3B80 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		B0AF91332157B430008F3B80 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B0AF91352157B4C7008F3B80 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		B0AF91372157B632008F3B80 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		B0AF91392157BF11008F3B80 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		B0AF913B2157C025008F3B80 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B0AF913F2157CF50008F3B80 /* AMIVApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApi.swift; sourceTree = "<group>"; };
+		B0AF91412157D192008F3B80 /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
+		B0AF91442157D34E008F3B80 /* JobsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsResponse.swift; sourceTree = "<group>"; };
+		B0AF91462157D36E008F3B80 /* EventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponse.swift; sourceTree = "<group>"; };
+		B0AF914A2157DE2A008F3B80 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
 		B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B0FE2EFB2154179600F3D073 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNavigator.swift; sourceTree = "<group>"; };
@@ -185,6 +215,7 @@
 				B0FE2F0E2154494100F3D073 /* View */,
 				B050E15D215173470090CB79 /* Extension */,
 				B050E15721516E160090CB79 /* Model */,
+				B0AF91262157B074008F3B80 /* Networking */,
 				B050E141215169740090CB79 /* View Controller */,
 				B050E140215169690090CB79 /* Navigation */,
 				B050E1632151762C0090CB79 /* Amiv Apps */,
@@ -460,6 +491,83 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
+		B0AF91262157B074008F3B80 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF91432157D320008F3B80 /* Model */,
+				B0AF91272157B086008F3B80 /* EndPoint */,
+				B0AF912B2157B151008F3B80 /* Manager */,
+				B0AF912A2157B140008F3B80 /* Service */,
+				B0AF912C2157B15E008F3B80 /* Encoding */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B0AF91272157B086008F3B80 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF913F2157CF50008F3B80 /* AMIVApi.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		B0AF912A2157B140008F3B80 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF91282157B0A3008F3B80 /* EndPointType.swift */,
+				B0AF912D2157B19A008F3B80 /* HTTPMethod.swift */,
+				B0AF912F2157B26C008F3B80 /* HTTPTask.swift */,
+				B0AF91392157BF11008F3B80 /* NetworkRouter.swift */,
+				B0AF913B2157C025008F3B80 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B0AF912B2157B151008F3B80 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		B0AF912C2157B15E008F3B80 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF91312157B38F008F3B80 /* ParameterEncoding.swift */,
+				B0AF91332157B430008F3B80 /* NetworkError.swift */,
+				B0AF91352157B4C7008F3B80 /* URLParameterEncoder.swift */,
+				B0AF91372157B632008F3B80 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		B0AF91432157D320008F3B80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF91492157DE14008F3B80 /* Jobs */,
+				B0AF91482157DE08008F3B80 /* Events */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0AF91482157DE08008F3B80 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF91462157D36E008F3B80 /* EventsResponse.swift */,
+				B0AF914A2157DE2A008F3B80 /* EventItem.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		B0AF91492157DE14008F3B80 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF91442157D34E008F3B80 /* JobsResponse.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
 		B0FE2EFD21541A1000F3D073 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +626,7 @@
 				B0FE2F1A21552A9D00F3D073 /* KeychainSwift.swift */,
 				B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */,
 				B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */,
+				B0AF91412157D192008F3B80 /* KeychainKey.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -629,8 +738,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */,
+				B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */,
 				B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */,
 				B050E17821517EF50090CB79 /* AmivApplicationModel.swift in Sources */,
+				B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivApplictionsNavigator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
 				B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */,
@@ -645,12 +756,16 @@
 				B050E171215179A30090CB79 /* AmivApplicationViewController.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
 				B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */,
+				B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */,
+				B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
+				B0AF91342157B430008F3B80 /* NetworkError.swift in Sources */,
 				B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */,
 				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
 				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
+				B0AF913C2157C025008F3B80 /* Router.swift in Sources */,
 				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
 				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
@@ -659,8 +774,11 @@
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
 				B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */,
 				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
+				B0AF91362157B4C7008F3B80 /* URLParameterEncoder.swift in Sources */,
 				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
+				B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */,
 				B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */,
+				B0AF914B2157DE2A008F3B80 /* EventItem.swift in Sources */,
 				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
@@ -670,16 +788,22 @@
 				B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */,
 				B050E15921516E230090CB79 /* EventModel.swift in Sources */,
 				B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */,
+				B0AF91322157B38F008F3B80 /* ParameterEncoding.swift in Sources */,
 				B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */,
+				B0AF91292157B0A3008F3B80 /* EndPointType.swift in Sources */,
 				B050E144215169950090CB79 /* Navigator.swift in Sources */,
 				B050E17A215180D20090CB79 /* AmivApplicationCell.swift in Sources */,
 				B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */,
+				B0AF91382157B632008F3B80 /* JSONParameterEncoder.swift in Sources */,
 				B0FE2F1F21552AF700F3D073 /* KeychainSwiftConstants.swift in Sources */,
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
 				B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */,
+				B0AF912E2157B19A008F3B80 /* HTTPMethod.swift in Sources */,
+				B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
 				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivApplication.swift in Sources */,
+				B0AF91402157CF50008F3B80 /* AMIVApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
