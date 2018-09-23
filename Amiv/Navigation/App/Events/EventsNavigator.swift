@@ -24,20 +24,12 @@ public class EventsNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        let home = EventsViewController(model: nil)
-        self.navigationController = UINavigationController(rootViewController: home)
+        let events = EventsViewController(model: .create(with: nil))
+        self.navigationController = UINavigationController(rootViewController: events)
         self.navigationController.navigationBar.tintColor = .amivRed
-        home.delegate = self
+        events.delegate = self
         
-        self.networkManager.getEvents { (response, error) in
-            if let response = response {
-                DispatchQueue.main.async {
-                    if let top = self.navigationController.topViewController as? EventsViewController {
-                        top.model = response
-                    }
-                }
-            }
-        }
+        self.refreshData(events)
     }
     
     // MARK: - Navigation
@@ -52,7 +44,7 @@ public class EventsNavigator: Navigator {
 
 extension EventsNavigator: EventsViewControllerDelegate {
     
-    public func didSelectEvent(section: Int, index: Int) {
+    public func didSelectEvent(_ viewController: EventsViewController, section: Int, index: Int) {
         debugPrint("didSelect section: \(section) and index: \(index)")
         
         // TODO: - Retrieve event, convert into GenericInfoViewControllerModel and show Detail View
@@ -60,16 +52,13 @@ extension EventsNavigator: EventsViewControllerDelegate {
         self.goToEventDetailView(model: .createTestModel())
     }
     
-    public func refreshData() {
+    public func refreshData(_ viewController: EventsViewController) {
         debugPrint("Refreshing Events Data")
         
         self.networkManager.getEvents { (response, error) in
             if let response = response {
                 DispatchQueue.main.async {
-                    if let top = self.navigationController.topViewController as? EventsViewController {
-                        top.model = response
-                        top.tableView.refreshControl?.endRefreshing()
-                    }
+                    viewController.model = .create(with: response)
                 }
             }
         }
@@ -79,7 +68,7 @@ extension EventsNavigator: EventsViewControllerDelegate {
 
 extension EventsNavigator: GenericInfoViewControllerDelegate {
     
-    public func buttonTapped() {
+    public func buttonTapped(_ viewController: GenericInfoViewController) {
         debugPrint("Info View button tapped")
         
         // TODO: - Sign up for event

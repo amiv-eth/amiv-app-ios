@@ -197,7 +197,7 @@ public class GenericInfoViewController: UIViewController {
     
     @objc private func buttonTapped() {
         debugPrint("button tapped")
-        self.delegate?.buttonTapped()
+        self.delegate?.buttonTapped(self)
     }
     
     @objc private func expandImage() {

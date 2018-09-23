@@ -10,8 +10,8 @@ import Foundation
 
 public protocol JobsViewControllerDelegate {
     
-    func didSelectJob(section: Int, index: Int)
+    func didSelectJob(_ viewController: JobsViewController, section: Int, index: Int)
     
-    func refreshData()
+    func refreshData(_ viewController: JobsViewController)
     
 }

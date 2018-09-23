@@ -10,8 +10,8 @@ import Foundation
 
 public protocol EventsViewControllerDelegate {
     
-    func didSelectEvent(section: Int, index: Int)
+    func didSelectEvent(_ viewController: EventsViewController, section: Int, index: Int)
     
-    func refreshData()
+    func refreshData(_ viewController: EventsViewController)
     
 }

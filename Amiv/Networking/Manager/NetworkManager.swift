@@ -22,12 +22,12 @@ public struct NetworkManager {
         case serverError = "Something went wrong at the AMIV server."
     }
     
-    public enum Result<String> {
+    public enum RequestResult<String> {
         case success
         case failure(String)
     }
     
-    fileprivate func handleNetworkRequest(_ response: HTTPURLResponse) -> Result<String> {
+    fileprivate func handleNetworkRequest(_ response: HTTPURLResponse) -> RequestResult<String> {
         switch response.statusCode {
         case 200...299:
             return .success

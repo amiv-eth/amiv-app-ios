@@ -43,7 +43,7 @@ public class JobsNavigator: Navigator {
 
 extension JobsNavigator: JobsViewControllerDelegate {
     
-    public func didSelectJob(section: Int, index: Int) {
+    public func didSelectJob(_ viewController: JobsViewController, section: Int, index: Int) {
         debugPrint("didSelect section: \(section) and index: \(index)")
         
         // TODO: - Retrieve job, convert into GenericInfoViewControllerModel and show Detail View
@@ -51,7 +51,7 @@ extension JobsNavigator: JobsViewControllerDelegate {
         self.goToJobsDetailView(model: .createTestModel())
     }
     
-    public func refreshData() {
+    public func refreshData(_ viewController: JobsViewController) {
         debugPrint("Refreshing Jobs Data")
     }
     
@@ -59,7 +59,7 @@ extension JobsNavigator: JobsViewControllerDelegate {
 
 extension JobsNavigator: GenericInfoViewControllerDelegate {
     
-    public func buttonTapped() {
+    public func buttonTapped(_ viewController: GenericInfoViewController) {
         debugPrint("Info View button tapped")
         
         // TODO: - Show job description pdf using QLPreviewController

@@ -13,7 +13,7 @@ public class HomeViewController: UITableViewController {
     
     // MARK: - Variables
     
-    public var model: EventModel {
+    public var model: String {
         didSet {
             self.tableView.reloadData()
         }
@@ -21,7 +21,7 @@ public class HomeViewController: UITableViewController {
     
     // MARK: - Initializers
     
-    public init(model: EventModel) {
+    public init(model: String) {
         self.model = model
         
         super.init(style: .plain)

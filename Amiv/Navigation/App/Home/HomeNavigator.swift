@@ -22,7 +22,7 @@ public class HomeNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        let model = EventModel()
+        let model = ""
         let home = HomeViewController(model: model)
         self.navigationController = UINavigationController(rootViewController: home)
         self.navigationController.navigationBar.tintColor = .amivRed

@@ -17,7 +17,7 @@
 		B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E14D21516AFE0090CB79 /* AppNavigator.swift */; };
 		B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E14F21516BA60090CB79 /* OnboardingNavigator.swift */; };
 		B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15521516D4D0090CB79 /* HomeViewController.swift */; };
-		B050E15921516E230090CB79 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15821516E230090CB79 /* EventModel.swift */; };
+		B050E15921516E230090CB79 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15821516E230090CB79 /* EventViewModel.swift */; };
 		B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15B215171F70090CB79 /* HomeNavigator.swift */; };
 		B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E15E2151735A0090CB79 /* UIColor+Extension.swift */; };
 		B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E167215176D50090CB79 /* AmivApplicationActionDelegate.swift */; };
@@ -106,7 +106,7 @@
 		B050E14F21516BA60090CB79 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
 		B050E15121516C520090CB79 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B050E15521516D4D0090CB79 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B050E15821516E230090CB79 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		B050E15821516E230090CB79 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		B050E15B215171F70090CB79 /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
 		B050E15E2151735A0090CB79 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B050E167215176D50090CB79 /* AmivApplicationActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivApplicationActionDelegate.swift; sourceTree = "<group>"; };
@@ -338,7 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				B050E1882151A4850090CB79 /* Settings Model */,
-				B050E15821516E230090CB79 /* EventModel.swift */,
+				B050E15821516E230090CB79 /* EventViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -786,7 +786,7 @@
 				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
 				B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */,
-				B050E15921516E230090CB79 /* EventModel.swift in Sources */,
+				B050E15921516E230090CB79 /* EventViewModel.swift in Sources */,
 				B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */,
 				B0AF91322157B38F008F3B80 /* ParameterEncoding.swift in Sources */,
 				B050E168215176D50090CB79 /* AmivApplicationActionDelegate.swift in Sources */,

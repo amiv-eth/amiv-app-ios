@@ -52,7 +52,7 @@ public class JobsViewController: UITableViewController {
     // MARK: - View Interaction
     
     @objc private func refreshData() {
-        self.delegate?.refreshData()
+        self.delegate?.refreshData(self)
     }
     
 }
@@ -84,7 +84,7 @@ extension JobsViewController {
 extension JobsViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectJob(section: indexPath.section, index: indexPath.row)
+        self.delegate?.didSelectJob(self, section: indexPath.section, index: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

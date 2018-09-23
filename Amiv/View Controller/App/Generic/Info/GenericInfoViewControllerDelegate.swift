@@ -11,6 +11,6 @@ import UIKit
 
 public protocol GenericInfoViewControllerDelegate {
     
-    func buttonTapped()
+    func buttonTapped(_ viewController: GenericInfoViewController)
     
 }

@@ -15,18 +15,18 @@ public class EventsViewController: UITableViewController {
     
     public var delegate: EventsViewControllerDelegate?
     
-    public var model: EventsResponse? {
+    public var model: EventViewModel {
         didSet {
-            self.tableView.reloadData()
+            self.updateView()
         }
     }
     
     // MARK: - Initializers
     
-    public init(model: EventsResponse?) {
+    public init(model: EventViewModel) {
         self.model = model
         super.init(style: .plain)
-        self.title = "Events"
+        self.title = model.title
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -56,10 +56,18 @@ public class EventsViewController: UITableViewController {
         self.refreshControl?.endRefreshing()
     }
     
+    private func updateView() {
+        DispatchQueue.main.async {
+            self.title = self.model.title
+            self.tableView.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
+    
     // MARK: - View Interaction
     
     @objc private func refreshData() {
-        self.delegate?.refreshData()
+        self.delegate?.refreshData(self)
     }
     
 }
@@ -73,7 +81,7 @@ extension EventsViewController {
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let model = self.model {
+        if let model = self.model.eventResponse {
             return model.events.count
         }
         return 0
@@ -87,7 +95,7 @@ extension EventsViewController {
             return cell
         }()
         
-        guard let model = self.model else {
+        guard let model = self.model.eventResponse else {
             return cell
         }
         
@@ -108,7 +116,7 @@ extension EventsViewController {
 extension EventsViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectEvent(section: indexPath.section, index: indexPath.row)
+        self.delegate?.didSelectEvent(self, section: indexPath.section, index: indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
