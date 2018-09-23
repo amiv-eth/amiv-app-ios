@@ -13,8 +13,8 @@ public struct EventItem {
     public let title: String
     public let catchPhrase: String
     public let location: String
-    public let startTime: String
-    public let endTime: String
+    public let startTime: Date
+    public let endTime: Date
     public let description: String
     
     
@@ -37,8 +37,19 @@ extension EventItem: Decodable {
         self.title = try container.decode(String.self, forKey: .title)
         self.catchPhrase = try container.decode(String.self, forKey: .catchPhrase)
         self.location = try container.decode(String.self, forKey: .location)
-        self.startTime = try container.decode(String.self, forKey: .startTime)
-        self.endTime = try container.decode(String.self, forKey: .endTime)
+        
+        if let startTime = try container.decode(String.self, forKey: .startTime).toDate() {
+            self.startTime = startTime
+        } else {
+            throw DecodingError.dataCorrupted(.init(codingPath: [EventItemResponseCodingKeys.startTime], debugDescription: "Invalid date string"))
+        }
+        
+        if let endTime = try container.decode(String.self, forKey: .endTime).toDate() {
+            self.endTime = endTime
+        } else {
+            throw DecodingError.dataCorrupted(.init(codingPath: [EventItemResponseCodingKeys.endTime], debugDescription: "Invalid date string"))
+        }
+        
         self.description = try container.decode(String.self, forKey: .description)
     }
     
