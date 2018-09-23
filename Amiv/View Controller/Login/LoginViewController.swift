@@ -73,6 +73,12 @@ public class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Deinitializers
+    
+    deinit {
+        self.hideKeyboard()
+    }
+    
     // MARK: - View Creation
     
     private func createTitleLabel(_ title: String) -> UILabel {
@@ -126,7 +132,7 @@ public class LoginViewController: UIViewController {
     private func applyButtonConstraints() {
         NSLayoutConstraint(item: self.button, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
         NSLayoutConstraint(item: self.button, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.button, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.button, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottomMargin, multiplier: 1, constant: -20).isActive = true
         NSLayoutConstraint(item: self.button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 50).isActive = true
     }
     
@@ -152,9 +158,11 @@ public class LoginViewController: UIViewController {
         let field = UITextField()
         field.tintColor = .amivRed
         field.placeholder = "Username"
+        field.textContentType = .username
         field.autocapitalizationType = .none
         field.returnKeyType = .continue
         field.borderStyle = .roundedRect
+        field.addTarget(self, action: #selector(self.checkLoginButtonEnabling), for: .editingChanged)
         field.addTarget(self, action: #selector(self.fillPassword), for: .primaryActionTriggered)
         field.translatesAutoresizingMaskIntoConstraints = false
         
@@ -171,10 +179,12 @@ public class LoginViewController: UIViewController {
         let field = UITextField()
         field.tintColor = .amivRed
         field.placeholder = "Password"
+        field.textContentType = .password
         field.returnKeyType = .go
         field.autocapitalizationType = .none
         field.isSecureTextEntry = true
         field.borderStyle = .roundedRect
+        field.addTarget(self, action: #selector(self.checkLoginButtonEnabling), for: .editingChanged)
         field.addTarget(self, action: #selector(self.login), for: .primaryActionTriggered)
         field.translatesAutoresizingMaskIntoConstraints = false
         
@@ -193,12 +203,20 @@ public class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
+        self.modalPresentationStyle = .formSheet
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = true
+        self.checkLoginButtonEnabling()
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        self.hideKeyboard()
     }
     
     // MARK: - View Interaction
@@ -215,6 +233,7 @@ public class LoginViewController: UIViewController {
     }
     
     @objc private func smallButtonAction() {
+        self.hideKeyboard()
         self.delegate?.smallButtonTapped()
     }
     
@@ -234,6 +253,16 @@ public class LoginViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.infoLabel.textColor = .black
             self.infoLabel.text = self.infoLabelText
+        }
+    }
+    
+    @objc private func checkLoginButtonEnabling() {
+        if self.usernameTextField.text == "" || self.passwordTextField.text == "" {
+            self.button.isEnabled = false
+            self.button.setBackgroundColor(UIColor.amivRed.withAlphaComponent(0.9), for: .normal)
+        } else {
+            self.button.isEnabled = true
+            self.button.setBackgroundColor(UIColor.amivRed.withAlphaComponent(1), for: .normal)
         }
     }
     

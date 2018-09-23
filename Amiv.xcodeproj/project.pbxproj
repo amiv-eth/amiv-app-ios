@@ -121,6 +121,7 @@
 		B07A8A0521523B96003CC2D8 /* InfoViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B07A8A0821524384003CC2D8 /* OnboardingNavigatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigatorDelegate.swift; sourceTree = "<group>"; };
 		B07A8A0A21524474003CC2D8 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		B0A2F35921579FD0002C340F /* Amiv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amiv.entitlements; sourceTree = "<group>"; };
 		B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B0FE2EFB2154179600F3D073 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNavigator.swift; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 		B050E11E215169230090CB79 /* Amiv */ = {
 			isa = PBXGroup;
 			children = (
+				B0A2F35921579FD0002C340F /* Amiv.entitlements */,
 				B0FE2F1921552A8800F3D073 /* Keychain */,
 				B0FE2F0E2154494100F3D073 /* View */,
 				B050E15D215173470090CB79 /* Extension */,
@@ -570,6 +572,11 @@
 				TargetAttributes = {
 					B050E11B215169230090CB79 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					B050E12F215169250090CB79 = {
 						CreatedOnToolsVersion = 10.0;
@@ -826,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Amiv/Amiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28J3L9UEGT;
 				INFOPLIST_FILE = Amiv/Info.plist;
@@ -845,6 +853,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Amiv/Amiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28J3L9UEGT;
 				INFOPLIST_FILE = Amiv/Info.plist;
