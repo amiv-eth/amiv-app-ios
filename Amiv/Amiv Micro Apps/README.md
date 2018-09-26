@@ -10,7 +10,7 @@ An amiv micro app is an "app inside the app".  Micro apps are used for services,
 
 First of all, create your micro app and place it inside its own folder under `Amiv -> Amiv Apps -> Apps`.
 
-Second, for your app to be called, your start up class needs to conform to `AmivMicroApp`.  It includes the rootViewController which will be presented first. Also it includes the `start()` function. This function is called right before the first view of your micro app is shown. Use it to do any aditional setup. In the end, return `true` when your app is ready to show its content, else return false and your app will get killed.
+Second, for your app to be called, your start up class needs to conform to `AmivMicroApp`.  It includes the rootViewController which will be presented first. Also it includes the `start()` function. This function is called right before the first view of your micro app is shown. Use it to do any aditional setup. In the end, return `true` when your app is ready to show its content, else return `false` and your app will get killed.
 It is recommended to use the navigator / controller pattern for your micro app.
 
 Next, add your app `AmivMicroAppType` and edit the `createApp(:)` function in `AmivMicroAppsNavigator`. There call your root class, which conforms to `AmivMicroApp`.

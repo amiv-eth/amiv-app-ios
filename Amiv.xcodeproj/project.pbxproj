@@ -235,7 +235,7 @@
 				B0AF91262157B074008F3B80 /* Networking */,
 				B050E141215169740090CB79 /* View Controller */,
 				B050E140215169690090CB79 /* Navigation */,
-				B050E1632151762C0090CB79 /* Amiv Apps */,
+				B050E1632151762C0090CB79 /* Amiv Micro Apps */,
 				B050E13F2151695A0090CB79 /* Base */,
 				B050E12B215169250090CB79 /* Info.plist */,
 			);
@@ -380,7 +380,7 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B050E1632151762C0090CB79 /* Amiv Apps */ = {
+		B050E1632151762C0090CB79 /* Amiv Micro Apps */ = {
 			isa = PBXGroup;
 			children = (
 				B0845920215B789800479D27 /* Apps */,
@@ -389,7 +389,7 @@
 				B050E17221517A050090CB79 /* AmivMicroAppType.swift */,
 				B0845929215B81DE00479D27 /* README.md */,
 			);
-			path = "Amiv Apps";
+			path = "Amiv Micro Apps";
 			sourceTree = "<group>";
 		};
 		B050E1662151766E0090CB79 /* App Protocols */ = {
