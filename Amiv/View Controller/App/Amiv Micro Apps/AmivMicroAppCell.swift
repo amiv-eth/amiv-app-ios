@@ -1,5 +1,5 @@
 //
-//  AmivApplicationCell.swift
+//  AmivMicroAppsCell.swift
 //  Amiv
 //
 //  Created by Domenic Wüthrich on 18.09.18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class AmivApplicationCell: UITableViewCell {
+public class AmivMicroAppsCell: UITableViewCell {
     
     // MARK: - Variables
     
@@ -74,7 +74,7 @@ public class AmivApplicationCell: UITableViewCell {
     
     // MARK: - View Setup
     
-    public func prepareCell(model: AmivApplicationModel) {
+    public func prepareCell(model: AmivMicroAppModel) {
         self.titleLabel.text = model.title
         self.appImageView.image = model.image
     }

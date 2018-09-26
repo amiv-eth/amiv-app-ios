@@ -1,5 +1,5 @@
 //
-//  AmivApplicationModel.swift
+//  AmivMicroAppModelModel.swift
 //  Amiv
 //
 //  Created by Domenic Wüthrich on 18.09.18.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-public struct AmivApplicationModel {
+public struct AmivMicroAppModel {
     
-    public let app: AmivApplication
+    public let app: AmivMicroAppType
     
     public let title: String
     
@@ -19,7 +19,7 @@ public struct AmivApplicationModel {
     
     // MARK: - Initializers
     
-    public init(app: AmivApplication, title: String, image: UIImage?) {
+    public init(app: AmivMicroAppType, title: String, image: UIImage?) {
         self.app = app
         self.title = title
         self.image = image
@@ -27,18 +27,18 @@ public struct AmivApplicationModel {
     
 }
 
-extension AmivApplicationModel {
+extension AmivMicroAppModel {
     
-    public static func createModels() -> [AmivApplicationModel] {
-        let models: [AmivApplicationModel] = [.createCheckinModel(), .createBarcodeModel()]
+    public static func createModels() -> [AmivMicroAppModel] {
+        let models: [AmivMicroAppModel] = [.createCheckinModel(), .createBarcodeModel()]
         return models
     }
     
-    public static func createCheckinModel() -> AmivApplicationModel {
+    public static func createCheckinModel() -> AmivMicroAppModel {
         return self.init(app: .checkin, title: "Checkin", image: nil)
     }
     
-    public static func createBarcodeModel() -> AmivApplicationModel {
+    public static func createBarcodeModel() -> AmivMicroAppModel {
         return self.init(app: .barcode, title: "Barcode", image: nil)
     }
 

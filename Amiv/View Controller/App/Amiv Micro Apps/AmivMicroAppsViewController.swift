@@ -1,5 +1,5 @@
 //
-//  AmivApplicationViewController.swift
+//  AmivMicroAppsViewController.swift
 //  Amiv
 //
 //  Created by Domenic Wüthrich on 18.09.18.
@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-public class AmivApplicationViewcontroller: UITableViewController {
+public class AmivMicroAppsViewController: UITableViewController {
     
     // MARK: - Variables
     
     fileprivate let reuseIdentifer = "amivApplicationCell"
     
-    public var delegate: AmivApplicationViewControllerDelegate?
+    public var delegate: AmivMicroAppsViewControllerDelegate?
     
-    public var model: [AmivApplicationModel]
+    public var model: [AmivMicroAppModel]
     
     // MARK: - Initializers
     
-    public init(model: [AmivApplicationModel]) {
+    public init(model: [AmivMicroAppModel]) {
         self.model = model
         
         super.init(style: .plain)
@@ -55,7 +55,7 @@ public class AmivApplicationViewcontroller: UITableViewController {
 
 // MARK: - Collection View Data Source Extension
 
-extension AmivApplicationViewcontroller {
+extension AmivMicroAppsViewController {
     
     public override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -66,9 +66,9 @@ extension AmivApplicationViewcontroller {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: AmivApplicationCell = {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifer) as? AmivApplicationCell else {
-                return AmivApplicationCell(reuseIdentifier: self.reuseIdentifer)
+        let cell: AmivMicroAppsCell = {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifer) as? AmivMicroAppsCell else {
+                return AmivMicroAppsCell(reuseIdentifier: self.reuseIdentifer)
             }
             return cell
         }()
@@ -83,7 +83,7 @@ extension AmivApplicationViewcontroller {
 
 // MARK: - Collection View Delegate
 
-extension AmivApplicationViewcontroller {
+extension AmivMicroAppsViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.start(app: self.model[indexPath.row].app)

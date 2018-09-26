@@ -71,7 +71,7 @@ public class AppNavigator: Navigator {
     }
     
     private func createAmivApplicationTab() {
-        let app = AmivApplicationsNavigator()
+        let app = AmivMicroAppsNavigator()
         self.childNavigators.append(app)
     }
     

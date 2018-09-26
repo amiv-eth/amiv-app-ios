@@ -1,5 +1,5 @@
 //
-//  AmivApplicationViewControllerDelegate.swift
+//  AmivMicroAppType.swift
 //  Amiv
 //
 //  Created by Domenic Wüthrich on 18.09.18.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-public protocol AmivApplicationViewControllerDelegate {
+public enum AmivMicroAppType {
     
-    func start(app: AmivApplication)
+    case checkin
+    case barcode
     
 }
