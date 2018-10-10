@@ -41,6 +41,9 @@
 		B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */; };
 		B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1932151A9750090CB79 /* Bundle+Extension.swift */; };
 		B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E1962151AAC40090CB79 /* SettingsNavigator.swift */; };
+		B05EC24F216BF9B900D5AD99 /* RouterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EC24E216BF9B900D5AD99 /* RouterError.swift */; };
+		B05EC252216BFCDC00D5AD99 /* AuthenticationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EC251216BFCDC00D5AD99 /* AuthenticationResponse.swift */; };
+		B05EC254216BFE6600D5AD99 /* AMIVApiSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05EC253216BFE6600D5AD99 /* AMIVApiSession.swift */; };
 		B07A89FE2152316C003CC2D8 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A89FD2152316C003CC2D8 /* InfoViewController.swift */; };
 		B07A8A00215233B5003CC2D8 /* InfoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A89FF215233B5003CC2D8 /* InfoItemView.swift */; };
 		B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A8A012152384F003CC2D8 /* InfoItemModel.swift */; };
@@ -61,12 +64,17 @@
 		B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91392157BF11008F3B80 /* NetworkRouter.swift */; };
 		B0AF913C2157C025008F3B80 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913B2157C025008F3B80 /* Router.swift */; };
 		B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */; };
-		B0AF91402157CF50008F3B80 /* AMIVApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913F2157CF50008F3B80 /* AMIVApi.swift */; };
+		B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913F2157CF50008F3B80 /* AMIVApiEvents.swift */; };
 		B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91412157D192008F3B80 /* KeychainKey.swift */; };
 		B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91442157D34E008F3B80 /* JobsResponse.swift */; };
 		B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91462157D36E008F3B80 /* EventsResponse.swift */; };
 		B0AF914B2157DE2A008F3B80 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF914A2157DE2A008F3B80 /* EventItem.swift */; };
 		B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */; };
+		B0E22FDA216DD2E0002317D6 /* AMIVApiJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FD9216DD2E0002317D6 /* AMIVApiJobs.swift */; };
+		B0E22FDC216DD41D002317D6 /* JobOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FDB216DD41D002317D6 /* JobOffer.swift */; };
+		B0E22FDF216DD754002317D6 /* AMIVApiStudyDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FDE216DD754002317D6 /* AMIVApiStudyDocuments.swift */; };
+		B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FE0216E93EF002317D6 /* StudyDocumentResponse.swift */; };
+		B0E22FE3216E9448002317D6 /* StudyDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FE2216E9448002317D6 /* StudyDocument.swift */; };
 		B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFB2154179600F3D073 /* JobsViewController.swift */; };
 		B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */; };
 		B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0121541A6300F3D073 /* EventsViewController.swift */; };
@@ -134,6 +142,9 @@
 		B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
 		B050E1932151A9750090CB79 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B050E1962151AAC40090CB79 /* SettingsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNavigator.swift; sourceTree = "<group>"; };
+		B05EC24E216BF9B900D5AD99 /* RouterError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterError.swift; sourceTree = "<group>"; };
+		B05EC251216BFCDC00D5AD99 /* AuthenticationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResponse.swift; sourceTree = "<group>"; };
+		B05EC253216BFE6600D5AD99 /* AMIVApiSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiSession.swift; sourceTree = "<group>"; };
 		B07A89FD2152316C003CC2D8 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		B07A89FF215233B5003CC2D8 /* InfoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemView.swift; sourceTree = "<group>"; };
 		B07A8A012152384F003CC2D8 /* InfoItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoItemModel.swift; sourceTree = "<group>"; };
@@ -156,12 +167,17 @@
 		B0AF91392157BF11008F3B80 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		B0AF913B2157C025008F3B80 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		B0AF913F2157CF50008F3B80 /* AMIVApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApi.swift; sourceTree = "<group>"; };
+		B0AF913F2157CF50008F3B80 /* AMIVApiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiEvents.swift; sourceTree = "<group>"; };
 		B0AF91412157D192008F3B80 /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
 		B0AF91442157D34E008F3B80 /* JobsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsResponse.swift; sourceTree = "<group>"; };
 		B0AF91462157D36E008F3B80 /* EventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponse.swift; sourceTree = "<group>"; };
 		B0AF914A2157DE2A008F3B80 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
 		B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		B0E22FD9216DD2E0002317D6 /* AMIVApiJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiJobs.swift; sourceTree = "<group>"; };
+		B0E22FDB216DD41D002317D6 /* JobOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOffer.swift; sourceTree = "<group>"; };
+		B0E22FDE216DD754002317D6 /* AMIVApiStudyDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiStudyDocuments.swift; sourceTree = "<group>"; };
+		B0E22FE0216E93EF002317D6 /* StudyDocumentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDocumentResponse.swift; sourceTree = "<group>"; };
+		B0E22FE2216E9448002317D6 /* StudyDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDocument.swift; sourceTree = "<group>"; };
 		B0FE2EFB2154179600F3D073 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNavigator.swift; sourceTree = "<group>"; };
 		B0FE2F0121541A6300F3D073 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -484,6 +500,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		B05EC250216BFCC700D5AD99 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B05EC251216BFCDC00D5AD99 /* AuthenticationResponse.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		B07A8A0721524023003CC2D8 /* Info */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,7 +560,10 @@
 		B0AF91272157B086008F3B80 /* EndPoint */ = {
 			isa = PBXGroup;
 			children = (
-				B0AF913F2157CF50008F3B80 /* AMIVApi.swift */,
+				B0AF913F2157CF50008F3B80 /* AMIVApiEvents.swift */,
+				B05EC253216BFE6600D5AD99 /* AMIVApiSession.swift */,
+				B0E22FD9216DD2E0002317D6 /* AMIVApiJobs.swift */,
+				B0E22FDE216DD754002317D6 /* AMIVApiStudyDocuments.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -549,6 +576,7 @@
 				B0AF912F2157B26C008F3B80 /* HTTPTask.swift */,
 				B0AF91392157BF11008F3B80 /* NetworkRouter.swift */,
 				B0AF913B2157C025008F3B80 /* Router.swift */,
+				B05EC24E216BF9B900D5AD99 /* RouterError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -575,6 +603,8 @@
 		B0AF91432157D320008F3B80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0E22FDD216DD73D002317D6 /* Study Documents */,
+				B05EC250216BFCC700D5AD99 /* Authentication */,
 				B0AF91492157DE14008F3B80 /* Jobs */,
 				B0AF91482157DE08008F3B80 /* Events */,
 			);
@@ -594,8 +624,18 @@
 			isa = PBXGroup;
 			children = (
 				B0AF91442157D34E008F3B80 /* JobsResponse.swift */,
+				B0E22FDB216DD41D002317D6 /* JobOffer.swift */,
 			);
 			path = Jobs;
+			sourceTree = "<group>";
+		};
+		B0E22FDD216DD73D002317D6 /* Study Documents */ = {
+			isa = PBXGroup;
+			children = (
+				B0E22FE0216E93EF002317D6 /* StudyDocumentResponse.swift */,
+				B0E22FE2216E9448002317D6 /* StudyDocument.swift */,
+			);
+			path = "Study Documents";
 			sourceTree = "<group>";
 		};
 		B0FE2EFD21541A1000F3D073 /* Events */ = {
@@ -774,7 +814,9 @@
 				B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivMicroAppsNavigator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
+				B0E22FDF216DD754002317D6 /* AMIVApiStudyDocuments.swift in Sources */,
 				B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */,
+				B05EC252216BFCDC00D5AD99 /* AuthenticationResponse.swift in Sources */,
 				B07A8A00215233B5003CC2D8 /* InfoItemView.swift in Sources */,
 				B050E17521517E1B0090CB79 /* AmivMicroAppViewControllerDelegate.swift in Sources */,
 				B050E120215169230090CB79 /* AppDelegate.swift in Sources */,
@@ -785,19 +827,24 @@
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivMicroAppsViewController.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
+				B0E22FE3216E9448002317D6 /* StudyDocument.swift in Sources */,
 				B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */,
 				B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */,
 				B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
 				B0AF91342157B430008F3B80 /* NetworkError.swift in Sources */,
+				B05EC24F216BF9B900D5AD99 /* RouterError.swift in Sources */,
 				B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */,
+				B0E22FDC216DD41D002317D6 /* JobOffer.swift in Sources */,
 				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
 				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
 				B0AF913C2157C025008F3B80 /* Router.swift in Sources */,
+				B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */,
 				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
 				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
+				B0E22FDA216DD2E0002317D6 /* AMIVApiJobs.swift in Sources */,
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
 				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
@@ -817,6 +864,7 @@
 				B0FE2F1D21552AC800F3D073 /* KeychainSwiftAccessOptions.swift in Sources */,
 				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
+				B05EC254216BFE6600D5AD99 /* AMIVApiSession.swift in Sources */,
 				B050E1922151A61F0090CB79 /* SettingsSectionModel.swift in Sources */,
 				B050E15921516E230090CB79 /* EventViewModel.swift in Sources */,
 				B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */,
@@ -837,7 +885,7 @@
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
 				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivMicroAppType.swift in Sources */,
-				B0AF91402157CF50008F3B80 /* AMIVApi.swift in Sources */,
+				B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

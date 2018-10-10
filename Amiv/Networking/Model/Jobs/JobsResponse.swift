@@ -10,6 +10,6 @@ import Foundation
 
 public struct JobsResponse: Decodable {
     
-    
+    var _items: [JobOffer]
     
 }

@@ -10,23 +10,20 @@ import Foundation
 
 public class Router<EndPoint: EndPointType>: NetworkRouter {
     
-    private var task: URLSessionTask?
+    private var tasks: [URLSessionTask] = []
     
     public func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
-            self.task = session.dataTask(with: request, completionHandler: { (data, response, error) in
+            let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
                 completion(data, response, error)
             })
+            self.tasks.append(task)
+            task.resume()
         } catch let error {
             completion(nil, nil, error)
         }
-        self.task?.resume()
-    }
-    
-    public func cancel() {
-        self.task?.cancel()
     }
     
     fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
@@ -34,6 +31,10 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
         request.httpMethod = route.httpMethod.rawValue
         
         do {
+            if route.isAuthenticationRequired {
+                try self.addAuthentication(&request)
+            }
+            
             switch route.task {
             case .request:
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -72,6 +73,19 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
+    }
+    
+    fileprivate func addAuthentication(_ request: inout URLRequest) throws {
+        guard let token = KeychainKey.authToken.getString() else {
+            throw RouterError.missingAuthToken
+        }
+        
+        guard let tokenData = String(format: "%@:", token).data(using: .utf8) else {
+            throw RouterError.badAuthenticationData
+        }
+        
+        let encodedAuthentication = tokenData.base64EncodedString()
+        request.setValue("Basic \(encodedAuthentication)", forHTTPHeaderField: "Authorization")
     }
     
 }

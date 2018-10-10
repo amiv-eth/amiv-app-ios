@@ -13,6 +13,8 @@ public class OnboardingNavigator: Navigator {
     
     // MARK: - Variables
     
+    let networkManager = NetworkManager<AMIVApiSession>()
+    
     public var delegate: OnboardingNavigatorDelegate?
     
     public var rootViewController: UIViewController {
@@ -53,17 +55,33 @@ extension OnboardingNavigator: InfoViewControllerDelegate {
 
 extension OnboardingNavigator: LoginViewControllerDelegate {
     
-    public func login(username: String, password: String) {
+    public func login(_ viewController: LoginViewController, username: String, password: String) {
         // TODO: - Check for valid credentials
         debugPrint("Logging in with username: \(username) and password: \(password)")
-        let keychain = KeychainSwift()
-        keychain.set(password, forKey: KeychainKey.password.rawValue)
-        keychain.set(username, forKey: KeychainKey.username.rawValue)
-        keychain.synchronizable = true
-        self.delegate?.onboardingFinished()
+        
+        
+        self.networkManager.authenticate(username: username, password: password) { (response, error) in
+            guard let response = response else {
+                DispatchQueue.main.async {
+                    viewController.loginFailed(with: "Incorrect Username or Password.\nPlease try again.")
+                }
+                return
+            }
+            
+            debugPrint(response.token)
+            
+            // Save token into secure and encrypted keychain
+            let keychain = KeychainSwift()
+            keychain.set(response.token, forKey: KeychainKey.authToken.rawValue)
+            keychain.synchronizable = true
+            
+            DispatchQueue.main.async {
+                self.delegate?.onboardingFinished()
+            }
+        }
     }
     
-    public func smallButtonTapped() {
+    public func smallButtonTapped(_ viewController: LoginViewController) {
         self.delegate?.onboardingFinished()
     }
     

@@ -13,7 +13,7 @@ public class EventsNavigator: Navigator {
     
     // MARK: - Variables
     
-    public let networkManager = NetworkManager()
+    public let networkManager = NetworkManager<AMIVApiEvents>()
     
     public var rootViewController: UIViewController {
         return self.navigationController

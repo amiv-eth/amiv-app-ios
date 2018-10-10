@@ -17,5 +17,14 @@ public protocol EndPointType {
     var httpMethod: HTTPMethod { get }
     var task: HTTPTask { get }
     var headers: HTTPHeaders? { get }
+    var isAuthenticationRequired: Bool { get }
+    
+}
+
+extension EndPointType {
+    
+    public var baseURL: URL {
+        return URL(string: "https://api.amiv.ethz.ch/")!
+    }
     
 }

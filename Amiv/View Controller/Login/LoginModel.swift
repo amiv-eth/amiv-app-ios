@@ -34,12 +34,12 @@ public struct LoginModel {
 extension LoginModel {
     
     public static func createOnboarding() -> LoginModel {
-        let infoText = "Login in using your ETHZ username (email address) and your ETHZ password."
+        let infoText = "Log in using your ETHZ username (email address) and your ETHZ password."
         return self.init(title: "Login", infoText: infoText, buttonTitle: "Login", smallButtonTitle: "Skip")
     }
     
     public static func createNormal() -> LoginModel {
-        let infoText = "Login in using your ETHZ username (email address) and your ETHZ password."
+        let infoText = "Log in using your ETHZ username (email address) and your ETHZ password."
         return self.init(title: "Login", infoText: infoText, buttonTitle: "Login", smallButtonTitle: "Cancel")
     }
     

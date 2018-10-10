@@ -14,6 +14,8 @@ public class JobsNavigator: Navigator {
     
     // MARK: - Variables
     
+    let manager = NetworkManager<AMIVApiJobs>()
+    
     private var quickLookDataSource: QuickLookDataSource?
     
     public var rootViewController: UIViewController {
@@ -29,6 +31,16 @@ public class JobsNavigator: Navigator {
         self.navigationController = UINavigationController(rootViewController: jobs)
         self.navigationController.navigationBar.tintColor = .amivRed
         jobs.delegate = self
+        
+        #warning("replace with proper code")
+        manager.getJobOffers { (offers, error) in
+            guard error == nil else {
+                debugPrint(error)
+                return
+            }
+            
+            debugPrint(offers)
+        }
     }
     
     // MARK: - Navigation

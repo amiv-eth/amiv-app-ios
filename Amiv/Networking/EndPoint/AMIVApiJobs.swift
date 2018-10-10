@@ -1,30 +1,23 @@
 //
-//  AMIVApi.swift
+//  AMIVApiJobs.swift
 //  Amiv
 //
-//  Created by Domenic Wüthrich on 23.09.18.
+//  Created by Domenic Wüthrich on 10.10.18.
 //  Copyright © 2018 Amiv an der ETH. All rights reserved.
 //
 
 import Foundation
 
-public enum AMIVApi {
+public enum AMIVApiJobs: EndPointType {
     
     case jobs
-    case events
     
 }
 
-extension AMIVApi: EndPointType {
-    
-    public var baseURL: URL {
-        return URL(string: "https://api.amiv.ethz.ch/")!
-    }
+extension AMIVApiJobs {
     
     public var path: String {
         switch self {
-        case .events:
-            return "events"
         case .jobs:
             return "joboffers"
         }
@@ -32,23 +25,27 @@ extension AMIVApi: EndPointType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .events, .jobs:
+        case .jobs:
             return .get
         }
     }
     
     public var task: HTTPTask {
         switch self {
-        case .events, .jobs:
+        case .jobs:
             return .request
         }
     }
     
     public var headers: HTTPHeaders? {
         switch self {
-        case .events, .jobs:
+        case .jobs:
             return nil
         }
+    }
+    
+    public var isAuthenticationRequired: Bool {
+        return true
     }
     
 }

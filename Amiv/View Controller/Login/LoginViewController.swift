@@ -225,7 +225,7 @@ public class LoginViewController: UIViewController {
         self.hideKeyboard()
         
         if let username = self.usernameTextField.text, let password = self.passwordTextField.text {
-            self.delegate?.login(username: username, password: password)
+            self.delegate?.login(self, username: username, password: password)
         } else {
             self.infoLabel.text = "Oops... This should not happen."
             self.infoLabel.textColor = .red
@@ -234,7 +234,7 @@ public class LoginViewController: UIViewController {
     
     @objc private func smallButtonAction() {
         self.hideKeyboard()
-        self.delegate?.smallButtonTapped()
+        self.delegate?.smallButtonTapped(self)
     }
     
     @objc private func fillPassword() {

@@ -12,5 +12,18 @@ public enum KeychainKey: String {
     
     case username
     case password
+    case authToken
+    
+}
+
+extension KeychainKey {
+    
+    /// Gets associated value of key from keychain store
+    public func getString() -> String? {
+        let keychain = KeychainSwift()
+        let string = keychain.get(self.rawValue)
+        
+        return string
+    }
     
 }

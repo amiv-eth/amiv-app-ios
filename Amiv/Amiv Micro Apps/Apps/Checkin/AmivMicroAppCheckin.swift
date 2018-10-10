@@ -40,11 +40,11 @@ public class AmivMicroAppCheckin: AmivMicroApp {
 
 extension AmivMicroAppCheckin: LoginViewControllerDelegate {
     
-    public func login(username: String, password: String) {
+    public func login(_ viewController: LoginViewController, username: String, password: String) {
         self.delegate.appIsFinished()
     }
     
-    public func smallButtonTapped() {
+    public func smallButtonTapped(_ viewController: LoginViewController) {
         self.delegate.appIsFinished()
     }
     

@@ -10,8 +10,8 @@ import Foundation
 
 public protocol LoginViewControllerDelegate {
     
-    func login(username: String, password: String)
+    func login(_ viewController: LoginViewController, username: String, password: String)
     
-    func smallButtonTapped()
+    func smallButtonTapped(_ viewController: LoginViewController)
     
 }
