@@ -15,9 +15,7 @@ public class AmivMicroAppsCell: UITableViewCell {
     
     // MARK: - View Variables
     
-    public private(set) var titleLabel: UILabel!
-    
-    public private(set) var appImageView: UIImageView!
+    public private(set) var cellView: AmivMicroAppCellView!
     
     // MARK: - Initializers
     
@@ -25,15 +23,10 @@ public class AmivMicroAppsCell: UITableViewCell {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         
         // Create Views
-        self.titleLabel = self.createTitleLabel()
-        self.addSubview(self.titleLabel)
+        self.cellView = self.createCellView()
+        self.addSubview(self.cellView)
+        self.applyCellViewConstraints()
         
-        self.appImageView = self.createImageView()
-        self.addSubview(self.appImageView)
-        
-        // Apply Constraints
-        self.applyTitleLabelConstraints()
-        self.applyImageViewConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,40 +35,25 @@ public class AmivMicroAppsCell: UITableViewCell {
     
     // MARK: - View Creation
     
-    private func createTitleLabel() -> UILabel {
-        let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .body)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        return label
-    }
-    
-    private func applyTitleLabelConstraints() {
-        NSLayoutConstraint(item: self.titleLabel, attribute: .leading, relatedBy: .equal, toItem: self.appImageView, attribute: .trailing, multiplier: 1, constant: 20).isActive = true
-        NSLayoutConstraint(item: self.titleLabel, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.titleLabel, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: self, attribute: .topMargin, multiplier: 1, constant: 8).isActive = true
-        NSLayoutConstraint(item: self.titleLabel, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: self, attribute: .bottomMargin, multiplier: 1, constant: -8).isActive = true
-    }
-    
-    private func createImageView() -> UIImageView {
-        let view = UIImageView()
+    private func createCellView() -> AmivMicroAppCellView {
+        let view = AmivMicroAppCellView()
         view.translatesAutoresizingMaskIntoConstraints = false
         
         return view
     }
     
-    private func applyImageViewConstraints() {
-        NSLayoutConstraint(item: self.appImageView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
-        NSLayoutConstraint(item: self.appImageView, attribute: .top, relatedBy: .equal, toItem: self, attribute: .topMargin, multiplier: 1, constant: 10).isActive = true
-        NSLayoutConstraint(item: self.appImageView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottomMargin, multiplier: 1, constant: -10).isActive = true
-        NSLayoutConstraint(item: self.appImageView, attribute: .height, relatedBy: .equal, toItem: self.self.appImageView, attribute: .width, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: self.appImageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 30).isActive = true
+    private func applyCellViewConstraints() {
+        NSLayoutConstraint(item: self.cellView, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leadingMargin, multiplier: 1, constant: 10).isActive = true
+        NSLayoutConstraint(item: self.cellView, attribute: .trailing, relatedBy: .lessThanOrEqual, toItem: self, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
+        NSLayoutConstraint(item: self.cellView, attribute: .top, relatedBy: .greaterThanOrEqual, toItem: self, attribute: .topMargin, multiplier: 1, constant: 8).isActive = true
+        NSLayoutConstraint(item: self.cellView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: self, attribute: .bottomMargin, multiplier: 1, constant: -8).isActive = true
     }
     
     // MARK: - View Setup
     
     public func prepareCell(model: AmivMicroAppModel) {
-        self.titleLabel.text = model.title
-        self.appImageView.image = model.image
+        self.cellView.titleLabel.text = model.title
+        self.cellView.subtitleLabel.text = model.subtitle
+        self.cellView.appImageView.image = model.image
     }
 }

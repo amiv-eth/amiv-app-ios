@@ -82,6 +82,15 @@
 		B0F5B95A2171624D005E4591 /* GenericInfoViewControllerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9592171624D005E4591 /* GenericInfoViewControllerAction.swift */; };
 		B0F5B95C2171786C005E4591 /* AMIVApiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B95B2171786C005E4591 /* AMIVApiUser.swift */; };
 		B0F5B95F217179D9005E4591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B95E217179D9005E4591 /* User.swift */; };
+		B0F5B9612171FD00005E4591 /* AmivMicroAppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9602171FD00005E4591 /* AmivMicroAppCellView.swift */; };
+		B0F5B963217205E7005E4591 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B962217205E7005E4591 /* EventTableViewCell.swift */; };
+		B0F5B9652172132B005E4591 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9642172132B005E4591 /* SessionManager.swift */; };
+		B0F5B967217217F3005E4591 /* EventsSignupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B966217217F3005E4591 /* EventsSignupResponse.swift */; };
+		B0F5B9692172181C005E4591 /* EventSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9682172181C005E4591 /* EventSignup.swift */; };
+		B0F5B96B217225EF005E4591 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B96A217225EF005E4591 /* Gender.swift */; };
+		B0F5B96D217226CD005E4591 /* AMIVMemebership.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B96C217226CD005E4591 /* AMIVMemebership.swift */; };
+		B0F5B96F21722731005E4591 /* ETHDepartment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B96E21722731005E4591 /* ETHDepartment.swift */; };
+		B0F5B97121722CDA005E4591 /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B97021722CDA005E4591 /* UsersResponse.swift */; };
 		B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFB2154179600F3D073 /* JobsViewController.swift */; };
 		B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */; };
 		B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0121541A6300F3D073 /* EventsViewController.swift */; };
@@ -191,6 +200,15 @@
 		B0F5B9592171624D005E4591 /* GenericInfoViewControllerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerAction.swift; sourceTree = "<group>"; };
 		B0F5B95B2171786C005E4591 /* AMIVApiUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiUser.swift; sourceTree = "<group>"; };
 		B0F5B95E217179D9005E4591 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B0F5B9602171FD00005E4591 /* AmivMicroAppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivMicroAppCellView.swift; sourceTree = "<group>"; };
+		B0F5B962217205E7005E4591 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		B0F5B9642172132B005E4591 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		B0F5B966217217F3005E4591 /* EventsSignupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsSignupResponse.swift; sourceTree = "<group>"; };
+		B0F5B9682172181C005E4591 /* EventSignup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSignup.swift; sourceTree = "<group>"; };
+		B0F5B96A217225EF005E4591 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		B0F5B96C217226CD005E4591 /* AMIVMemebership.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVMemebership.swift; sourceTree = "<group>"; };
+		B0F5B96E21722731005E4591 /* ETHDepartment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETHDepartment.swift; sourceTree = "<group>"; };
+		B0F5B97021722CDA005E4591 /* UsersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersResponse.swift; sourceTree = "<group>"; };
 		B0FE2EFB2154179600F3D073 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNavigator.swift; sourceTree = "<group>"; };
 		B0FE2F0121541A6300F3D073 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +471,7 @@
 				B050E170215179A30090CB79 /* AmivMicroAppsViewController.swift */,
 				B050E17421517E1B0090CB79 /* AmivMicroAppViewControllerDelegate.swift */,
 				B050E179215180D20090CB79 /* AmivMicroAppCell.swift */,
+				B0F5B9602171FD00005E4591 /* AmivMicroAppCellView.swift */,
 			);
 			path = "Amiv Micro Apps";
 			sourceTree = "<group>";
@@ -633,6 +652,8 @@
 			children = (
 				B0AF91462157D36E008F3B80 /* EventsResponse.swift */,
 				B0AF914A2157DE2A008F3B80 /* AMIVEvent.swift */,
+				B0F5B966217217F3005E4591 /* EventsSignupResponse.swift */,
+				B0F5B9682172181C005E4591 /* EventSignup.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -667,6 +688,10 @@
 			isa = PBXGroup;
 			children = (
 				B0F5B95E217179D9005E4591 /* User.swift */,
+				B0F5B96A217225EF005E4591 /* Gender.swift */,
+				B0F5B96C217226CD005E4591 /* AMIVMemebership.swift */,
+				B0F5B96E21722731005E4591 /* ETHDepartment.swift */,
+				B0F5B97021722CDA005E4591 /* UsersResponse.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -684,6 +709,7 @@
 			children = (
 				B0FE2F0121541A6300F3D073 /* EventsViewController.swift */,
 				B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */,
+				B0F5B962217205E7005E4591 /* EventTableViewCell.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -731,6 +757,7 @@
 				B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */,
 				B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */,
 				B0AF91412157D192008F3B80 /* KeychainKey.swift */,
+				B0F5B9642172132B005E4591 /* SessionManager.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -856,6 +883,7 @@
 				B07A89FE2152316C003CC2D8 /* InfoViewController.swift in Sources */,
 				B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */,
 				B0FE2F1B21552A9D00F3D073 /* KeychainSwift.swift in Sources */,
+				B0F5B9612171FD00005E4591 /* AmivMicroAppCellView.swift in Sources */,
 				B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivMicroAppsViewController.swift in Sources */,
@@ -880,6 +908,7 @@
 				B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */,
 				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
 				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
+				B0F5B97121722CDA005E4591 /* UsersResponse.swift in Sources */,
 				B0E22FDA216DD2E0002317D6 /* AMIVApiJobs.swift in Sources */,
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
 				B0F5B95F217179D9005E4591 /* User.swift in Sources */,
@@ -888,15 +917,19 @@
 				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
 				B0845924215B78C700479D27 /* AmivMicroAppCheckin.swift in Sources */,
+				B0F5B96F21722731005E4591 /* ETHDepartment.swift in Sources */,
 				B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */,
 				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
 				B0AF91362157B4C7008F3B80 /* URLParameterEncoder.swift in Sources */,
 				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
+				B0F5B967217217F3005E4591 /* EventsSignupResponse.swift in Sources */,
 				B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */,
 				B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */,
 				B0AF914B2157DE2A008F3B80 /* AMIVEvent.swift in Sources */,
+				B0F5B963217205E7005E4591 /* EventTableViewCell.swift in Sources */,
 				B0845926215B797200479D27 /* AmivMicroApp.swift in Sources */,
 				B0F5B94F217137EC005E4591 /* Local+Extension.swift in Sources */,
+				B0F5B9652172132B005E4591 /* SessionManager.swift in Sources */,
 				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
@@ -908,10 +941,12 @@
 				B050E15921516E230090CB79 /* EventViewModel.swift in Sources */,
 				B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */,
 				B0AF91322157B38F008F3B80 /* ParameterEncoding.swift in Sources */,
+				B0F5B96B217225EF005E4591 /* Gender.swift in Sources */,
 				B050E168215176D50090CB79 /* AmivMicroAppDelegate.swift in Sources */,
 				B0AF91292157B0A3008F3B80 /* EndPointType.swift in Sources */,
 				B050E144215169950090CB79 /* Navigator.swift in Sources */,
 				B050E17A215180D20090CB79 /* AmivMicroAppCell.swift in Sources */,
+				B0F5B96D217226CD005E4591 /* AMIVMemebership.swift in Sources */,
 				B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */,
 				B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */,
 				B0AF91382157B632008F3B80 /* JSONParameterEncoder.swift in Sources */,
@@ -925,6 +960,7 @@
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
 				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivMicroAppType.swift in Sources */,
+				B0F5B9692172181C005E4591 /* EventSignup.swift in Sources */,
 				B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

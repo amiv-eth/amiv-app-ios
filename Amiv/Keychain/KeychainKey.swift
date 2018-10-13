@@ -13,7 +13,7 @@ public enum KeychainKey: String {
     case username
     case password
     case authToken
-    case sessionID
+    case userID
     
 }
 

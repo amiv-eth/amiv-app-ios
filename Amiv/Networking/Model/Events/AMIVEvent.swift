@@ -17,7 +17,7 @@ public struct AMIVEvent {
     public let startTime: Date
     public let endTime: Date
     public let description: String
-    public let price: Double
+    public let price: Int
     public let spots: Int
     public let signupCount: Int
     public let image: AMIVMedia?
@@ -74,7 +74,7 @@ extension AMIVEvent: Decodable {
         let descriptionDe = try container.decode(String.self, forKey: .descriptionDe)
         self.description = Locale.getLocalizedString(english: descriptionEn, german: descriptionDe)
         
-        self.price = try container.decode(Double.self, forKey: .price)
+        self.price = try container.decode(Int.self, forKey: .price)
         self.spots = try container.decode(Int.self, forKey: .spots)
         self.signupCount = try container.decode(Int.self, forKey: .signupCount)
         

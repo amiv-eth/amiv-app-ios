@@ -21,8 +21,11 @@ public class AmivRootNavigator: RootNavigator {
     
     public init(window: UIWindow) {
         self.window = window
-        
-        self.goToOnboarding()
+        if SessionManager.isLoggedIn {
+            self.goToApp()
+        } else {
+            self.goToOnboarding()
+        }
     }
     
     // MARK: - Navigation

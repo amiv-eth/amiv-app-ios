@@ -85,16 +85,15 @@ extension EventsViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell: EventTableViewCell = {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? EventTableViewCell else {
+                return EventTableViewCell(reuseIdentifier: "cell")
             }
             return cell
         }()
         
-        cell.textLabel?.text = self.model.events[indexPath.row].title
-        cell.textLabel?.numberOfLines = 0
-        cell.detailTextLabel?.text = self.model.events[indexPath.row].catchPhrase
+        let event = self.model.events[indexPath.row]
+        cell.setupView(title: event.title, subtitle: event.catchPhrase, additionalInfo: String(describing: event.signupCount))
         
         return cell
     }

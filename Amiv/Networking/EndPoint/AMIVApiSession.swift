@@ -23,7 +23,7 @@ extension AMIVApiSession {
             return "/sessions"
         case .logout:
             let keychain = KeychainSwift()
-            guard let id = keychain.get(KeychainKey.sessionID.rawValue) else {
+            guard let id = keychain.get(KeychainKey.userID.rawValue) else {
                 return "/sessions"
             }
             return "/sessions/\(id)"

@@ -15,13 +15,16 @@ public struct AmivMicroAppModel {
     
     public let title: String
     
+    public let subtitle: String
+    
     public let image: UIImage?
     
     // MARK: - Initializers
     
-    public init(app: AmivMicroAppType, title: String, image: UIImage?) {
+    public init(app: AmivMicroAppType, title: String, subtitle: String, image: UIImage?) {
         self.app = app
         self.title = title
+        self.subtitle = subtitle
         self.image = image
     }
     
@@ -35,11 +38,11 @@ extension AmivMicroAppModel {
     }
     
     public static func createCheckinModel() -> AmivMicroAppModel {
-        return self.init(app: .checkin, title: "Checkin", image: nil)
+        return self.init(app: .checkin, title: "Checkin", subtitle: "Checkin AMIV Members in and out of AMIV events.", image: nil)
     }
     
     public static func createBarcodeModel() -> AmivMicroAppModel {
-        return self.init(app: .barcode, title: "Barcode", image: nil)
+        return self.init(app: .barcode, title: "Barcode", subtitle: "Display your legi barcode digitally.", image: nil)
     }
 
 }
