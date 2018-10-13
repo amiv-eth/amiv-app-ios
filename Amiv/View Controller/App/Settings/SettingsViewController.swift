@@ -16,7 +16,7 @@ public class SettingsViewController: UITableViewController {
     // MARK: - Variables
     
     private var model: SettingsModel
-    
+    private var CustomIdentifier = "customIdentifier"
     public var delegate: SettingsViewControllerDelegate?
     
     // MARK: - Initializers
@@ -25,6 +25,8 @@ public class SettingsViewController: UITableViewController {
         self.model = model
         super.init(style: .grouped)
         self.title = "Settings"
+        
+        self.tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomIdentifier)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -73,25 +75,41 @@ extension SettingsViewController {
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
         
+        let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
+        var cell = UITableViewCell()
+        
+        
+        switch cellModel.cellType {
+        case .custom:
+            cell = tableView.dequeueReusableCell(withIdentifier: CustomIdentifier, for: indexPath) as! CustomTableViewCell
+            return cell
+        case .changeValue:
+             cell = UITableViewCell(style: cellModel.cellType.style(), reuseIdentifier: cellModel.cellType.reuseIdentifier())
+            populateNormalCell(cell: cell, cellModel: cellModel)
+            return cell
+        case .login:
+              cell = UITableViewCell(style: cellModel.cellType.style(), reuseIdentifier: cellModel.cellType.reuseIdentifier())
+            populateNormalCell(cell: cell, cellModel: cellModel)
+            return cell
+        case .normal:
+                cell = UITableViewCell(style: cellModel.cellType.style(), reuseIdentifier: cellModel.cellType.reuseIdentifier())
+            populateNormalCell(cell: cell, cellModel: cellModel)
+            return cell
+            
+            }
+        /*
+        let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
         let cell: UITableViewCell = {
+            
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellType.reuseIdentifier()) else {
                 return UITableViewCell(style: cellModel.cellType.style(), reuseIdentifier: cellModel.cellType.reuseIdentifier())
             }
             return cell
         }()
+         */
         
-        cell.textLabel?.text = cellModel.text
-        cell.detailTextLabel?.text = cellModel.detailText
-        cell.textLabel?.numberOfLines = 0
-        cell.accessoryType = cellModel.action.indicator()
-        cell.tintColor = UIColor(named: "lightBlue")
-        cell.selectionStyle = cellModel.action.selectionStyle()
-        
-        return cell
     }
-    //Was passiert wenn eine Zelle geklickt wird
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
         
@@ -108,6 +126,14 @@ extension SettingsViewController {
         }
     }
     
-    
+    private func populateNormalCell(cell : UITableViewCell, cellModel : SettingsCellModel){
+        cell.textLabel?.text = cellModel.text
+        cell.detailTextLabel?.text = cellModel.detailText
+        cell.textLabel?.numberOfLines = 0
+        cell.accessoryType = cellModel.action.indicator()
+        cell.tintColor = UIColor(named: "lightBlue")
+        cell.selectionStyle = cellModel.action.selectionStyle()
+        
+    }
    
 }

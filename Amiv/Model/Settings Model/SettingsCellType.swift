@@ -14,6 +14,7 @@ public enum SettingsCellType {
     case normal
     case login
     case changeValue
+    case custom
     
     public func reuseIdentifier() -> String {
         switch self {
@@ -23,6 +24,8 @@ public enum SettingsCellType {
             return "login"
         case .changeValue:
             return "changeValue"
+        case .custom:
+            return "custom"
         }
     }
     
@@ -34,6 +37,8 @@ public enum SettingsCellType {
             return .subtitle
         case .login:
             return .subtitle
+        case .custom:
+            return .default
         }
     }
 }

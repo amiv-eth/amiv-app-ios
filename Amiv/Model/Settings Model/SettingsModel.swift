@@ -40,10 +40,13 @@ extension SettingsModel {
     
     private static func createValueSection() -> SettingsSectionModel{
         let food = SettingsCellModel(text: "Food Preference", detailText: "All", action: .changeValue("food"), cellType: .changeValue)
+        
+        let SpecialFoodRequierements = SettingsCellModel(text: "Special Food Requierement", detailText: "Special FoodRequirement", action: .none, cellType: .custom)
+        
         let publicTransport = SettingsCellModel(text: "Public Transport", detailText: "GA", action: .changeValue("pubTrans"), cellType: .changeValue)
         let pushNotification = SettingsCellModel(text: "Enabled", detailText: "Tap to disable Push Notifications", action: .changeValue("pushNotification"), cellType: .changeValue)
         
-        return SettingsSectionModel(headerText: "Settings", footerText: nil, cellModels: [food, publicTransport, pushNotification])
+        return SettingsSectionModel(headerText: "Settings", footerText: nil, cellModels: [food,SpecialFoodRequierements, publicTransport, pushNotification])
     }
     
     private static func createDisclosureSection() -> SettingsSectionModel {

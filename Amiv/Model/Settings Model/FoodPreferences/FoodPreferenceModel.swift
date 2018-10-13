@@ -30,8 +30,9 @@ extension FoodPreferenceModel{
     public static func createFoodPreferenceSection() -> FoodPreferenceSectionModel {
         let vegetarisch = FoodPreferencesCellModel(text: "vegetarisch", action: .changeFoodPreference, cellType: .normal)
         let Nichts = FoodPreferencesCellModel(text: "Keine Vorlieben", action: .changeFoodPreference, cellType: .normal)
+        let Other = FoodPreferencesCellModel(text: "Other Food", action: .changeFoodPreference, cellType: .normal)
         
-        return FoodPreferenceSectionModel(headerText: "Your Choice", footerText: "FooterText", cellModels: [vegetarisch, Nichts])
+        return FoodPreferenceSectionModel(headerText: "Your Choice", footerText: "FooterText", cellModels: [vegetarisch, Nichts, Other])
     }
     
 }

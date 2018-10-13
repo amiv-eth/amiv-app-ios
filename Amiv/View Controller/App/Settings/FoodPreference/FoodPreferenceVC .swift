@@ -39,6 +39,10 @@ class FoodPreferenceViewController: UITableViewController {
 
 extension FoodPreferenceViewController {
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
+    
     public override func numberOfSections(in tableView: UITableView) -> Int {
         return self.model.sectionModels.count
     }
@@ -54,20 +58,21 @@ extension FoodPreferenceViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
+
         let cell: UITableViewCell = {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.cellType.reuseIdentifier()) else {
                 return UITableViewCell(style: cellModel.cellType.style(), reuseIdentifier: cellModel.cellType.reuseIdentifier())
             }
             return cell
         }()
-        cell.tintColor = UIColor(named: "lightBlue")
         cell.textLabel?.text = cellModel.text
-       
-        
+        cell.textLabel?.textAlignment = .center
+        cell.textLabel?.font = UIFont(name:"Avenir", size:22)
         cell.selectionStyle = cellModel.action.selectionStyle()
         cell.accessoryType = cellModel.action.indicator()
         return cell
     }
+
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
@@ -78,8 +83,6 @@ extension FoodPreferenceViewController {
         case .none:
             break
         case .changeFoodPreference:
-            debugPrint("This Works")
-            debugPrint(self.delegate)
             self.delegate?.changeFoodPreference()
         }
     }
