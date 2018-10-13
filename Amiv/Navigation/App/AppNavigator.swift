@@ -72,6 +72,7 @@ public class AppNavigator: Navigator {
     
     private func createAmivApplicationTab() {
         let app = AmivMicroAppsNavigator()
+        app.rootViewController.tabBarItem = UITabBarItem(title: "Apps", image: UIImage(named: "appsTab"), tag: Tab.settings.rawValue)
         self.childNavigators.append(app)
     }
     
