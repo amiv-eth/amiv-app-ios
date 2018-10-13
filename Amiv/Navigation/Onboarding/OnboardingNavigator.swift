@@ -71,6 +71,18 @@ extension OnboardingNavigator: LoginViewControllerDelegate {
             // Save token into secure and encrypted keychain
             SessionManager.save(response)
             
+            let userManager = NetworkManager<AMIVApiUser>()
+            userManager.getUserInfo({ (user, error) in
+                guard error == nil, let user = user else {
+                    debugPrint(error)
+                    return
+                }
+                
+                if user.saveLocal() {
+                    debugPrint(User.loadLocal())
+                }
+            })
+            
             DispatchQueue.main.async {
                 self.delegate?.onboardingFinished()
             }

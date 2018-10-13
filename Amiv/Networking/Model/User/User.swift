@@ -26,7 +26,7 @@ public struct User {
     
 }
 
-extension User: Decodable {
+extension User: Codable {
     
     private enum UserCodingKeys: String, CodingKey {
         case nethz = "nethz"
@@ -62,6 +62,63 @@ extension User: Decodable {
         self.isPasswordSet = try container.decode(Bool.self, forKey: .isPasswordSet)
         self.id = try container.decode(String.self, forKey: .id)
         self.etag = try container.decode(String.self, forKey: .etag)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: UserCodingKeys.self)
+        
+        try container.encode(self.nethz, forKey: .nethz)
+        try container.encode(self.firstname, forKey: .firstname)
+        try container.encode(self.lastname, forKey: .lastname)
+        try container.encode(self.membership, forKey: .membership)
+        try container.encode(self.legi, forKey: .legi)
+        try container.encode(self.department, forKey: .department)
+        try container.encode(self.gender, forKey: .gender)
+        try container.encode(self.email, forKey: .email)
+        try container.encode(self.rfid, forKey: .rfid)
+        try container.encode(self.phone, forKey: .phone)
+        try container.encode(self.isPasswordSet, forKey: .isPasswordSet)
+        try container.encode(self.id, forKey: .id)
+        try container.encode(self.etag, forKey: .etag)
+    }
+    
+}
+
+extension User {
+    
+    public static func loadLocal() -> User? {
+        let fileManager = FileManager.default
+        do {
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileURL = documentDirectory.appendingPathComponent("user.json")
+            
+            guard fileManager.fileExists(atPath: fileURL.path) else {
+                return nil
+            }
+            
+            let data = try Data(contentsOf: fileURL)
+            let json = try JSONDecoder().decode(User.self, from: data)
+            return json
+        } catch {
+            return nil
+        }
+    }
+    
+    public func saveLocal() -> Bool {
+        return User.saveLocal(self)
+    }
+    
+    public static func saveLocal(_ user: User) -> Bool {
+        let fileManager = FileManager.default
+        do {
+            let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+            let fileURL = documentDirectory.appendingPathComponent("user.json")
+            let json = try JSONEncoder().encode(user)
+            try json.write(to: fileURL)
+            return true
+        } catch {
+            return false
+        }
     }
     
 }
