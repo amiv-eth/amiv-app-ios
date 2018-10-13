@@ -39,7 +39,7 @@ extension AmivMicroAppModel {
     }
     
     public static func createBarcodeModel() -> AmivMicroAppModel {
-        return self.init(app: .barcode, title: "Barcode", image: nil)
+        return self.init(app: .barcode, title: "Barcode ID", image: nil)
     }
 
 }

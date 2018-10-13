@@ -24,7 +24,7 @@ public protocol EndPointType {
 extension EndPointType {
     
     public var baseURL: URL {
-        return URL(string: "https://api.amiv.ethz.ch/")!
+        return URL(string: "https://api-dev.amiv.ethz.ch/")!
     }
     
 }

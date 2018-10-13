@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92232A5F217144E3000780A2 /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232A5E217144E3000780A2 /* BarcodeViewController.swift */; };
+		92232A6521716D99000780A2 /* BarcodeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232A6421716D99000780A2 /* BarcodeViewControllerDelegate.swift */; };
+		92F912F72172015F00B883BA /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E02172015D00B883BA /* StringExtension.swift */; };
+		92F912F82172015F00B883BA /* RSCodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E12172015D00B883BA /* RSCodeLayer.swift */; };
+		92F912F92172015F00B883BA /* RSCode128Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E22172015D00B883BA /* RSCode128Generator.swift */; };
+		92F912FA2172015F00B883BA /* RSCornersLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E32172015D00B883BA /* RSCornersLayer.swift */; };
+		92F912FB2172015F00B883BA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E52172015D00B883BA /* UIColorExtension.swift */; };
+		92F912FC2172015F00B883BA /* RSCode39Mod43Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E62172015D00B883BA /* RSCode39Mod43Generator.swift */; };
+		92F912FD2172015F00B883BA /* RSCode93Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E72172015D00B883BA /* RSCode93Generator.swift */; };
+		92F912FE2172015F00B883BA /* RSCode39Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E82172015D00B883BA /* RSCode39Generator.swift */; };
+		92F913002172015F00B883BA /* RSExtendedCode39Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912EA2172015E00B883BA /* RSExtendedCode39Generator.swift */; };
+		92F913012172015F00B883BA /* RSFocusMarkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912EB2172015E00B883BA /* RSFocusMarkLayer.swift */; };
+		92F913022172015F00B883BA /* ContextMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F912EC2172015E00B883BA /* ContextMaker.m */; };
+		92F913032172015F00B883BA /* RSUnifiedCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912EE2172015E00B883BA /* RSUnifiedCodeValidator.swift */; };
+		92F913042172015F00B883BA /* RSCodeDataMatrixGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912EF2172015E00B883BA /* RSCodeDataMatrixGenerator.swift */; };
+		92F913052172015F00B883BA /* RSCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F02172015E00B883BA /* RSCodeGenerator.swift */; };
+		92F913062172015F00B883BA /* RSCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F12172015E00B883BA /* RSCodeReaderViewController.swift */; };
+		92F913072172015F00B883BA /* RSEANGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F22172015F00B883BA /* RSEANGenerator.swift */; };
+		92F913082172015F00B883BA /* RSITF14Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F32172015F00B883BA /* RSITF14Generator.swift */; };
+		92F913092172015F00B883BA /* RSITFGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F42172015F00B883BA /* RSITFGenerator.swift */; };
+		92F9130A2172015F00B883BA /* RSUnifiedCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F52172015F00B883BA /* RSUnifiedCodeGenerator.swift */; };
+		92F9130B2172015F00B883BA /* RSUPCEGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F62172015F00B883BA /* RSUPCEGenerator.swift */; };
 		B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048377D21582D4E00AFA689 /* String+Extension.swift */; };
 		B050E120215169230090CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E11F215169230090CB79 /* AppDelegate.swift */; };
 		B050E127215169250090CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B050E126215169250090CB79 /* Assets.xcassets */; };
@@ -103,6 +125,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92232A5E217144E3000780A2 /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
+		92232A6421716D99000780A2 /* BarcodeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		92F912E02172015D00B883BA /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		92F912E12172015D00B883BA /* RSCodeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCodeLayer.swift; sourceTree = "<group>"; };
+		92F912E22172015D00B883BA /* RSCode128Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCode128Generator.swift; sourceTree = "<group>"; };
+		92F912E32172015D00B883BA /* RSCornersLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCornersLayer.swift; sourceTree = "<group>"; };
+		92F912E42172015D00B883BA /* ContextMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextMaker.h; sourceTree = "<group>"; };
+		92F912E52172015D00B883BA /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		92F912E62172015D00B883BA /* RSCode39Mod43Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCode39Mod43Generator.swift; sourceTree = "<group>"; };
+		92F912E72172015D00B883BA /* RSCode93Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCode93Generator.swift; sourceTree = "<group>"; };
+		92F912E82172015D00B883BA /* RSCode39Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCode39Generator.swift; sourceTree = "<group>"; };
+		92F912EA2172015E00B883BA /* RSExtendedCode39Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSExtendedCode39Generator.swift; sourceTree = "<group>"; };
+		92F912EB2172015E00B883BA /* RSFocusMarkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSFocusMarkLayer.swift; sourceTree = "<group>"; };
+		92F912EC2172015E00B883BA /* ContextMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMaker.m; sourceTree = "<group>"; };
+		92F912ED2172015E00B883BA /* RSBarcodes-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSBarcodes-Bridging-Header.h"; sourceTree = "<group>"; };
+		92F912EE2172015E00B883BA /* RSUnifiedCodeValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUnifiedCodeValidator.swift; sourceTree = "<group>"; };
+		92F912EF2172015E00B883BA /* RSCodeDataMatrixGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCodeDataMatrixGenerator.swift; sourceTree = "<group>"; };
+		92F912F02172015E00B883BA /* RSCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCodeGenerator.swift; sourceTree = "<group>"; };
+		92F912F12172015E00B883BA /* RSCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSCodeReaderViewController.swift; sourceTree = "<group>"; };
+		92F912F22172015F00B883BA /* RSEANGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSEANGenerator.swift; sourceTree = "<group>"; };
+		92F912F32172015F00B883BA /* RSITF14Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSITF14Generator.swift; sourceTree = "<group>"; };
+		92F912F42172015F00B883BA /* RSITFGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSITFGenerator.swift; sourceTree = "<group>"; };
+		92F912F52172015F00B883BA /* RSUnifiedCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUnifiedCodeGenerator.swift; sourceTree = "<group>"; };
+		92F912F62172015F00B883BA /* RSUPCEGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUPCEGenerator.swift; sourceTree = "<group>"; };
 		B048377D21582D4E00AFA689 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B050E11C215169230090CB79 /* Amiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B050E11F215169230090CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +259,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92F912B22171FBAA00B883BA /* RSBarcodes */ = {
+			isa = PBXGroup;
+			children = (
+				92F912E42172015D00B883BA /* ContextMaker.h */,
+				92F912EC2172015E00B883BA /* ContextMaker.m */,
+				92F912ED2172015E00B883BA /* RSBarcodes-Bridging-Header.h */,
+				92F912E82172015D00B883BA /* RSCode39Generator.swift */,
+				92F912E62172015D00B883BA /* RSCode39Mod43Generator.swift */,
+				92F912E72172015D00B883BA /* RSCode93Generator.swift */,
+				92F912E22172015D00B883BA /* RSCode128Generator.swift */,
+				92F912EF2172015E00B883BA /* RSCodeDataMatrixGenerator.swift */,
+				92F912F02172015E00B883BA /* RSCodeGenerator.swift */,
+				92F912E12172015D00B883BA /* RSCodeLayer.swift */,
+				92F912F12172015E00B883BA /* RSCodeReaderViewController.swift */,
+				92F912E32172015D00B883BA /* RSCornersLayer.swift */,
+				92F912F22172015F00B883BA /* RSEANGenerator.swift */,
+				92F912EA2172015E00B883BA /* RSExtendedCode39Generator.swift */,
+				92F912EB2172015E00B883BA /* RSFocusMarkLayer.swift */,
+				92F912F32172015F00B883BA /* RSITF14Generator.swift */,
+				92F912F42172015F00B883BA /* RSITFGenerator.swift */,
+				92F912F52172015F00B883BA /* RSUnifiedCodeGenerator.swift */,
+				92F912EE2172015E00B883BA /* RSUnifiedCodeValidator.swift */,
+				92F912F62172015F00B883BA /* RSUPCEGenerator.swift */,
+				92F912E02172015D00B883BA /* StringExtension.swift */,
+				92F912E52172015D00B883BA /* UIColorExtension.swift */,
+			);
+			path = RSBarcodes;
+			sourceTree = "<group>";
+		};
 		B048377A21582C4500AFA689 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,7 +615,10 @@
 		B0845922215B78AB00479D27 /* Barcode */ = {
 			isa = PBXGroup;
 			children = (
+				92F912B22171FBAA00B883BA /* RSBarcodes */,
 				B0845927215B7AF200479D27 /* AmivMicroAppBarcode.swift */,
+				92232A5E217144E3000780A2 /* BarcodeViewController.swift */,
+				92232A6421716D99000780A2 /* BarcodeViewControllerDelegate.swift */,
 			);
 			path = Barcode;
 			sourceTree = "<group>";
@@ -751,6 +829,7 @@
 				TargetAttributes = {
 					B050E11B215169230090CB79 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.SafariKeychain = {
 								enabled = 1;
@@ -809,11 +888,15 @@
 			files = (
 				B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */,
 				B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */,
+				92F9130A2172015F00B883BA /* RSUnifiedCodeGenerator.swift in Sources */,
 				B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */,
 				B050E17821517EF50090CB79 /* AmivMicroAppModel.swift in Sources */,
 				B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivMicroAppsNavigator.swift in Sources */,
+				92F913022172015F00B883BA /* ContextMaker.m in Sources */,
+				92F913002172015F00B883BA /* RSExtendedCode39Generator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
+				92F913092172015F00B883BA /* RSITFGenerator.swift in Sources */,
 				B0E22FDF216DD754002317D6 /* AMIVApiStudyDocuments.swift in Sources */,
 				B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */,
 				B05EC252216BFCDC00D5AD99 /* AuthenticationResponse.swift in Sources */,
@@ -826,20 +909,28 @@
 				B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivMicroAppsViewController.swift in Sources */,
+				92F912FB2172015F00B883BA /* UIColorExtension.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
 				B0E22FE3216E9448002317D6 /* StudyDocument.swift in Sources */,
+				92F912FA2172015F00B883BA /* RSCornersLayer.swift in Sources */,
 				B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */,
 				B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */,
 				B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */,
+				92F9130B2172015F00B883BA /* RSUPCEGenerator.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
+				92F912FC2172015F00B883BA /* RSCode39Mod43Generator.swift in Sources */,
 				B0AF91342157B430008F3B80 /* NetworkError.swift in Sources */,
 				B05EC24F216BF9B900D5AD99 /* RouterError.swift in Sources */,
 				B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */,
 				B0E22FDC216DD41D002317D6 /* JobOffer.swift in Sources */,
+				92F913072172015F00B883BA /* RSEANGenerator.swift in Sources */,
 				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
 				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
+				92F913012172015F00B883BA /* RSFocusMarkLayer.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
+				92F912F92172015F00B883BA /* RSCode128Generator.swift in Sources */,
+				92F912FD2172015F00B883BA /* RSCode93Generator.swift in Sources */,
 				B0AF913C2157C025008F3B80 /* Router.swift in Sources */,
 				B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */,
 				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
@@ -848,11 +939,17 @@
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
 				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
+				92F912F82172015F00B883BA /* RSCodeLayer.swift in Sources */,
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
 				B0845924215B78C700479D27 /* AmivMicroAppCheckin.swift in Sources */,
+				92F913082172015F00B883BA /* RSITF14Generator.swift in Sources */,
+				92F913042172015F00B883BA /* RSCodeDataMatrixGenerator.swift in Sources */,
 				B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */,
 				B050E18E2151A5660090CB79 /* SettingsCellType.swift in Sources */,
 				B0AF91362157B4C7008F3B80 /* URLParameterEncoder.swift in Sources */,
+				92F913052172015F00B883BA /* RSCodeGenerator.swift in Sources */,
+				92232A6521716D99000780A2 /* BarcodeViewControllerDelegate.swift in Sources */,
+				92F913062172015F00B883BA /* RSCodeReaderViewController.swift in Sources */,
 				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
 				B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */,
 				B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */,
@@ -862,6 +959,7 @@
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
 				B0FE2F1D21552AC800F3D073 /* KeychainSwiftAccessOptions.swift in Sources */,
+				92F912FE2172015F00B883BA /* RSCode39Generator.swift in Sources */,
 				B050E1902151A6000090CB79 /* SettingsModel.swift in Sources */,
 				B050E15621516D4D0090CB79 /* HomeViewController.swift in Sources */,
 				B05EC254216BFE6600D5AD99 /* AMIVApiSession.swift in Sources */,
@@ -876,6 +974,7 @@
 				B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */,
 				B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */,
 				B0AF91382157B632008F3B80 /* JSONParameterEncoder.swift in Sources */,
+				92232A5F217144E3000780A2 /* BarcodeViewController.swift in Sources */,
 				B0FE2F1F21552AF700F3D073 /* KeychainSwiftConstants.swift in Sources */,
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
 				B0845928215B7AF200479D27 /* AmivMicroAppBarcode.swift in Sources */,
@@ -883,9 +982,11 @@
 				B0AF912E2157B19A008F3B80 /* HTTPMethod.swift in Sources */,
 				B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
+				92F912F72172015F00B883BA /* StringExtension.swift in Sources */,
 				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivMicroAppType.swift in Sources */,
 				B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */,
+				92F913032172015F00B883BA /* RSUnifiedCodeValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1039,6 +1140,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Amiv/Amiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28J3L9UEGT;
@@ -1050,6 +1152,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.ethz.amiv.Amiv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Amiv/Amiv Micro Apps/Apps/Barcode/RSBarcodes/RSBarcodes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1059,6 +1163,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Amiv/Amiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28J3L9UEGT;
@@ -1070,6 +1175,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ch.ethz.amiv.Amiv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Amiv/Amiv Micro Apps/Apps/Barcode/RSBarcodes/RSBarcodes-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
