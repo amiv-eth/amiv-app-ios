@@ -38,11 +38,11 @@ extension AmivMicroAppModel {
     }
     
     public static func createCheckinModel() -> AmivMicroAppModel {
-        return self.init(app: .checkin, title: "Checkin", subtitle: "Checkin AMIV Members in and out of AMIV events.", image: nil)
+        return self.init(app: .checkin, title: "Checkin", subtitle: "Checkin AMIV Members in and out of AMIV events.", image: UIImage(named: "settings"))
     }
     
     public static func createBarcodeModel() -> AmivMicroAppModel {
-        return self.init(app: .barcode, title: "Barcode", subtitle: "Display your legi barcode digitally.", image: nil)
+        return self.init(app: .barcode, title: "Barcode ID", subtitle: "Display your legi barcode digitally.", image: UIImage(named: "barcodeID"))
     }
 
 }

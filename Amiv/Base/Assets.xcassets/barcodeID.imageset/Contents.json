@@ -2,10 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "BarcodeID_1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "BarcodeID_2.png",
       "scale" : "2x"
     },
     {

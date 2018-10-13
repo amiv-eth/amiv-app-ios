@@ -19,11 +19,14 @@ public class BarcodeViewController: UIViewController {
     public private(set) var barcodeLabelView: UIImageView!
     public private(set) var button: UIButton!
     public private(set) var textView: UITextView!
+    public private(set) var brightness: CGFloat!
     
     public init(model: AmivMicroAppModel){
         super.init(nibName: nil, bundle: nil)
         self.title = model.title
         
+        brightness = UIScreen.main.brightness
+        UIScreen.main.brightness = 1.0
         // UI
         self.titleLabel = self.createTitleLabel()
         self.view.addSubview(self.titleLabel)
@@ -38,6 +41,7 @@ public class BarcodeViewController: UIViewController {
         self.view.addSubview(self.barcodeLabelView)
         
         // Layout
+        self.navigationItem.leftBarButtonItem?.tintColor = .amivRed
         self.setLabelLayout()
         self.setBarcodeLabelLayout()
     }
@@ -63,11 +67,26 @@ public class BarcodeViewController: UIViewController {
         NSLayoutConstraint(item: self.titleLabel, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailingMargin, multiplier: 1, constant: -10).isActive = true
     }
     
+    private func checkBestString(user: User) -> String {
+        if let legi = user.legi {
+            return legi
+        }
+        if let nethz = user.nethz {
+            return nethz
+        }
+        // there is no @ in Code 39 so we use " " (be sure to implement that in the checktin app
+        return user.email.replacingOccurrences(of: "@", with: " ")
+    }
+    
     private func createBarcodeLabel() -> UIImage {
-        let codeInput = "PLACEHOLDER"
         let errorImage = UIImage(named: "xcode_error_icon")
-        // Code 39 Generator Library RSBarcodes
-        guard let barcode = RSUnifiedCodeGenerator.shared.generateCode(codeInput, machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue) else {
+        guard let user = User.loadLocal() else {
+            debugPrint("no user")
+            return errorImage!
+        }
+        // Code 39 Generator Library RSBarcodes (accepts only uppercase letters)
+        guard let barcode = RSUnifiedCodeGenerator.shared.generateCode(self.checkBestString(user: user).uppercased(), machineReadableCodeObjectType: AVMetadataObject.ObjectType.code39.rawValue) else {
+            debugPrint("wrong string")
             return errorImage!
         }
         return barcode
@@ -81,6 +100,7 @@ public class BarcodeViewController: UIViewController {
     }
     
     @objc private func goBack() {
+        UIScreen.main.brightness = brightness
         dismiss(animated: true, completion: nil)
     }
     
