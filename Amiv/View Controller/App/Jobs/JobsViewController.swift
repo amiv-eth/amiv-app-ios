@@ -96,6 +96,7 @@ extension JobsViewController {
         }()
         
         cell.textLabel?.text = model.title
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = model.company
         
         return cell

@@ -133,8 +133,8 @@ extension NetworkManager where EndPoint == AMIVApiJobs {
         }
     }
     
-    public func getMedia(for path: String, _ completion: @escaping (_ url: URL?, _ error: String?) -> Void) {
-        router.download(.media(path)) { (url, response, error) in
+    public func getMedia(for path: String, named: String, _ completion: @escaping (_ url: URL?, _ error: String?) -> Void) {
+        router.download(.media(path), named) { (url, response, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
                 return

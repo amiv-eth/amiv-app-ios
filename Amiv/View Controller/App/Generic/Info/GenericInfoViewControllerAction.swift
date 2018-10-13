@@ -11,7 +11,7 @@ import Foundation
 public enum GenericInfoViewControllerAction {
     
     case `default`
-    case openPDF(String)
-    case signup(_ eventID: String)
+    case openMedia(AMIVMedia)
+    case signup(String)
     
 }

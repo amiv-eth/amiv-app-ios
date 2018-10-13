@@ -26,26 +26,28 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
         }
     }
     
-    public func download(_ route: EndPoint, completion: @escaping NetworkRouterDownloadCompletion) {
+    public func download(_ route: EndPoint, _ fileName: String, completion: @escaping NetworkRouterDownloadCompletion) {
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
             let task = session.downloadTask(with: request) { (tempURL, response, error) in
-                guard let url = tempURL else {
-                    completion(tempURL, response, error)
+                guard let tempURL = tempURL else {
+                    completion(nil, response, error)
                     return
                 }
+                
+                let documentsURL:URL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL!
+                let destinationURL = documentsURL.appendingPathComponent(fileName)
+                
                 do {
-                    let data = try Data(contentsOf: url)
-                    let documentsURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-                    
-                    let savedURL = documentsURL.appendingPathComponent("jobApplication.pdf")
-                    FileManager.default.createFile(atPath: savedURL.path, contents: data, attributes: nil)
-                    completion(savedURL, response, error)
+                    if FileManager.default.fileExists(atPath: destinationURL.path) {
+                        try FileManager.default.removeItem(at: destinationURL)
+                    }
+                    try FileManager.default.copyItem(at: tempURL, to: destinationURL)
+                    completion(destinationURL, response, error)
                 } catch {
-                    debugPrint(error.localizedDescription)
+                    completion(nil, response, error)
                 }
-                completion(url, response, error)
             }
             self.tasks.append(task)
             task.resume()

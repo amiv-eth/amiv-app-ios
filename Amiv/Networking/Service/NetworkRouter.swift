@@ -18,6 +18,6 @@ public protocol NetworkRouter: class {
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterRequestCompletion)
     
-    func download(_ route: EndPoint, completion: @escaping NetworkRouterDownloadCompletion)
+    func download(_ route: EndPoint, _ named: String, completion: @escaping NetworkRouterDownloadCompletion)
     
 }

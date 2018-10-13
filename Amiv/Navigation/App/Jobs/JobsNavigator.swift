@@ -95,11 +95,11 @@ extension JobsNavigator: GenericInfoViewControllerDelegate {
         // TODO: - Show job description pdf using QLPreviewController
         // https://www.hackingwithswift.com/example-code/libraries/how-to-preview-files-using-quick-look-and-qlpreviewcontroller
         
-        guard case .openPDF(let path) = action else {
+        guard case .openMedia(let media) = action else {
             return
         }
         
-        self.manager.getMedia(for: path) { (url, error) in
+        self.manager.getMedia(for: media.filePath, named: media.name) { (url, error) in
             guard error == nil, let url = url else {
                 return
             }
@@ -112,14 +112,6 @@ extension JobsNavigator: GenericInfoViewControllerDelegate {
                 self.navigationController.present(quickLook, animated: true, completion: nil)
             }
         }
-        /*
-        let url = Bundle.main.url(forResource: "Dienstverschiebungsgesuch", withExtension: "pdf")!
-        let quickLook = QLPreviewController()
-        let dataSource = QuickLookDataSource(urls: [url])
-        self.quickLookDataSource = dataSource
-        quickLook.dataSource = dataSource
-        self.navigationController.present(quickLook, animated: true, completion: nil)
-        */
     }
     
 }

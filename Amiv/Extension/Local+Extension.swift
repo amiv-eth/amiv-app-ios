@@ -10,13 +10,13 @@ import Foundation
 
 public extension Locale {
     
-    public enum AppLanguage {
-        case german
-        case english
+    public enum AppLanguage: String {
+        case german = "de"
+        case english = "en"
     }
     
     public static func current() -> AppLanguage {
-        if ["de-DE", "de-CH", "de-AT", "de-LI", "de-LU"].contains(Locale.current.languageCode) {
+        if let language = Locale.preferredLanguages.first, language == AppLanguage.german.rawValue {
             return .german
         } else {
             return .english

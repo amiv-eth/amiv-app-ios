@@ -93,6 +93,7 @@ extension EventsViewController {
         }()
         
         cell.textLabel?.text = self.model.events[indexPath.row].title
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = self.model.events[indexPath.row].catchPhrase
         
         return cell

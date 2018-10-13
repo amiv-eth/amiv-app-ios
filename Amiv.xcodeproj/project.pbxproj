@@ -93,7 +93,6 @@
 		B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1121550C0100F3D073 /* JobsViewControllerDelegate.swift */; };
 		B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */; };
 		B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */; };
-		B0FE2F182155167F00F3D073 /* Dienstverschiebungsgesuch.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */; };
 		B0FE2F1B21552A9D00F3D073 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1A21552A9D00F3D073 /* KeychainSwift.swift */; };
 		B0FE2F1D21552AC800F3D073 /* KeychainSwiftAccessOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */; };
 		B0FE2F1F21552AF700F3D073 /* KeychainSwiftConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */; };
@@ -203,7 +202,6 @@
 		B0FE2F1121550C0100F3D073 /* JobsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B0FE2F1321550C4400F3D073 /* EventsViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewControllerDelegate.swift; sourceTree = "<group>"; };
 		B0FE2F15215514E600F3D073 /* QuickLookDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookDataSource.swift; sourceTree = "<group>"; };
-		B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Dienstverschiebungsgesuch.pdf; sourceTree = "<group>"; };
 		B0FE2F1A21552A9D00F3D073 /* KeychainSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainSwiftConstants.swift; sourceTree = "<group>"; };
@@ -284,7 +282,6 @@
 		B050E13F2151695A0090CB79 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				B0FE2F172155167F00F3D073 /* Dienstverschiebungsgesuch.pdf */,
 				B050E11F215169230090CB79 /* AppDelegate.swift */,
 				B050E126215169250090CB79 /* Assets.xcassets */,
 				B050E128215169250090CB79 /* LaunchScreen.storyboard */,
@@ -826,7 +823,6 @@
 			files = (
 				B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */,
 				B050E127215169250090CB79 /* Assets.xcassets in Resources */,
-				B0FE2F182155167F00F3D073 /* Dienstverschiebungsgesuch.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
