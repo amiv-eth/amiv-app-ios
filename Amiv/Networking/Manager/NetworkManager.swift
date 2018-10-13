@@ -76,6 +76,30 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
         }
     }
     
+    public func getImage(for path: String, _ completion: @escaping (_ image: Data?, _ error: String?) -> Void) {
+        router.request(.media(path)) { (data, response, error) in
+            guard error == nil else {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            let result = self.handleNetworkRequest(response)
+            switch result {
+            case .success:
+                guard let responseData = data else {
+                    completion(nil, NetworkResponse.noData.rawValue)
+                    return
+                }
+                completion(responseData, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
 }
 
 extension NetworkManager where EndPoint == AMIVApiJobs {
@@ -98,11 +122,59 @@ extension NetworkManager where EndPoint == AMIVApiJobs {
                     return
                 }
                 do {
-                    let apiResponse = try JSONDecoder().decode(JobsResponse.self, from: responseData)
-                    completion(apiResponse._items, nil)
+                    let apiResponse = try JSONDecoder().decode(JobOffersResponse.self, from: responseData)
+                    completion(apiResponse.jobs, nil)
                 } catch {
                     completion(nil, NetworkResponse.unableToDecode.rawValue)
                 }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
+    public func getMedia(for path: String, _ completion: @escaping (_ url: URL?, _ error: String?) -> Void) {
+        router.download(.media(path)) { (url, response, error) in
+            guard error == nil else {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            let result = self.handleNetworkRequest(response)
+            switch result {
+            case .success:
+                guard let url = url else {
+                    completion(nil, NetworkResponse.noData.rawValue)
+                    return
+                }
+                completion(url, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
+    public func getImage(for path: String, _ completion: @escaping (_ image: Data?, _ error: String?) -> Void) {
+        router.request(.media(path)) { (data, response, error) in
+            guard error == nil else {
+                completion(nil, error?.localizedDescription)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            let result = self.handleNetworkRequest(response)
+            switch result {
+            case .success:
+                guard let responseData = data else {
+                    completion(nil, NetworkResponse.noData.rawValue)
+                    return
+                }
+                completion(responseData, nil)
             case .failure(let error):
                 completion(nil, error)
             }
@@ -164,6 +236,57 @@ extension NetworkManager where EndPoint == AMIVApiSession {
                     }
                     do {
                         let apiResponse = try JSONDecoder().decode(AuthenticationResponse.self, from: responseData)
+                        completion(apiResponse, nil)
+                    } catch {
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let error):
+                    completion(nil, error)
+                }
+            }
+        }
+    }
+    
+    public func logout(_ completion: @escaping (_ success: Bool, _ error: String?) -> Void) {
+        router.request(.logout) { (data, response, error) in
+            guard error == nil else {
+                completion(false, "Please check your network connection.")
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkRequest(response)
+                switch result {
+                case .success:
+                    completion(true, nil)
+                case .failure(let error):
+                    completion(false, error)
+                }
+            }
+        }
+    }
+    
+}
+
+extension NetworkManager where EndPoint == AMIVApiUser {
+    
+    public func user(_ completion: @escaping (_ response: User?, _ error: String?) -> Void) {
+        router.request(.userInfo) { (data, response, error) in
+            guard error == nil else {
+                completion(nil, "Please check your network connection.")
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkRequest(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let apiResponse = try JSONDecoder().decode(User.self, from: responseData)
                         completion(apiResponse, nil)
                     } catch {
                         completion(nil, NetworkResponse.unableToDecode.rawValue)

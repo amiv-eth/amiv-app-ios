@@ -73,6 +73,7 @@ extension OnboardingNavigator: LoginViewControllerDelegate {
             // Save token into secure and encrypted keychain
             let keychain = KeychainSwift()
             keychain.set(response.token, forKey: KeychainKey.authToken.rawValue)
+            keychain.set(response.id, forKey: KeychainKey.sessionID.rawValue)
             keychain.synchronizable = true
             
             DispatchQueue.main.async {

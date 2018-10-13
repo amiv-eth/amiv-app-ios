@@ -15,19 +15,37 @@ public struct GenericInfoViewControllerModel {
     
     public let title: String?
     
-    public let image: UIImage?
+    public var image: UIImage?
     
     public let text: String
     
     public let titleButton: String?
     
+    public let action: GenericInfoViewControllerAction
+    
     // MARK: - Initializers
     
-    public init(title: String?, image: UIImage?, text: String, titleButton: String?) {
+    public init(title: String?, image: UIImage?, text: String, titleButton: String?, action: GenericInfoViewControllerAction = .default) {
         self.title = title
         self.image = image
         self.text = text
         self.titleButton = titleButton
+        self.action = action
+    }
+    
+    public init(jobOffer: JobOffer, image: UIImage?) {
+        self.title = jobOffer.title
+        self.image = image
+        self.text = jobOffer.description
+        self.titleButton = "View Job Offer (PDF)"
+        self.action = .openPDF(jobOffer.pdf.filePath)
+    }
+    public init(event: AMIVEvent, image: UIImage?) {
+        self.title = event.title
+        self.image = image
+        self.text = event.description
+        self.titleButton = "Signup"
+        self.action = .signup(event.id)
     }
     
 }

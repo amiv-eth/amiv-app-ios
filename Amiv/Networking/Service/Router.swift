@@ -12,13 +12,41 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
     
     private var tasks: [URLSessionTask] = []
     
-    public func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
+    public func request(_ route: EndPoint, completion: @escaping NetworkRouterRequestCompletion) {
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
             let task = session.dataTask(with: request, completionHandler: { (data, response, error) in
                 completion(data, response, error)
             })
+            self.tasks.append(task)
+            task.resume()
+        } catch let error {
+            completion(nil, nil, error)
+        }
+    }
+    
+    public func download(_ route: EndPoint, completion: @escaping NetworkRouterDownloadCompletion) {
+        let session = URLSession.shared
+        do {
+            let request = try self.buildRequest(from: route)
+            let task = session.downloadTask(with: request) { (tempURL, response, error) in
+                guard let url = tempURL else {
+                    completion(tempURL, response, error)
+                    return
+                }
+                do {
+                    let data = try Data(contentsOf: url)
+                    let documentsURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                    
+                    let savedURL = documentsURL.appendingPathComponent("jobApplication.pdf")
+                    FileManager.default.createFile(atPath: savedURL.path, contents: data, attributes: nil)
+                    completion(savedURL, response, error)
+                } catch {
+                    debugPrint(error.localizedDescription)
+                }
+                completion(url, response, error)
+            }
             self.tasks.append(task)
             task.resume()
         } catch let error {

@@ -10,7 +10,7 @@ import Foundation
 
 public struct EventsResponse {
     
-    public let events: [EventItem]
+    public let events: [AMIVEvent]
     
 }
 
@@ -23,7 +23,7 @@ extension EventsResponse: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: EventsResponseCodingKeys.self)
         
-        self.events = try container.decode([EventItem].self, forKey: .events)
+        self.events = try container.decode([AMIVEvent].self, forKey: .events)
     }
     
 }

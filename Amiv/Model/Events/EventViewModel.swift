@@ -10,15 +10,27 @@ import Foundation
 
 public struct EventViewModel {
     
-    let title: String
-    let eventResponse: EventsResponse?
+    // MARK: - Variables
     
+    let viewTitle: String
+    let events: [AMIVEvent]
+    
+    // MARK: - Initializers
+    
+    public init(viewTitle: String, events: [AMIVEvent]) {
+        self.viewTitle = viewTitle
+        self.events = events
+    }
+    
+    public init(response: EventsResponse) {
+        self.init(viewTitle: "Events", events: response.events)
+    }
 }
 
 extension EventViewModel {
     
-    public static func create(with response: EventsResponse?) -> EventViewModel {
-        return self.init(title: "Events", eventResponse: response)
+    public static func empty() -> EventViewModel {
+        return self.init(viewTitle: "Events", events: [])
     }
     
 }

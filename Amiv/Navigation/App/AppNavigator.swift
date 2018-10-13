@@ -24,7 +24,7 @@ public class AppNavigator: Navigator {
     // MARK: - Tabs
     
     private enum Tab: Int {
-        case home
+        //case home
         case events
         case jobs
         case apps
@@ -43,7 +43,7 @@ public class AppNavigator: Navigator {
     
     private func createTabs() {
         // Create all tabs
-        self.createHomeTab()
+        //self.createHomeTab()
         self.createEventsTab()
         self.createJobsTab()
         self.createAmivApplicationTab()
@@ -51,7 +51,7 @@ public class AppNavigator: Navigator {
         
         // Make tabBarController ready
         self.tabBarController.viewControllers = self.childNavigators.map({ $0.rootViewController })
-        self.tabBarController.selectedIndex = Tab.home.rawValue
+        self.tabBarController.selectedIndex = Tab.events.rawValue
         self.tabBarController.tabBar.tintColor = .amivRed
     }
     

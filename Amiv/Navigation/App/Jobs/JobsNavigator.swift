@@ -27,19 +27,19 @@ public class JobsNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        let jobs = JobsViewController()
+        let jobs = JobsViewController(model: JobsViewModel.empty())
         self.navigationController = UINavigationController(rootViewController: jobs)
         self.navigationController.navigationBar.tintColor = .amivRed
         jobs.delegate = self
         
-        #warning("replace with proper code")
         manager.getJobOffers { (offers, error) in
-            guard error == nil else {
-                debugPrint(error)
+            guard error == nil, let offers = offers else {
+                #warning("handle error")
                 return
             }
             
-            debugPrint(offers)
+            let model = JobsViewModel(jobOffers: offers)
+            jobs.model = model
         }
     }
     
@@ -55,36 +55,71 @@ public class JobsNavigator: Navigator {
 
 extension JobsNavigator: JobsViewControllerDelegate {
     
-    public func didSelectJob(_ viewController: JobsViewController, section: Int, index: Int) {
-        debugPrint("didSelect section: \(section) and index: \(index)")
-        
-        // TODO: - Retrieve job, convert into GenericInfoViewControllerModel and show Detail View
-        // let model = ...
-        self.goToJobsDetailView(model: .createTestModel())
+    public func didSelectJob(_ viewController: JobsViewController, job: JobOffer) {
+        self.manager.getImage(for: job.logo.filePath) { (data, error) in
+            DispatchQueue.main.async {
+                guard error == nil, let data = data else {
+                    let model = GenericInfoViewControllerModel(jobOffer: job, image: nil)
+                    self.goToJobsDetailView(model: model)
+                    return
+                }
+                
+                let image = UIImage(data: data)
+                let model = GenericInfoViewControllerModel(jobOffer: job, image: image)
+                self.goToJobsDetailView(model: model)
+            }
+        }
     }
     
     public func refreshData(_ viewController: JobsViewController) {
-        debugPrint("Refreshing Jobs Data")
+        manager.getJobOffers { (offers, error) in
+            guard error == nil, let offers = offers else {
+                DispatchQueue.main.async {
+                    viewController.tableView.refreshControl?.endRefreshing()
+                }
+                return
+            }
+            
+            let model = JobsViewModel(jobOffers: offers)
+            viewController.model = model
+        }
     }
     
 }
 
 extension JobsNavigator: GenericInfoViewControllerDelegate {
     
-    public func buttonTapped(_ viewController: GenericInfoViewController) {
+    public func buttonTapped(_ viewController: GenericInfoViewController, action: GenericInfoViewControllerAction) {
         debugPrint("Info View button tapped")
         
         // TODO: - Show job description pdf using QLPreviewController
         // https://www.hackingwithswift.com/example-code/libraries/how-to-preview-files-using-quick-look-and-qlpreviewcontroller
         
-        #warning("replace with actual pdf data")
+        guard case .openPDF(let path) = action else {
+            return
+        }
         
+        self.manager.getMedia(for: path) { (url, error) in
+            guard error == nil, let url = url else {
+                return
+            }
+            
+            let quickLook = QLPreviewController()
+            let dataSource = QuickLookDataSource(urls: [url])
+            self.quickLookDataSource = dataSource
+            quickLook.dataSource = dataSource
+            DispatchQueue.main.async {
+                self.navigationController.present(quickLook, animated: true, completion: nil)
+            }
+        }
+        /*
         let url = Bundle.main.url(forResource: "Dienstverschiebungsgesuch", withExtension: "pdf")!
         let quickLook = QLPreviewController()
         let dataSource = QuickLookDataSource(urls: [url])
         self.quickLookDataSource = dataSource
         quickLook.dataSource = dataSource
         self.navigationController.present(quickLook, animated: true, completion: nil)
+        */
     }
     
 }

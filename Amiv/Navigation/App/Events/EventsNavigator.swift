@@ -24,7 +24,7 @@ public class EventsNavigator: Navigator {
     // MARK: - Initializers
     
     public init() {
-        let events = EventsViewController(model: .create(with: nil))
+        let events = EventsViewController(model: .empty())
         self.navigationController = UINavigationController(rootViewController: events)
         self.navigationController.navigationBar.tintColor = .amivRed
         events.delegate = self
@@ -44,22 +44,37 @@ public class EventsNavigator: Navigator {
 
 extension EventsNavigator: EventsViewControllerDelegate {
     
-    public func didSelectEvent(_ viewController: EventsViewController, section: Int, index: Int) {
-        debugPrint("didSelect section: \(section) and index: \(index)")
+    public func didSelectEvent(_ viewController: EventsViewController, event: AMIVEvent) {
         
-        // TODO: - Retrieve event, convert into GenericInfoViewControllerModel and show Detail View
-        // let model = ...
-        self.goToEventDetailView(model: .createTestModel())
+        if let eventImage = event.image {
+            self.networkManager.getImage(for: eventImage.filePath) { (data, error) in
+                let model: GenericInfoViewControllerModel
+                if error == nil, let data = data {
+                    let image = UIImage(data: data)
+                    model = GenericInfoViewControllerModel(event: event, image: image)
+                } else {
+                    model = GenericInfoViewControllerModel(event: event, image: nil)
+                }
+                DispatchQueue.main.async {
+                    self.goToEventDetailView(model: model)
+                }
+            }
+        } else {
+            let model = GenericInfoViewControllerModel(event: event, image: nil)
+            self.goToEventDetailView(model: model)
+        }
     }
     
     public func refreshData(_ viewController: EventsViewController) {
-        debugPrint("Refreshing Events Data")
-        
         self.networkManager.getEvents { (response, error) in
-            if let response = response {
+            guard let response = response else {
                 DispatchQueue.main.async {
-                    viewController.model = .create(with: response)
+                    viewController.tableView.refreshControl?.endRefreshing()
                 }
+                return
+            }
+            DispatchQueue.main.async {
+                viewController.model = EventViewModel(response: response)
             }
         }
     }
@@ -68,7 +83,7 @@ extension EventsNavigator: EventsViewControllerDelegate {
 
 extension EventsNavigator: GenericInfoViewControllerDelegate {
     
-    public func buttonTapped(_ viewController: GenericInfoViewController) {
+    public func buttonTapped(_ viewController: GenericInfoViewController, action: GenericInfoViewControllerAction) {
         debugPrint("Info View button tapped")
         
         // TODO: - Sign up for event

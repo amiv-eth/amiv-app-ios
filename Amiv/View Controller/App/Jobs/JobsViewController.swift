@@ -13,13 +13,21 @@ public class JobsViewController: UITableViewController {
     
     // MARK: - Variables
     
+    public var model: JobsViewModel {
+        didSet {
+            self.updateView()
+        }
+    }
+    
     public var delegate: JobsViewControllerDelegate?
     
     // MARK: - Initializers
     
-    public init() {
+    public init(model: JobsViewModel) {
+        self.model = model
         super.init(style: .plain)
-        self.title = "Jobs"
+        
+        self.title = model.viewTitle
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,6 +57,14 @@ public class JobsViewController: UITableViewController {
         self.refreshControl?.endRefreshing()
     }
     
+    private func updateView() {
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
+            self.title = self.model.viewTitle
+            self.tableView.reloadData()
+        }
+    }
+    
     // MARK: - View Interaction
     
     @objc private func refreshData() {
@@ -66,15 +82,27 @@ extension JobsViewController {
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.model.jobOffers.count
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let model = self.model.jobOffers[indexPath.row]
+        
+        let cell: UITableViewCell = {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell") else {
+                return UITableViewCell(style: .subtitle, reuseIdentifier: "JobCell")
+            }
+            return cell
+        }()
+        
+        cell.textLabel?.text = model.title
+        cell.detailTextLabel?.text = model.company
+        
+        return cell
     }
     
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ""
+        return "Jobs"
     }
     
 }
@@ -84,7 +112,7 @@ extension JobsViewController {
 extension JobsViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectJob(self, section: indexPath.section, index: indexPath.row)
+        self.delegate?.didSelectJob(self, job: self.model.jobOffers[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

@@ -19,7 +19,7 @@ extension AMIVApiStudyDocuments: EndPointType {
     public var path: String {
         switch self {
         case .overview:
-            return "studydocuments"
+            return "/studydocuments"
         }
     }
     

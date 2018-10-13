@@ -66,15 +66,22 @@
 		B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */; };
 		B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF913F2157CF50008F3B80 /* AMIVApiEvents.swift */; };
 		B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91412157D192008F3B80 /* KeychainKey.swift */; };
-		B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91442157D34E008F3B80 /* JobsResponse.swift */; };
+		B0AF91452157D34E008F3B80 /* JobOffersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91442157D34E008F3B80 /* JobOffersResponse.swift */; };
 		B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91462157D36E008F3B80 /* EventsResponse.swift */; };
-		B0AF914B2157DE2A008F3B80 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF914A2157DE2A008F3B80 /* EventItem.swift */; };
+		B0AF914B2157DE2A008F3B80 /* AMIVEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF914A2157DE2A008F3B80 /* AMIVEvent.swift */; };
 		B0D3F92B21552E8E005209FF /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */; };
 		B0E22FDA216DD2E0002317D6 /* AMIVApiJobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FD9216DD2E0002317D6 /* AMIVApiJobs.swift */; };
 		B0E22FDC216DD41D002317D6 /* JobOffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FDB216DD41D002317D6 /* JobOffer.swift */; };
 		B0E22FDF216DD754002317D6 /* AMIVApiStudyDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FDE216DD754002317D6 /* AMIVApiStudyDocuments.swift */; };
 		B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FE0216E93EF002317D6 /* StudyDocumentResponse.swift */; };
 		B0E22FE3216E9448002317D6 /* StudyDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E22FE2216E9448002317D6 /* StudyDocument.swift */; };
+		B0F5B94F217137EC005E4591 /* Local+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B94E217137EC005E4591 /* Local+Extension.swift */; };
+		B0F5B9512171408E005E4591 /* AMIVMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9502171408E005E4591 /* AMIVMedia.swift */; };
+		B0F5B955217142E3005E4591 /* AMIVMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B954217142E3005E4591 /* AMIVMediaType.swift */; };
+		B0F5B9582171480B005E4591 /* JobsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9572171480B005E4591 /* JobsViewModel.swift */; };
+		B0F5B95A2171624D005E4591 /* GenericInfoViewControllerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9592171624D005E4591 /* GenericInfoViewControllerAction.swift */; };
+		B0F5B95C2171786C005E4591 /* AMIVApiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B95B2171786C005E4591 /* AMIVApiUser.swift */; };
+		B0F5B95F217179D9005E4591 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B95E217179D9005E4591 /* User.swift */; };
 		B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFB2154179600F3D073 /* JobsViewController.swift */; };
 		B0FE2EFF21541A2B00F3D073 /* EventsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */; };
 		B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FE2F0121541A6300F3D073 /* EventsViewController.swift */; };
@@ -169,15 +176,22 @@
 		B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B0AF913F2157CF50008F3B80 /* AMIVApiEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiEvents.swift; sourceTree = "<group>"; };
 		B0AF91412157D192008F3B80 /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
-		B0AF91442157D34E008F3B80 /* JobsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsResponse.swift; sourceTree = "<group>"; };
+		B0AF91442157D34E008F3B80 /* JobOffersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOffersResponse.swift; sourceTree = "<group>"; };
 		B0AF91462157D36E008F3B80 /* EventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponse.swift; sourceTree = "<group>"; };
-		B0AF914A2157DE2A008F3B80 /* EventItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
+		B0AF914A2157DE2A008F3B80 /* AMIVEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVEvent.swift; sourceTree = "<group>"; };
 		B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		B0E22FD9216DD2E0002317D6 /* AMIVApiJobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiJobs.swift; sourceTree = "<group>"; };
 		B0E22FDB216DD41D002317D6 /* JobOffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOffer.swift; sourceTree = "<group>"; };
 		B0E22FDE216DD754002317D6 /* AMIVApiStudyDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiStudyDocuments.swift; sourceTree = "<group>"; };
 		B0E22FE0216E93EF002317D6 /* StudyDocumentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDocumentResponse.swift; sourceTree = "<group>"; };
 		B0E22FE2216E9448002317D6 /* StudyDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyDocument.swift; sourceTree = "<group>"; };
+		B0F5B94E217137EC005E4591 /* Local+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Local+Extension.swift"; sourceTree = "<group>"; };
+		B0F5B9502171408E005E4591 /* AMIVMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVMedia.swift; sourceTree = "<group>"; };
+		B0F5B954217142E3005E4591 /* AMIVMediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVMediaType.swift; sourceTree = "<group>"; };
+		B0F5B9572171480B005E4591 /* JobsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModel.swift; sourceTree = "<group>"; };
+		B0F5B9592171624D005E4591 /* GenericInfoViewControllerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericInfoViewControllerAction.swift; sourceTree = "<group>"; };
+		B0F5B95B2171786C005E4591 /* AMIVApiUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMIVApiUser.swift; sourceTree = "<group>"; };
+		B0F5B95E217179D9005E4591 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0FE2EFB2154179600F3D073 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		B0FE2EFE21541A2B00F3D073 /* EventsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNavigator.swift; sourceTree = "<group>"; };
 		B0FE2F0121541A6300F3D073 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +384,7 @@
 		B050E15721516E160090CB79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0F5B956217147FC005E4591 /* Jobs */,
 				B048377A21582C4500AFA689 /* Events */,
 				B050E1882151A4850090CB79 /* Settings Model */,
 			);
@@ -392,6 +407,7 @@
 				B050E1932151A9750090CB79 /* Bundle+Extension.swift */,
 				B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */,
 				B048377D21582D4E00AFA689 /* String+Extension.swift */,
+				B0F5B94E217137EC005E4591 /* Local+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -564,6 +580,7 @@
 				B05EC253216BFE6600D5AD99 /* AMIVApiSession.swift */,
 				B0E22FD9216DD2E0002317D6 /* AMIVApiJobs.swift */,
 				B0E22FDE216DD754002317D6 /* AMIVApiStudyDocuments.swift */,
+				B0F5B95B2171786C005E4591 /* AMIVApiUser.swift */,
 			);
 			path = EndPoint;
 			sourceTree = "<group>";
@@ -603,6 +620,9 @@
 		B0AF91432157D320008F3B80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B0F5B9502171408E005E4591 /* AMIVMedia.swift */,
+				B0F5B954217142E3005E4591 /* AMIVMediaType.swift */,
+				B0F5B95D217179C6005E4591 /* User */,
 				B0E22FDD216DD73D002317D6 /* Study Documents */,
 				B05EC250216BFCC700D5AD99 /* Authentication */,
 				B0AF91492157DE14008F3B80 /* Jobs */,
@@ -615,7 +635,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AF91462157D36E008F3B80 /* EventsResponse.swift */,
-				B0AF914A2157DE2A008F3B80 /* EventItem.swift */,
+				B0AF914A2157DE2A008F3B80 /* AMIVEvent.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -623,7 +643,7 @@
 		B0AF91492157DE14008F3B80 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
-				B0AF91442157D34E008F3B80 /* JobsResponse.swift */,
+				B0AF91442157D34E008F3B80 /* JobOffersResponse.swift */,
 				B0E22FDB216DD41D002317D6 /* JobOffer.swift */,
 			);
 			path = Jobs;
@@ -636,6 +656,22 @@
 				B0E22FE2216E9448002317D6 /* StudyDocument.swift */,
 			);
 			path = "Study Documents";
+			sourceTree = "<group>";
+		};
+		B0F5B956217147FC005E4591 /* Jobs */ = {
+			isa = PBXGroup;
+			children = (
+				B0F5B9572171480B005E4591 /* JobsViewModel.swift */,
+			);
+			path = Jobs;
+			sourceTree = "<group>";
+		};
+		B0F5B95D217179C6005E4591 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B0F5B95E217179D9005E4591 /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		B0FE2EFD21541A1000F3D073 /* Events */ = {
@@ -670,6 +706,7 @@
 				B0FE2F0521541C5C00F3D073 /* GenericInfoViewController.swift */,
 				B0FE2F072154230500F3D073 /* GenericInfoViewControllerDelegate.swift */,
 				B0FE2F092154237C00F3D073 /* GenericInfoViewControllerModel.swift */,
+				B0F5B9592171624D005E4591 /* GenericInfoViewControllerAction.swift */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -811,7 +848,7 @@
 				B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */,
 				B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */,
 				B050E17821517EF50090CB79 /* AmivMicroAppModel.swift in Sources */,
-				B0AF91452157D34E008F3B80 /* JobsResponse.swift in Sources */,
+				B0AF91452157D34E008F3B80 /* JobOffersResponse.swift in Sources */,
 				B050E16E215178BA0090CB79 /* AmivMicroAppsNavigator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
 				B0E22FDF216DD754002317D6 /* AMIVApiStudyDocuments.swift in Sources */,
@@ -828,12 +865,15 @@
 				B050E171215179A30090CB79 /* AmivMicroAppsViewController.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
 				B0E22FE3216E9448002317D6 /* StudyDocument.swift in Sources */,
+				B0F5B955217142E3005E4591 /* AMIVMediaType.swift in Sources */,
 				B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */,
 				B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */,
 				B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
+				B0F5B95A2171624D005E4591 /* GenericInfoViewControllerAction.swift in Sources */,
 				B0AF91342157B430008F3B80 /* NetworkError.swift in Sources */,
 				B05EC24F216BF9B900D5AD99 /* RouterError.swift in Sources */,
+				B0F5B9582171480B005E4591 /* JobsViewModel.swift in Sources */,
 				B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */,
 				B0E22FDC216DD41D002317D6 /* JobOffer.swift in Sources */,
 				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
@@ -846,7 +886,9 @@
 				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
 				B0E22FDA216DD2E0002317D6 /* AMIVApiJobs.swift in Sources */,
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
+				B0F5B95F217179D9005E4591 /* User.swift in Sources */,
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
+				B0F5B9512171408E005E4591 /* AMIVMedia.swift in Sources */,
 				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
 				B0845924215B78C700479D27 /* AmivMicroAppCheckin.swift in Sources */,
@@ -856,8 +898,9 @@
 				B0FE2F0621541C5C00F3D073 /* GenericInfoViewController.swift in Sources */,
 				B0AF91472157D36E008F3B80 /* EventsResponse.swift in Sources */,
 				B0FE2F1221550C0100F3D073 /* JobsViewControllerDelegate.swift in Sources */,
-				B0AF914B2157DE2A008F3B80 /* EventItem.swift in Sources */,
+				B0AF914B2157DE2A008F3B80 /* AMIVEvent.swift in Sources */,
 				B0845926215B797200479D27 /* AmivMicroApp.swift in Sources */,
+				B0F5B94F217137EC005E4591 /* Local+Extension.swift in Sources */,
 				B0FE2F082154230500F3D073 /* GenericInfoViewControllerDelegate.swift in Sources */,
 				B050E1852151A3700090CB79 /* SettingsViewController.swift in Sources */,
 				B0FE2F102154495100F3D073 /* BlurButton.swift in Sources */,
@@ -880,6 +923,7 @@
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
 				B0845928215B7AF200479D27 /* AmivMicroAppBarcode.swift in Sources */,
 				B050E17F215195B50090CB79 /* UIFont+Extension.swift in Sources */,
+				B0F5B95C2171786C005E4591 /* AMIVApiUser.swift in Sources */,
 				B0AF912E2157B19A008F3B80 /* HTTPMethod.swift in Sources */,
 				B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,

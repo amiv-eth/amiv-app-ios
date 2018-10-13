@@ -15,6 +15,8 @@ public class GenericInfoViewController: UIViewController {
     
     public var delegate: GenericInfoViewControllerDelegate?
     
+    public var action: GenericInfoViewControllerAction
+    
     // MARK: - View Variables
     
     public private(set) var scrollView: UIScrollView!
@@ -30,6 +32,7 @@ public class GenericInfoViewController: UIViewController {
     // MARK: - Initializers
     
     public init(model: GenericInfoViewControllerModel) {
+        self.action = model.action
         super.init(nibName: nil, bundle: nil)
         self.view.backgroundColor = .white
         self.title = model.title
@@ -139,6 +142,8 @@ public class GenericInfoViewController: UIViewController {
         textView.text = text
         textView.isScrollEnabled = false
         textView.isEditable = false
+        textView.isSelectable = true
+        textView.dataDetectorTypes = .link
         textView.font = UIFont.preferredFont(forTextStyle: .body)
         textView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -197,7 +202,7 @@ public class GenericInfoViewController: UIViewController {
     
     @objc private func buttonTapped() {
         debugPrint("button tapped")
-        self.delegate?.buttonTapped(self)
+        self.delegate?.buttonTapped(self, action: self.action)
     }
     
     @objc private func expandImage() {
