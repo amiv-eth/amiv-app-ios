@@ -10,35 +10,39 @@ import Foundation
 
 public struct EventSignup {
     
-    public var event: String
-    public var user: String
+    public var eventID: String
+    public var userID: String?
     public var email: String
     public var isConfirmed: Bool
     public var isAccepted: Bool
-    public var id: String
+    public var signupID: String
+    public var etag: String
     
 }
 
-extension EventSignup: Decodable {
+extension EventSignup: Codable {
     
     private enum EventSignupCodingKeys: String, CodingKey {
-        case event = "event"
-        case user = "user"
+        case eventID = "event"
+        case userID = "user"
         case email = "email"
         case isConfirmed = "confirmed"
         case isAccepted = "accepted"
-        case id = "_id"
+        case signupID = "_id"
+        case etag = "_etag"
     }
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: EventSignupCodingKeys.self)
         
-        self.event = try container.decode(String.self, forKey: .event)
-        self.user = try container.decode(String.self, forKey: .user)
+        self.eventID = try container.decode(String.self, forKey: .eventID)
+        self.userID = try? container.decode(String.self, forKey: .userID)
         self.email = try container.decode(String.self, forKey: .email)
         self.isConfirmed = try container.decode(Bool.self, forKey: .isConfirmed)
         self.isAccepted = try container.decode(Bool.self, forKey: .isAccepted)
-        self.id = try container.decode(String.self, forKey: .id)
+        self.signupID = try container.decode(String.self, forKey: .signupID)
+        self.etag = try container.decode(String.self, forKey: .etag)
     }
     
+    // TODO: - Implement encodable
 }

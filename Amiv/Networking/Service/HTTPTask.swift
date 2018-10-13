@@ -15,5 +15,6 @@ public enum HTTPTask {
     case request
     case requestParameters(bodyParameters: Parameters?, urlParameter: Parameters?)
     case requestParametersAndHeaders(bodyParameters: Parameters?, urlParameter: Parameters?, additionalHeaders: HTTPHeaders?)
+    case requestJson(json: EventSignup)
     
 }

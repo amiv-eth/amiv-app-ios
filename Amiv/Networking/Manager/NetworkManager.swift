@@ -100,7 +100,7 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
         }
     }
     
-    public func getEventSignups(_ completion: @escaping (_ image: Data?, _ error: String?) -> Void) {
+    public func getEventSignups(_ completion: @escaping (_ signups: [EventSignup]?, _ error: String?) -> Void) {
         router.request(.eventSignups) { (data, response, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
@@ -118,9 +118,39 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
                     completion(nil, NetworkResponse.noData.rawValue)
                     return
                 }
-                completion(responseData, nil)
+                do {
+                    let json = try JSONDecoder().decode(EventsSignupResponse.self, from: responseData)
+                    completion(json.eventSignups, nil)
+                } catch {
+                    completion(nil, NetworkResponse.unableToDecode.rawValue)
+                }
             case .failure(let error):
                 completion(nil, error)
+            }
+        }
+    }
+    
+    public func signupTo(_ event: EventSignup, _ completion: @escaping (_ success: Bool, _ error: String?) -> Void) {
+        router.request(.signup(event)) { (data, response, error) in
+            guard error == nil else {
+                completion(false, error?.localizedDescription)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                return
+            }
+            
+            if let data = data {
+                debugPrint(String(data: data, encoding: .utf8))
+            }
+            
+            let result = self.handleNetworkRequest(response)
+            switch result {
+            case .success:
+                completion(true, nil)
+            case .failure(let error):
+                completion(false, error)
             }
         }
     }

@@ -74,13 +74,9 @@ extension OnboardingNavigator: LoginViewControllerDelegate {
             let userManager = NetworkManager<AMIVApiUser>()
             userManager.getUserInfo({ (user, error) in
                 guard error == nil, let user = user else {
-                    debugPrint(error)
                     return
                 }
-                
-                if user.saveLocal() {
-                    debugPrint(User.loadLocal())
-                }
+                let _ = user.saveLocal()
             })
             
             DispatchQueue.main.async {

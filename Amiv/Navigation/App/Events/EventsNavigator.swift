@@ -30,6 +30,17 @@ public class EventsNavigator: Navigator {
         events.delegate = self
         
         self.refreshData(events)
+        
+        self.networkManager.getEventSignups { (events, error) in
+            guard let event = events?.first else {
+                return
+            }
+            
+            self.networkManager.signupTo(event, { (success, error) in
+                debugPrint(success)
+                debugPrint(error)
+            })
+        }
     }
     
     // MARK: - Navigation
