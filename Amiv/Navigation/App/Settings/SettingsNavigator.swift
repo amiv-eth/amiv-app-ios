@@ -12,6 +12,7 @@ import UIKit
 public class SettingsNavigator: Navigator {
     
     // MARK: - Variables
+    let modelFP : FoodPreferenceModel?
     
     public var rootViewController: UIViewController {
         return self.navigationController
@@ -23,6 +24,8 @@ public class SettingsNavigator: Navigator {
     
     public init() {
         let model = SettingsModel.create()
+        modelFP = FoodPreferenceModel.create()
+        
         let settings = SettingsViewController(model: model)
         self.navigationController = UINavigationController(rootViewController: settings)
         self.navigationController.navigationBar.tintColor = .amivRed
@@ -31,17 +34,47 @@ public class SettingsNavigator: Navigator {
     
 }
 
+//Action onClick calls
 extension SettingsNavigator: SettingsViewControllerDelegate {
     
-    public func toggleLogin() {
-        debugPrint("toggle login")
+    private func changeVC(ViewController : UITableViewController){
+        self.navigationController.pushViewController(ViewController , animated: true)
     }
     
+    public func toggleLogin() {
+        let alert = UIAlertController(title: "Do you want to logout?", message: "If you log out you're required to log in again", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        //TODO add Completion Handler for logout
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        self.navigationController.present(alert, animated: true, completion: nil)
+    }
     public func pushNotification() {
         debugPrint("push notification")
     }
-    
+    // 2. Sektion in den Settings,
     public func changeValue(for key: String) {
-        debugPrint("change value for key \(key)")
+        switch (key) {
+            case "food":
+                let viewController = FoodPreferenceViewController(model: modelFP!)
+                viewController.delegate = self
+                changeVC(ViewController: viewController)
+                debugPrint("change value for key food")
+                break;
+            case "pubTrans":
+                changeVC(ViewController: pubTransVC())
+            case "pushNotification":
+                debugPrint("change value for key pushNotification")
+            default:
+                break;
+        }
     }
 }
+extension SettingsNavigator: FoodPreferenceDelegate {
+    public func changeFoodPreference() {
+        debugPrint("Dismissing View Controller")
+        self.navigationController.popViewController(animated: true)
+        
+    }
+    
+}
+

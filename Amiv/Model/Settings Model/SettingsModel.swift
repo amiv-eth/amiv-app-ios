@@ -21,6 +21,7 @@ public class SettingsModel {
         self.sectionModels = sectionModels
     }
 }
+//Create all the Data to be populated later in the ViewController
 
 extension SettingsModel {
     
@@ -31,7 +32,7 @@ extension SettingsModel {
     }
     
     private static func createLoginSection() -> SettingsSectionModel {
-        let first = SettingsCellModel(text: "Name: Hans", detailText: "Email: hans@ethz.ch", action: .none, cellType: .login)
+        let first = SettingsCellModel(text: "Name: Test", detailText: "Email: Testing the Model", action: .none, cellType: .login)
         let second = SettingsCellModel(text: "Status: Logged In", detailText: "Tap to log out", action: .toggleLogin, cellType: .login)
         
         return SettingsSectionModel(headerText: "Login", footerText: nil, cellModels: [first, second])

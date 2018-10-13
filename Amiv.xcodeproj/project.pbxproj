@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F996B1A2171510A00FCC28F /* FoodPreferenceVC .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B192171510A00FCC28F /* FoodPreferenceVC .swift */; };
+		7F996B1C21715D9C00FCC28F /* pubTransVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B1B21715D9C00FCC28F /* pubTransVC.swift */; };
+		7F996B202171651F00FCC28F /* FoodPreferencesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B1F2171651F00FCC28F /* FoodPreferencesCell.swift */; };
+		7F996B222171660500FCC28F /* FoodPreferencesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B212171660500FCC28F /* FoodPreferencesAction.swift */; };
+		7F996B26217168CD00FCC28F /* FoodPreferenceCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B25217168CD00FCC28F /* FoodPreferenceCellType.swift */; };
+		7F996B2821716B1600FCC28F /* FoodPreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B2721716B1600FCC28F /* FoodPreferenceModel.swift */; };
+		7F996B2B2171D5D800FCC28F /* FoodPreferenceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B2A2171D5D800FCC28F /* FoodPreferenceDelegate.swift */; };
+		7F996B2D2171EDD300FCC28F /* FoodPreferencesSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B2C2171EDD300FCC28F /* FoodPreferencesSectionModel.swift */; };
 		B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048377D21582D4E00AFA689 /* String+Extension.swift */; };
 		B050E120215169230090CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E11F215169230090CB79 /* AppDelegate.swift */; };
 		B050E127215169250090CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B050E126215169250090CB79 /* Assets.xcassets */; };
@@ -103,6 +111,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F996B192171510A00FCC28F /* FoodPreferenceVC .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodPreferenceVC .swift"; sourceTree = "<group>"; };
+		7F996B1B21715D9C00FCC28F /* pubTransVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pubTransVC.swift; sourceTree = "<group>"; };
+		7F996B1F2171651F00FCC28F /* FoodPreferencesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferencesCell.swift; sourceTree = "<group>"; };
+		7F996B212171660500FCC28F /* FoodPreferencesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferencesAction.swift; sourceTree = "<group>"; };
+		7F996B25217168CD00FCC28F /* FoodPreferenceCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferenceCellType.swift; sourceTree = "<group>"; };
+		7F996B2721716B1600FCC28F /* FoodPreferenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferenceModel.swift; sourceTree = "<group>"; };
+		7F996B2A2171D5D800FCC28F /* FoodPreferenceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferenceDelegate.swift; sourceTree = "<group>"; };
+		7F996B2C2171EDD300FCC28F /* FoodPreferencesSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferencesSectionModel.swift; sourceTree = "<group>"; };
 		B048377D21582D4E00AFA689 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B050E11C215169230090CB79 /* Amiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B050E11F215169230090CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +229,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F996B1D217164DC00FCC28F /* FoodPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				7F996B1F2171651F00FCC28F /* FoodPreferencesCell.swift */,
+				7F996B212171660500FCC28F /* FoodPreferencesAction.swift */,
+				7F996B2721716B1600FCC28F /* FoodPreferenceModel.swift */,
+				7F996B25217168CD00FCC28F /* FoodPreferenceCellType.swift */,
+				7F996B2C2171EDD300FCC28F /* FoodPreferencesSectionModel.swift */,
+			);
+			path = FoodPreferences;
+			sourceTree = "<group>";
+		};
+		7F996B1E217164E900FCC28F /* pubTrans */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pubTrans;
+			sourceTree = "<group>";
+		};
+		7F996B2E2171FA8C00FCC28F /* FoodPreference */ = {
+			isa = PBXGroup;
+			children = (
+				7F996B2A2171D5D800FCC28F /* FoodPreferenceDelegate.swift */,
+				7F996B192171510A00FCC28F /* FoodPreferenceVC .swift */,
+			);
+			path = FoodPreference;
+			sourceTree = "<group>";
+		};
+		7F996B2F2171FABD00FCC28F /* pubTrans */ = {
+			isa = PBXGroup;
+			children = (
+				7F996B1B21715D9C00FCC28F /* pubTransVC.swift */,
+			);
+			path = pubTrans;
+			sourceTree = "<group>";
+		};
 		B048377A21582C4500AFA689 /* Events */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +517,8 @@
 		B050E1822151A3590090CB79 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7F996B2F2171FABD00FCC28F /* pubTrans */,
+				7F996B2E2171FA8C00FCC28F /* FoodPreference */,
 				B050E1842151A3700090CB79 /* SettingsViewController.swift */,
 				B050E1862151A3C40090CB79 /* SettingsViewControllerDelegate.swift */,
 			);
@@ -483,11 +537,13 @@
 		B050E1882151A4850090CB79 /* Settings Model */ = {
 			isa = PBXGroup;
 			children = (
+				B050E18B2151A54D0090CB79 /* SettingsCellModel.swift */,
 				B050E18F2151A6000090CB79 /* SettingsModel.swift */,
 				B050E1892151A4A80090CB79 /* SettingsAction.swift */,
-				B050E18B2151A54D0090CB79 /* SettingsCellModel.swift */,
 				B050E18D2151A5660090CB79 /* SettingsCellType.swift */,
 				B050E1912151A61F0090CB79 /* SettingsSectionModel.swift */,
+				7F996B1D217164DC00FCC28F /* FoodPreferences */,
+				7F996B1E217164E900FCC28F /* pubTrans */,
 			);
 			path = "Settings Model";
 			sourceTree = "<group>";
@@ -826,28 +882,34 @@
 				B0FE2F0221541A6300F3D073 /* EventsViewController.swift in Sources */,
 				B050E17D2151910F0090CB79 /* LoginViewController.swift in Sources */,
 				B050E171215179A30090CB79 /* AmivMicroAppsViewController.swift in Sources */,
+				7F996B2D2171EDD300FCC28F /* FoodPreferencesSectionModel.swift in Sources */,
 				B050E18A2151A4A80090CB79 /* SettingsAction.swift in Sources */,
 				B0E22FE3216E9448002317D6 /* StudyDocument.swift in Sources */,
 				B07A8A0421523AB8003CC2D8 /* InfoViewControllerModel.swift in Sources */,
 				B0AF913A2157BF11008F3B80 /* NetworkRouter.swift in Sources */,
 				B0AF913E2157CE2D008F3B80 /* NetworkManager.swift in Sources */,
+				7F996B202171651F00FCC28F /* FoodPreferencesCell.swift in Sources */,
 				B050E146215169D00090CB79 /* RootNavigator.swift in Sources */,
 				B0AF91342157B430008F3B80 /* NetworkError.swift in Sources */,
 				B05EC24F216BF9B900D5AD99 /* RouterError.swift in Sources */,
 				B07A8A0621523B96003CC2D8 /* InfoViewControllerDelegate.swift in Sources */,
 				B0E22FDC216DD41D002317D6 /* JobOffer.swift in Sources */,
+				7F996B2821716B1600FCC28F /* FoodPreferenceModel.swift in Sources */,
 				B050E1872151A3C40090CB79 /* SettingsViewControllerDelegate.swift in Sources */,
+				7F996B1A2171510A00FCC28F /* FoodPreferenceVC .swift in Sources */,
 				B050E15021516BA60090CB79 /* OnboardingNavigator.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
 				B0AF913C2157C025008F3B80 /* Router.swift in Sources */,
 				B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */,
+				7F996B222171660500FCC28F /* FoodPreferencesAction.swift in Sources */,
 				B050E15C215171F70090CB79 /* HomeNavigator.swift in Sources */,
 				B050E1972151AAC40090CB79 /* SettingsNavigator.swift in Sources */,
 				B0E22FDA216DD2E0002317D6 /* AMIVApiJobs.swift in Sources */,
 				B050E1942151A9750090CB79 /* Bundle+Extension.swift in Sources */,
 				B050E14E21516AFE0090CB79 /* AppNavigator.swift in Sources */,
 				B0FE2F0A2154237C00F3D073 /* GenericInfoViewControllerModel.swift in Sources */,
+				7F996B1C21715D9C00FCC28F /* pubTransVC.swift in Sources */,
 				B050E18121519B390090CB79 /* LoginViewControllerDelegate.swift in Sources */,
 				B0845924215B78C700479D27 /* AmivMicroAppCheckin.swift in Sources */,
 				B0FE2F0D21543E6600F3D073 /* ImageViewerViewController.swift in Sources */,
@@ -875,6 +937,7 @@
 				B050E17A215180D20090CB79 /* AmivMicroAppCell.swift in Sources */,
 				B07A8A0B21524474003CC2D8 /* LoginModel.swift in Sources */,
 				B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */,
+				7F996B2B2171D5D800FCC28F /* FoodPreferenceDelegate.swift in Sources */,
 				B0AF91382157B632008F3B80 /* JSONParameterEncoder.swift in Sources */,
 				B0FE2F1F21552AF700F3D073 /* KeychainSwiftConstants.swift in Sources */,
 				B050E15F2151735A0090CB79 /* UIColor+Extension.swift in Sources */,
@@ -883,6 +946,7 @@
 				B0AF912E2157B19A008F3B80 /* HTTPMethod.swift in Sources */,
 				B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
+				7F996B26217168CD00FCC28F /* FoodPreferenceCellType.swift in Sources */,
 				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivMicroAppType.swift in Sources */,
 				B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */,
@@ -1041,7 +1105,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Amiv/Amiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28J3L9UEGT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Amiv/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1061,7 +1125,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Amiv/Amiv.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28J3L9UEGT;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Amiv/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
