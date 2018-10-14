@@ -34,9 +34,9 @@ public struct GenericInfoViewControllerModel {
     }
     
     public init(jobOffer: JobOffer, image: UIImage?) {
-        self.title = jobOffer.title
+        self.title = jobOffer.company
         self.image = image
-        self.text = jobOffer.description
+        self.text = jobOffer.title + "\n\n" + jobOffer.description
         self.titleButton = "View Job Offer (PDF)"
         self.action = .openMedia(jobOffer.pdf)
     }

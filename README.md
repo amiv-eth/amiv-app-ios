@@ -16,7 +16,6 @@ The following steps are necessary and need to be done before launching the first
 - Connect everything to [AMIV api](https://github.com/amiv-eth/amivapi/blob/master/docs/User_Guide.md).
 - Fill all views with data from AMIV api.
 - Include existing checkin app as micro app.
-- Create barcode app and include as micro app.
 - Properly localize every view.
 - Create missing icons (including app icon, tab icons, onboarding app features icons, micro app icons, etc.).
 - Write tests.
@@ -26,6 +25,7 @@ The following steps are necessary and need to be done before launching the first
 The following things are already implemented and work.
 
 - All the major views are build and ready to be connected to data from the AMIV api.
+- Barcode Micro App
 
 ## Developer Information
 
