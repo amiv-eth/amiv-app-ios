@@ -78,32 +78,31 @@ public class JobsViewController: UITableViewController {
 extension JobsViewController {
     
     public override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.model.sections.count
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.model.jobOffers.count
+        return self.model.sections[section].cells.count
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = self.model.jobOffers[indexPath.row]
+        let model = self.model.sections[indexPath.section].cells[indexPath.row]
         
         let cell: UITableViewCell = {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "JobCell") else {
-                return UITableViewCell(style: .subtitle, reuseIdentifier: "JobCell")
+                return UITableViewCell(style: .default, reuseIdentifier: "JobCell")
             }
             return cell
         }()
         
         cell.textLabel?.text = model.title
         cell.textLabel?.numberOfLines = 0
-        cell.detailTextLabel?.text = model.company
         
         return cell
     }
     
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Jobs"
+        return self.model.sections[section].title
     }
     
 }
@@ -113,7 +112,7 @@ extension JobsViewController {
 extension JobsViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectJob(self, job: self.model.jobOffers[indexPath.row])
+        self.delegate?.didSelectJob(self, job: self.model.sections[indexPath.section].cells[indexPath.row].jobOffer)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

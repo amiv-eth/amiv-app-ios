@@ -10,7 +10,7 @@ import Foundation
 
 public enum AMIVApiUser {
     
-    case userInfo
+    case userInfo(_ id: String)
     case allUsers
     
 }
@@ -19,11 +19,8 @@ extension AMIVApiUser: EndPointType {
     
     public var path: String {
         switch self {
-        case .userInfo:
-            if let id = SessionManager.userID {
-                return "/users/\(id)"
-            }
-            return "/users/0"
+        case .userInfo(let id):
+            return "/users/\(id)"
         case .allUsers:
             return "/users"
         }

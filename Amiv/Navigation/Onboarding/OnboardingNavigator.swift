@@ -56,31 +56,13 @@ extension OnboardingNavigator: InfoViewControllerDelegate {
 extension OnboardingNavigator: LoginViewControllerDelegate {
     
     public func login(_ viewController: LoginViewController, username: String, password: String) {
-        // TODO: - Check for valid credentials
-        debugPrint("Logging in with username: \(username) and password: \(password)")
-        
-        
-        self.networkManager.authenticate(username: username, password: password) { (response, error) in
-            guard let response = response else {
-                DispatchQueue.main.async {
+        SessionManager.login(username: username, password: password) { (success, error) in
+            DispatchQueue.main.async {
+                if success {
+                    self.delegate?.onboardingFinished()
+                } else {
                     viewController.loginFailed(with: "Incorrect Username or Password.\nPlease try again.")
                 }
-                return
-            }
-            
-            // Save token into secure and encrypted keychain
-            SessionManager.save(response)
-            
-            let userManager = NetworkManager<AMIVApiUser>()
-            userManager.getUserInfo({ (user, error) in
-                guard error == nil, let user = user else {
-                    return
-                }
-                let _ = user.saveLocal()
-            })
-            
-            DispatchQueue.main.async {
-                self.delegate?.onboardingFinished()
             }
         }
     }

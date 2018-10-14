@@ -81,6 +81,8 @@
 		B0845924215B78C700479D27 /* AmivMicroAppCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0845923215B78C700479D27 /* AmivMicroAppCheckin.swift */; };
 		B0845926215B797200479D27 /* AmivMicroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0845925215B797200479D27 /* AmivMicroApp.swift */; };
 		B0845928215B7AF200479D27 /* AmivMicroAppBarcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0845927215B7AF200479D27 /* AmivMicroAppBarcode.swift */; };
+		B097D4332173573B00B9D791 /* JobsViewModelSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B097D4322173573B00B9D791 /* JobsViewModelSection.swift */; };
+		B097D4352173578100B9D791 /* JobsViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B097D4342173578100B9D791 /* JobsViewModelCell.swift */; };
 		B0AF91292157B0A3008F3B80 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF91282157B0A3008F3B80 /* EndPointType.swift */; };
 		B0AF912E2157B19A008F3B80 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF912D2157B19A008F3B80 /* HTTPMethod.swift */; };
 		B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AF912F2157B26C008F3B80 /* HTTPTask.swift */; };
@@ -227,6 +229,8 @@
 		B0845925215B797200479D27 /* AmivMicroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivMicroApp.swift; sourceTree = "<group>"; };
 		B0845927215B7AF200479D27 /* AmivMicroAppBarcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmivMicroAppBarcode.swift; sourceTree = "<group>"; };
 		B0845929215B81DE00479D27 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B097D4322173573B00B9D791 /* JobsViewModelSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModelSection.swift; sourceTree = "<group>"; };
+		B097D4342173578100B9D791 /* JobsViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewModelCell.swift; sourceTree = "<group>"; };
 		B0A2F35921579FD0002C340F /* Amiv.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amiv.entitlements; sourceTree = "<group>"; };
 		B0AF91282157B0A3008F3B80 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		B0AF912D2157B19A008F3B80 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -710,6 +714,7 @@
 		B0AF912B2157B151008F3B80 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B0F5B9642172132B005E4591 /* SessionManager.swift */,
 				B0AF913D2157CE2D008F3B80 /* NetworkManager.swift */,
 			);
 			path = Manager;
@@ -773,6 +778,8 @@
 			isa = PBXGroup;
 			children = (
 				B0F5B9572171480B005E4591 /* JobsViewModel.swift */,
+				B097D4322173573B00B9D791 /* JobsViewModelSection.swift */,
+				B097D4342173578100B9D791 /* JobsViewModelCell.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -850,7 +857,6 @@
 				B0FE2F1C21552AC800F3D073 /* KeychainSwiftAccessOptions.swift */,
 				B0FE2F1E21552AF700F3D073 /* KeychainSwiftConstants.swift */,
 				B0AF91412157D192008F3B80 /* KeychainKey.swift */,
-				B0F5B9642172132B005E4591 /* SessionManager.swift */,
 			);
 			path = Keychain;
 			sourceTree = "<group>";
@@ -1013,6 +1019,7 @@
 				92F913012172015F00B883BA /* RSFocusMarkLayer.swift in Sources */,
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
+				B097D4352173578100B9D791 /* JobsViewModelCell.swift in Sources */,
 				92F912F92172015F00B883BA /* RSCode128Generator.swift in Sources */,
 				B005A33A2172B3F600D0BA31 /* EventViewModelCell.swift in Sources */,
 				B005A3322172895F00D0BA31 /* JSONEncoder+Extension.swift in Sources */,
@@ -1062,6 +1069,7 @@
 				B0F5B96B217225EF005E4591 /* Gender.swift in Sources */,
 				B050E168215176D50090CB79 /* AmivMicroAppDelegate.swift in Sources */,
 				B0AF91292157B0A3008F3B80 /* EndPointType.swift in Sources */,
+				B097D4332173573B00B9D791 /* JobsViewModelSection.swift in Sources */,
 				B050E144215169950090CB79 /* Navigator.swift in Sources */,
 				B050E17A215180D20090CB79 /* AmivMicroAppCell.swift in Sources */,
 				B0F5B96D217226CD005E4591 /* AMIVMemebership.swift in Sources */,

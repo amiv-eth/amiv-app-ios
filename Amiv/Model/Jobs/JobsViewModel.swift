@@ -14,16 +14,16 @@ public struct JobsViewModel {
     
     var viewTitle: String
     
-    var jobOffers: [JobOffer]
+    var sections: [JobsViewModelSection]
     
     // MARK: - Initializers
     
-    public init(viewTitle: String, jobOffers: [JobOffer]) {
+    public init(viewTitle: String, jobOffers: [(String, [JobOffer])]) {
         self.viewTitle = viewTitle
-        self.jobOffers = jobOffers
+        self.sections = jobOffers.map({JobsViewModelSection(title: $0.0, jobs: $0.1)})
     }
     
-    public init(jobOffers: [JobOffer]) {
+    public init(jobOffers: [(String, [JobOffer])]) {
         self.init(viewTitle: "Jobs", jobOffers: jobOffers)
     }
     

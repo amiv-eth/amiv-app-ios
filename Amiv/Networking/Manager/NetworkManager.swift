@@ -14,12 +14,13 @@ public struct NetworkManager<EndPoint: EndPointType> {
     
     public enum NetworkResponse: String {
         case success
-        case authenticationError = "You are not logged in."
+        case authenticationError = "You are not logged in"
         case badRequest = "Bad request"
         case failed = "Request failed"
         case noData = "Request was without data to decode."
         case unableToDecode = "Unable to decode data."
         case serverError = "Something went wrong at the AMIV server."
+        case alreadyExists = "Entry already exists."
     }
     
     public enum RequestResult<String> {
@@ -29,7 +30,7 @@ public struct NetworkManager<EndPoint: EndPointType> {
     
     fileprivate func handleNetworkRequest(_ response: HTTPURLResponse) -> RequestResult<String> {
         switch response.statusCode {
-        case 200...299:
+        case 200...299, 100:
             return .success
         case 400:
             return .failure(NetworkResponse.badRequest.rawValue)
@@ -37,6 +38,8 @@ public struct NetworkManager<EndPoint: EndPointType> {
             return .failure(NetworkResponse.authenticationError.rawValue)
         case 404:
             return .failure(NetworkResponse.noData.rawValue)
+        case 422:
+            return .failure(NetworkResponse.alreadyExists.rawValue)
         case 500:
             return .failure(NetworkResponse.serverError.rawValue)
         default:
@@ -131,7 +134,7 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
     }
     
     public func signupTo(_ event: String, _ completion: @escaping (_ signup: EventSignup?, _ error: String?) -> Void) {
-        guard let user = User.loadLocal()?.id else {
+        guard let user = SessionManager.userID else {
             completion(nil, "Missing user id")
             return
         }
@@ -139,10 +142,6 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
                 return
-            }
-            
-            if let data = data {
-                debugPrint(String(data: data, encoding: .utf8))
             }
             
             guard let response = response as? HTTPURLResponse else {
@@ -173,7 +172,7 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
 
 extension NetworkManager where EndPoint == AMIVApiJobs {
     
-    public func getJobOffers(_ completion: @escaping (_ response: [JobOffer]?, _ error: String?) -> Void) {
+    public func getJobOffers(_ completion: @escaping (_ response: JobOffersResponse?, _ error: String?) -> Void) {
         router.request(.jobs) { (data, response, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
@@ -192,7 +191,7 @@ extension NetworkManager where EndPoint == AMIVApiJobs {
                 }
                 do {
                     let apiResponse = try JSONDecoder().decode(JobOffersResponse.self, from: responseData)
-                    completion(apiResponse.jobs, nil)
+                    completion(apiResponse, nil)
                 } catch {
                     completion(nil, NetworkResponse.unableToDecode.rawValue)
                 }
@@ -317,9 +316,13 @@ extension NetworkManager where EndPoint == AMIVApiSession {
     }
     
     public func logout(_ completion: @escaping (_ success: Bool, _ error: String?) -> Void) {
-        router.request(.logout) { (data, response, error) in
+        guard let sessionID = SessionManager.sessionID, let etag = SessionManager.etag else {
+            completion(false, "Missing sessionID or etag")
+            return
+        }
+        router.request(.logout(sessionID, etag)) { (data, response, error) in
             guard error == nil else {
-                completion(false, "Please check your network connection.")
+                completion(true, nil)
                 return
             }
             
@@ -367,8 +370,8 @@ extension NetworkManager where EndPoint == AMIVApiUser {
         }
     }
     
-    public func getUserInfo(_ completion: @escaping (_ response: User?, _ error: String?) -> Void) {
-        router.request(.userInfo) { (data, response, error) in
+    public func getUserInfo(userID: String, _ completion: @escaping (_ response: User?, _ error: String?) -> Void) {
+        router.request(.userInfo(userID)) { (data, response, error) in
             guard error == nil else {
                 completion(nil, "Please check your network connection.")
                 return

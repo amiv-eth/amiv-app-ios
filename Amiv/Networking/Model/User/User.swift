@@ -86,7 +86,7 @@ extension User: Codable {
 
 extension User {
     
-    public static func loadLocal() -> User? {
+    public static var current: User? {
         let fileManager = FileManager.default
         do {
             let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -104,11 +104,11 @@ extension User {
         }
     }
     
-    public func saveLocal() -> Bool {
-        return User.saveLocal(self)
+    public var save: Bool {
+        return User.save(self)
     }
     
-    public static func saveLocal(_ user: User) -> Bool {
+    public static func save(_ user: User) -> Bool {
         let fileManager = FileManager.default
         do {
             let documentDirectory = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)

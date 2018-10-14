@@ -11,7 +11,7 @@ import Foundation
 public enum AMIVApiSession: EndPointType {
     
     case authenticate(username: String, password: String)
-    case logout
+    case logout(_ sessionID: String, _ etag: String)
     
 }
 
@@ -21,11 +21,7 @@ extension AMIVApiSession {
         switch self {
         case .authenticate:
             return "/sessions"
-        case .logout:
-            let keychain = KeychainSwift()
-            guard let id = keychain.get(KeychainKey.userID.rawValue) else {
-                return "/sessions"
-            }
+        case .logout(let id, _):
             return "/sessions/\(id)"
         }
     }
@@ -51,8 +47,10 @@ extension AMIVApiSession {
     
     public var headers: HTTPHeaders? {
         switch self {
-        case .authenticate, .logout:
+        case .authenticate:
             return nil
+        case .logout(_, let etag):
+            return ["If-Match": etag]
         }
     }
     

@@ -38,7 +38,7 @@ public class JobsNavigator: Navigator {
                 return
             }
             
-            let model = JobsViewModel(jobOffers: offers)
+            let model = JobsViewModel(jobOffers: offers.sortJobs())
             jobs.model = model
         }
     }
@@ -80,7 +80,7 @@ extension JobsNavigator: JobsViewControllerDelegate {
                 return
             }
             
-            let model = JobsViewModel(jobOffers: offers)
+            let model = JobsViewModel(jobOffers: offers.sortJobs())
             viewController.model = model
         }
     }
