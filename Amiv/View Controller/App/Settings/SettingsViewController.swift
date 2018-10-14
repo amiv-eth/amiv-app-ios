@@ -18,15 +18,15 @@ public class SettingsViewController: UITableViewController {
     private var model: SettingsModel
     private var CustomIdentifier = "customIdentifier"
     public var delegate: SettingsViewControllerDelegate?
-    
     // MARK: - Initializers
     
     public init(model: SettingsModel) {
         self.model = model
         super.init(style: .grouped)
         self.title = "Settings"
-        
         self.tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomIdentifier)
+      
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

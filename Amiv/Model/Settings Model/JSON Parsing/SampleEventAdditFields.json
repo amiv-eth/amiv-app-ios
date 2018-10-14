@@ -13,11 +13,12 @@
         "Food":
         {
             "type":"string",
-            "enum":["Omnivor","Vegi","Vegan","Other"]
+            "enum":["Omnivor","Vegi","Vegan","Other","Created With JSON"]
         },
         "Special Food Requirements":
         {
-            "type":"string"
+            "type":"string",
+            
         }
     },
     "required":["SBB_Abo","Food"]

@@ -26,7 +26,7 @@ class CustomTableViewCell: UITableViewCell {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 20))
         Label.text = "Food Requierement"
         
-        let sampleTextField =  UITextField(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+        let sampleTextField =  UITextField(frame: CGRect(x: 0, y: 0, width: 500, height: 40))
         sampleTextField.textAlignment = .center
         sampleTextField.placeholder = "Enter text here"
         sampleTextField.font = UIFont.systemFont(ofSize: 15)
@@ -37,15 +37,14 @@ class CustomTableViewCell: UITableViewCell {
         sampleTextField.clearButtonMode = UITextField.ViewMode.whileEditing;
         sampleTextField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         contentView.addSubview(sampleTextField)
-        
+        /*
         sampleTextField.widthAnchor.constraint(equalToConstant: 400).isActive = true
         sampleTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        debugPrint(self.contentView.centerXAnchor)
         
         sampleTextField.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
         sampleTextField.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         
-        
+        */
     }
 
 }

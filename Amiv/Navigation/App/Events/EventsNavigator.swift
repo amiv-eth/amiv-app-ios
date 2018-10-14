@@ -65,7 +65,6 @@ extension EventsNavigator: EventsViewControllerDelegate {
     }
     
 }
-
 extension EventsNavigator: GenericInfoViewControllerDelegate {
     
     public func buttonTapped(_ viewController: GenericInfoViewController) {

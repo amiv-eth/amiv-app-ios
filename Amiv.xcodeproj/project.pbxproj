@@ -16,6 +16,9 @@
 		7F996B2B2171D5D800FCC28F /* FoodPreferenceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B2A2171D5D800FCC28F /* FoodPreferenceDelegate.swift */; };
 		7F996B2D2171EDD300FCC28F /* FoodPreferencesSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B2C2171EDD300FCC28F /* FoodPreferencesSectionModel.swift */; };
 		7F996B3321723D5B00FCC28F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B3221723D5B00FCC28F /* CustomTableViewCell.swift */; };
+		7F996B3821726ACD00FCC28F /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F996B3721726ACD00FCC28F /* JSONParser.swift */; };
+		7FEF6E762172976100984BDB /* SampleEventAdditFields.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F996B342172696500FCC28F /* SampleEventAdditFields.json */; };
+		7FEF6E7821729D9200984BDB /* BeerTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF6E7721729D9100984BDB /* BeerTest.json */; };
 		B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048377D21582D4E00AFA689 /* String+Extension.swift */; };
 		B050E120215169230090CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E11F215169230090CB79 /* AppDelegate.swift */; };
 		B050E127215169250090CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B050E126215169250090CB79 /* Assets.xcassets */; };
@@ -121,6 +124,9 @@
 		7F996B2A2171D5D800FCC28F /* FoodPreferenceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferenceDelegate.swift; sourceTree = "<group>"; };
 		7F996B2C2171EDD300FCC28F /* FoodPreferencesSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferencesSectionModel.swift; sourceTree = "<group>"; };
 		7F996B3221723D5B00FCC28F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		7F996B342172696500FCC28F /* SampleEventAdditFields.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleEventAdditFields.json; sourceTree = "<group>"; };
+		7F996B3721726ACD00FCC28F /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		7FEF6E7721729D9100984BDB /* BeerTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BeerTest.json; sourceTree = "<group>"; };
 		B048377D21582D4E00AFA689 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B050E11C215169230090CB79 /* Amiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B050E11F215169230090CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -265,6 +271,16 @@
 				7F996B1B21715D9C00FCC28F /* pubTransVC.swift */,
 			);
 			path = pubTrans;
+			sourceTree = "<group>";
+		};
+		7F996B36217269E100FCC28F /* JSON Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				7F996B342172696500FCC28F /* SampleEventAdditFields.json */,
+				7FEF6E7721729D9100984BDB /* BeerTest.json */,
+				7F996B3721726ACD00FCC28F /* JSONParser.swift */,
+			);
+			path = "JSON Parsing";
 			sourceTree = "<group>";
 		};
 		B048377A21582C4500AFA689 /* Events */ = {
@@ -540,6 +556,7 @@
 		B050E1882151A4850090CB79 /* Settings Model */ = {
 			isa = PBXGroup;
 			children = (
+				7F996B36217269E100FCC28F /* JSON Parsing */,
 				B050E18B2151A54D0090CB79 /* SettingsCellModel.swift */,
 				B050E18F2151A6000090CB79 /* SettingsModel.swift */,
 				B050E1892151A4A80090CB79 /* SettingsAction.swift */,
@@ -846,6 +863,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FEF6E7821729D9200984BDB /* BeerTest.json in Resources */,
+				7FEF6E762172976100984BDB /* SampleEventAdditFields.json in Resources */,
 				B050E12A215169250090CB79 /* LaunchScreen.storyboard in Resources */,
 				B050E127215169250090CB79 /* Assets.xcassets in Resources */,
 				B0FE2F182155167F00F3D073 /* Dienstverschiebungsgesuch.pdf in Resources */,
@@ -951,6 +970,7 @@
 				B0AF91302157B26C008F3B80 /* HTTPTask.swift in Sources */,
 				B07A8A022152384F003CC2D8 /* InfoItemModel.swift in Sources */,
 				7F996B26217168CD00FCC28F /* FoodPreferenceCellType.swift in Sources */,
+				7F996B3821726ACD00FCC28F /* JSONParser.swift in Sources */,
 				B0FE2EFC2154179600F3D073 /* JobsViewController.swift in Sources */,
 				B050E17321517A050090CB79 /* AmivMicroAppType.swift in Sources */,
 				B0AF91402157CF50008F3B80 /* AMIVApiEvents.swift in Sources */,

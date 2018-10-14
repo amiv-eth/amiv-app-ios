@@ -11,13 +11,11 @@ import UIKit
 
 public class FoodPreferenceModel{
     public private(set) var sectionModels: [FoodPreferenceSectionModel]
-    
     // MARK: - Initializers
-    
     public init(sectionModels: [FoodPreferenceSectionModel]) {
         self.sectionModels = sectionModels
+        
     }
-   //TODO Add Variables/Models
 }
 extension FoodPreferenceModel{
     
@@ -26,13 +24,16 @@ extension FoodPreferenceModel{
         return FoodPreferenceModel(sectionModels: sections)
     }
     
-    //TODO Make Dynamic
+  //Parse JSON into Table View
     public static func createFoodPreferenceSection() -> FoodPreferenceSectionModel {
-        let vegetarisch = FoodPreferencesCellModel(text: "vegetarisch", action: .changeFoodPreference, cellType: .normal)
-        let Nichts = FoodPreferencesCellModel(text: "Keine Vorlieben", action: .changeFoodPreference, cellType: .normal)
-        let Other = FoodPreferencesCellModel(text: "Other Food", action: .changeFoodPreference, cellType: .normal)
-        
-        return FoodPreferenceSectionModel(headerText: "Your Choice", footerText: "FooterText", cellModels: [vegetarisch, Nichts, Other])
-    }
+        let jsonParser = JSONParser()
+        var FoodCellModel = [FoodPreferencesCellModel]()
+        jsonParser.parseJSONData(Filename: "SampleEventAdditFields")
+        jsonParser.FoodTypes.forEach { (Food) in
+            let food = FoodPreferencesCellModel(text: Food, action: .changeFoodPreference, cellType: .normal)
+            FoodCellModel.append(food)
+        }
+        return FoodPreferenceSectionModel(headerText: "Your Choice", footerText: "FooterText", cellModels: FoodCellModel)
+ }
     
 }

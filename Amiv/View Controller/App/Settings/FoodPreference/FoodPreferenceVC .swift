@@ -32,6 +32,7 @@ class FoodPreferenceViewController: UITableViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
+       
     }
 }
 
@@ -73,7 +74,6 @@ extension FoodPreferenceViewController {
         return cell
     }
 
-    
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellModel = self.model.sectionModels[indexPath.section].cellModels[indexPath.row]
         let cell = tableView.cellForRow(at: indexPath)
