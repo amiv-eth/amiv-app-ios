@@ -77,11 +77,11 @@ public class EventsViewController: UITableViewController {
 extension EventsViewController {
     
     public override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.model.sections.count
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.model.events.count
+        return self.model.sections[section].cells.count
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -92,14 +92,14 @@ extension EventsViewController {
             return cell
         }()
         
-        let event = self.model.events[indexPath.row]
-        cell.setupView(title: event.title, subtitle: event.catchPhrase, additionalInfo: String(describing: event.signupCount))
+        let event = self.model.sections[indexPath.section].cells[indexPath.row]
+        cell.setupView(title: event.title, subtitle: event.subtitle, additionalInfo: event.additionalInfo)
         
         return cell
     }
     
     public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Events"
+        return self.model.sections[section].sectionTitle
     }
     
 }
@@ -109,7 +109,7 @@ extension EventsViewController {
 extension EventsViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.didSelectEvent(self, event: self.model.events[indexPath.row])
+        self.delegate?.didSelectEvent(self, event: self.model.sections[indexPath.section].cells[indexPath.row].event)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

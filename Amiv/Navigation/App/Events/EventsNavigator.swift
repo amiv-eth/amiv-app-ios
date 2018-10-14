@@ -30,17 +30,6 @@ public class EventsNavigator: Navigator {
         events.delegate = self
         
         self.refreshData(events)
-        
-        self.networkManager.getEventSignups { (events, error) in
-            guard let event = events?.first else {
-                return
-            }
-            
-            self.networkManager.signupTo(event, { (success, error) in
-                debugPrint(success)
-                debugPrint(error)
-            })
-        }
     }
     
     // MARK: - Navigation
@@ -95,9 +84,14 @@ extension EventsNavigator: EventsViewControllerDelegate {
 extension EventsNavigator: GenericInfoViewControllerDelegate {
     
     public func buttonTapped(_ viewController: GenericInfoViewController, action: GenericInfoViewControllerAction) {
-        debugPrint("Info View button tapped")
+        guard case .signup(let eventID) = action else {
+            return
+        }
         
-        // TODO: - Sign up for event
+        self.networkManager.signupTo(eventID) { (signup, error) in
+            debugPrint(error)
+            debugPrint(signup)
+        }
     }
     
 }

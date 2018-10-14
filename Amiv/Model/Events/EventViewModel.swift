@@ -13,17 +13,18 @@ public struct EventViewModel {
     // MARK: - Variables
     
     let viewTitle: String
-    let events: [AMIVEvent]
+    let sections: [EventViewModelSection]
     
     // MARK: - Initializers
     
-    public init(viewTitle: String, events: [AMIVEvent]) {
+    public init(viewTitle: String, events: [(String, [AMIVEvent])]) {
         self.viewTitle = viewTitle
-        self.events = events
+        self.sections = events.map({EventViewModelSection(sectionTitle: $0.0, cells: $0.1)})
     }
     
     public init(response: EventsResponse) {
-        self.init(viewTitle: "Events", events: response.events)
+        let events = response.sortEvents()
+        self.init(viewTitle: "Events", events: events)
     }
 }
 

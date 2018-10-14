@@ -43,9 +43,14 @@ public struct GenericInfoViewControllerModel {
     public init(event: AMIVEvent, image: UIImage?) {
         self.title = event.title
         self.image = image
-        self.text = event.description
-        self.titleButton = "Signup"
-        self.action = .signup(event.id)
+        self.text = event.getInfoText()
+        if event.startTime >= Date() {
+            self.titleButton = "Signup"
+            self.action = .signup(event.id)
+        } else {
+            self.titleButton = nil
+            self.action = .default
+        }
     }
     
 }

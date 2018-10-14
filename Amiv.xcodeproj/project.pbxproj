@@ -29,6 +29,11 @@
 		B005A32E21727D6A00D0BA31 /* RSCodeDataMatrixGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912EF2172015E00B883BA /* RSCodeDataMatrixGenerator.swift */; };
 		B005A32F21727D6D00D0BA31 /* RSCornersLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912E32172015D00B883BA /* RSCornersLayer.swift */; };
 		B005A33021727D7200D0BA31 /* RSITF14Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F912F32172015F00B883BA /* RSITF14Generator.swift */; };
+		B005A3322172895F00D0BA31 /* JSONEncoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005A3312172895F00D0BA31 /* JSONEncoder+Extension.swift */; };
+		B005A3342172A74E00D0BA31 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005A3332172A74E00D0BA31 /* NumberFormatter+Extension.swift */; };
+		B005A3362172B19300D0BA31 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005A3352172B19300D0BA31 /* Date+Extension.swift */; };
+		B005A3382172B38500D0BA31 /* EventViewModelSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005A3372172B38500D0BA31 /* EventViewModelSection.swift */; };
+		B005A33A2172B3F600D0BA31 /* EventViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005A3392172B3F600D0BA31 /* EventViewModelCell.swift */; };
 		B048377E21582D4E00AFA689 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048377D21582D4E00AFA689 /* String+Extension.swift */; };
 		B050E120215169230090CB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B050E11F215169230090CB79 /* AppDelegate.swift */; };
 		B050E127215169250090CB79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B050E126215169250090CB79 /* Assets.xcassets */; };
@@ -164,6 +169,11 @@
 		92F912F42172015F00B883BA /* RSITFGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSITFGenerator.swift; sourceTree = "<group>"; };
 		92F912F52172015F00B883BA /* RSUnifiedCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUnifiedCodeGenerator.swift; sourceTree = "<group>"; };
 		92F912F62172015F00B883BA /* RSUPCEGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSUPCEGenerator.swift; sourceTree = "<group>"; };
+		B005A3312172895F00D0BA31 /* JSONEncoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extension.swift"; sourceTree = "<group>"; };
+		B005A3332172A74E00D0BA31 /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		B005A3352172B19300D0BA31 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		B005A3372172B38500D0BA31 /* EventViewModelSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelSection.swift; sourceTree = "<group>"; };
+		B005A3392172B3F600D0BA31 /* EventViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelCell.swift; sourceTree = "<group>"; };
 		B048377D21582D4E00AFA689 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B050E11C215169230090CB79 /* Amiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B050E11F215169230090CB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				B050E15821516E230090CB79 /* EventViewModel.swift */,
+				B005A3372172B38500D0BA31 /* EventViewModelSection.swift */,
+				B005A3392172B3F600D0BA31 /* EventViewModelCell.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -498,6 +510,9 @@
 				B0D3F92A21552E8E005209FF /* UIButton+Extension.swift */,
 				B048377D21582D4E00AFA689 /* String+Extension.swift */,
 				B0F5B94E217137EC005E4591 /* Local+Extension.swift */,
+				B005A3312172895F00D0BA31 /* JSONEncoder+Extension.swift */,
+				B005A3332172A74E00D0BA31 /* NumberFormatter+Extension.swift */,
+				B005A3352172B19300D0BA31 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -951,8 +966,10 @@
 				B005A32E21727D6A00D0BA31 /* RSCodeDataMatrixGenerator.swift in Sources */,
 				B005A32D21727D6600D0BA31 /* RSCode39Mod43Generator.swift in Sources */,
 				B0FE2F1421550C4400F3D073 /* EventsViewControllerDelegate.swift in Sources */,
+				B005A3362172B19300D0BA31 /* Date+Extension.swift in Sources */,
 				B0AF91422157D192008F3B80 /* KeychainKey.swift in Sources */,
 				92F9130A2172015F00B883BA /* RSUnifiedCodeGenerator.swift in Sources */,
+				B005A3382172B38500D0BA31 /* EventViewModelSection.swift in Sources */,
 				B0FE2F16215514E600F3D073 /* QuickLookDataSource.swift in Sources */,
 				B050E17821517EF50090CB79 /* AmivMicroAppModel.swift in Sources */,
 				B0AF91452157D34E008F3B80 /* JobOffersResponse.swift in Sources */,
@@ -960,6 +977,7 @@
 				92F913022172015F00B883BA /* ContextMaker.m in Sources */,
 				92F913002172015F00B883BA /* RSExtendedCode39Generator.swift in Sources */,
 				B050E18C2151A54D0090CB79 /* SettingsCellModel.swift in Sources */,
+				B005A3342172A74E00D0BA31 /* NumberFormatter+Extension.swift in Sources */,
 				92F913092172015F00B883BA /* RSITFGenerator.swift in Sources */,
 				B0E22FDF216DD754002317D6 /* AMIVApiStudyDocuments.swift in Sources */,
 				B07A8A0921524384003CC2D8 /* OnboardingNavigatorDelegate.swift in Sources */,
@@ -996,6 +1014,8 @@
 				B050E16B215177820090CB79 /* JobsNavigator.swift in Sources */,
 				B050E14C21516A590090CB79 /* AmivRootNavigator.swift in Sources */,
 				92F912F92172015F00B883BA /* RSCode128Generator.swift in Sources */,
+				B005A33A2172B3F600D0BA31 /* EventViewModelCell.swift in Sources */,
+				B005A3322172895F00D0BA31 /* JSONEncoder+Extension.swift in Sources */,
 				92F912FD2172015F00B883BA /* RSCode93Generator.swift in Sources */,
 				B0AF913C2157C025008F3B80 /* Router.swift in Sources */,
 				B0E22FE1216E93EF002317D6 /* StudyDocumentResponse.swift in Sources */,

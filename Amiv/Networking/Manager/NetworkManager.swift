@@ -100,8 +100,8 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
         }
     }
     
-    public func getEventSignups(_ completion: @escaping (_ signups: [EventSignup]?, _ error: String?) -> Void) {
-        router.request(.eventSignups) { (data, response, error) in
+    public func getAllEventSignups(_ completion: @escaping (_ signups: [EventSignup]?, _ error: String?) -> Void) {
+        router.request(.allEventSignups) { (data, response, error) in
             guard error == nil else {
                 completion(nil, error?.localizedDescription)
                 return
@@ -130,14 +130,14 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
         }
     }
     
-    public func signupTo(_ event: EventSignup, _ completion: @escaping (_ success: Bool, _ error: String?) -> Void) {
-        router.request(.signup(event)) { (data, response, error) in
+    public func signupTo(_ event: String, _ completion: @escaping (_ signup: EventSignup?, _ error: String?) -> Void) {
+        guard let user = User.loadLocal()?.id else {
+            completion(nil, "Missing user id")
+            return
+        }
+        router.request(.signup(event, user: user)) { (data, response, error) in
             guard error == nil else {
-                completion(false, error?.localizedDescription)
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse else {
+                completion(nil, error?.localizedDescription)
                 return
             }
             
@@ -145,12 +145,26 @@ extension NetworkManager where EndPoint == AMIVApiEvents {
                 debugPrint(String(data: data, encoding: .utf8))
             }
             
+            guard let response = response as? HTTPURLResponse else {
+                debugPrint("fail")
+                return
+            }
+            
             let result = self.handleNetworkRequest(response)
             switch result {
             case .success:
-                completion(true, nil)
+                guard let data = data else {
+                    completion(nil, NetworkResponse.noData.rawValue)
+                    return
+                }
+                do {
+                    let json = try JSONDecoder().decode(EventSignup.self, from: data)
+                    completion(json, nil)
+                } catch {
+                    completion(nil, NetworkResponse.unableToDecode.rawValue)
+                }
             case .failure(let error):
-                completion(false, error)
+                completion(nil, error)
             }
         }
     }

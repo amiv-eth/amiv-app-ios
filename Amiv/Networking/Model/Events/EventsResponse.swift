@@ -27,3 +27,29 @@ extension EventsResponse: Decodable {
     }
     
 }
+
+extension EventsResponse {
+    
+    public func sortEvents() -> [(String, [AMIVEvent])] {
+        var past: [AMIVEvent] = []
+        var today: [AMIVEvent] = []
+        var upcoming: [AMIVEvent] = []
+        var current: [AMIVEvent] = []
+        let now = Date()
+        
+        self.events.forEach { (event) in
+            if event.startTime <= now && event.endTime >= now {
+                current.append(event)
+            } else if event.startTime.isToday {
+                today.append(event)
+            } else if event.startTime >= now {
+                upcoming.append(event)
+            } else if event.endTime <= now {
+                past.append(event)
+            }
+        }
+        let events: [(String, [AMIVEvent])] = [("Right Now", current), ("Today", today), ("Upcoming", upcoming), ("Past Events", past)]
+        return events.filter({!($0.1.isEmpty)})
+    }
+    
+}

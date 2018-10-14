@@ -82,3 +82,20 @@ extension AMIVEvent: Decodable {
     }
     
 }
+
+extension AMIVEvent {
+    
+    public func getInfoText() -> String {
+        var text = self.description
+        text += "\n\n"
+        
+        let shortInfo = [("Start Time", self.startTime.string), ("End Time", self.endTime.string), ("Price", NumberFormatter.priceString(for: Double(self.price))), ("Total Spots", String(describing: self.spots)), ("Available Spots", String(describing: self.spots - self.signupCount))]
+        
+        for (title, info) in shortInfo {
+            text += "\(title)\n\t\(info)\n"
+        }
+        
+        return text
+    }
+    
+}

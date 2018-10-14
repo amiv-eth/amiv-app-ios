@@ -11,8 +11,8 @@ import Foundation
 public enum AMIVApiEvents {
     
     case events
-    case eventSignups
-    case signup(_ eventSignup: EventSignup)
+    case allEventSignups
+    case signup(_ event: String, user: String)
     case media(_ path: String)
     
 }
@@ -23,7 +23,7 @@ extension AMIVApiEvents: EndPointType {
         switch self {
         case .events:
             return "/events"
-        case .eventSignups, .signup:
+        case .allEventSignups, .signup:
             return "/eventsignups"
         case .media(let path):
             return path
@@ -32,7 +32,7 @@ extension AMIVApiEvents: EndPointType {
     
     public var httpMethod: HTTPMethod {
         switch self {
-        case .events, .media, .eventSignups:
+        case .events, .media, .allEventSignups:
             return .get
         case .signup:
             return .post
@@ -41,16 +41,17 @@ extension AMIVApiEvents: EndPointType {
     
     public var task: HTTPTask {
         switch self {
-        case .events, .media, .eventSignups:
+        case .events, .media, .allEventSignups:
             return .request
-        case .signup(let eventSignup):
-            return .requestJson(json: eventSignup)
+        case let .signup(event, user):
+            let parameters = ["event": event, "user": user]
+            return .requestParameters(bodyParameters: parameters, urlParameter: nil)
         }
     }
     
     public var headers: HTTPHeaders? {
         switch self {
-        case .events, .media, .eventSignups, .signup:
+        case .events, .media, .allEventSignups, .signup:
             return nil
         }
     }
@@ -59,7 +60,7 @@ extension AMIVApiEvents: EndPointType {
         switch self {
         case .events, .media:
             return false
-        case .eventSignups, .signup:
+        case .allEventSignups, .signup:
             return true
         }
     }

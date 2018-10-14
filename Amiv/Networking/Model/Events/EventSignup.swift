@@ -45,4 +45,16 @@ extension EventSignup: Codable {
     }
     
     // TODO: - Implement encodable
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: EventSignupCodingKeys.self)
+        
+        try container.encode(self.eventID, forKey: .eventID)
+        try container.encode(self.userID, forKey: .userID)
+        try container.encode(self.email, forKey: .email)
+        try container.encode(self.isAccepted, forKey: .isAccepted)
+        try container.encode(self.isConfirmed, forKey: .isConfirmed)
+        try container.encode(self.signupID, forKey: .signupID)
+        try container.encode(etag, forKey: .etag)
+    }
 }
