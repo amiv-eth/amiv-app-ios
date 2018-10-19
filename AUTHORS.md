@@ -7,5 +7,5 @@
 
 - Denis Zuppiger, <Contact Mail>
    - Barcode ID Micro-App, <Other features worked on>
-- Gabriel <Surname>, <Contact Mail>
-   - <Features worked on>
+- Gabriel Sonderegger, gabrieso@student.ethz.ch
+   - Settings ViewControllers, JSON Parsers Class
