@@ -6,6 +6,6 @@
 ### Coding Weekend Contributors:
 
 - Denis Zuppiger, zdenis@student.ethz.ch
-   - Barcode ID Micro-App, <Other features worked on>
+   - Barcode ID Micro-App
 - Gabriel <Surname>, <Contact Mail>
    - <Features worked on>
